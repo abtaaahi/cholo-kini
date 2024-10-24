@@ -12,7 +12,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/cholo-kini"> {/* Add basename here */}
       <div>
         <Routes>
           <Route
