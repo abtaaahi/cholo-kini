@@ -1,0 +1,64 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.hero-logo {
+  flex: 1;
+  display: flex; /* Add flex to center the logo vertically */
+  justify-content: center; /* Center the logo horizontally */
+}
+
+.hero-sections {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-sections a {
+  text-decoration: none;
+  color: #333;
+}
+
+.hero-cart {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Align cart button vertically */
+}
+
+.cart-button {
+  padding: 8px 15px; /* Adjust padding for a smaller size */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Smaller font size */
+}
+
+.cart-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-sections {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-cart {
+    justify-content: center; /* Center cart button in mobile view */
+    margin-top: 10px; /* Add margin for spacing */
+  }
+}

@@ -1,0 +1,16 @@
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.slider-container img {
+  width: 100%;         /* Makes the image responsive to the container width */
+  height: 400px;       /* Set a fixed height */
+  object-fit: contain; /* Ensures the entire image is shown without cropping */
+  background-color: #f5f5f5; /* Optional: add a background color to fill empty space */
+}
+
+.slick-prev, .slick-next {
+  color: #007bff !important;
+}
