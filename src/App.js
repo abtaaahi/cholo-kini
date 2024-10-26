@@ -1,3 +1,4 @@
+// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
@@ -8,33 +9,35 @@ import Cosmetics from "./components/Cosmetics";
 import RealEstate from "./components/RealEstate";
 import Footer from "./components/Footer";
 import ProductDetails from "./components/ProductDetails";
+import Cart from "./components/Cart";
+import { CartProvider } from "./contexts/CartContext";
 import "./App.css";
 
 function App() {
   return (
-    <Router basename="/cholo-kini"> {/* Add basename here */}
-      <div>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <HeroSection />
-                <ImageSlider />
-                <ProductCards />
-              </>
-            }
-          />
-          {/* Section-specific routes */}
-          <Route path="/electronics" element={<Electronics />} />
-          <Route path="/cosmetics" element={<Cosmetics />} />
-          <Route path="/realEstate" element={<RealEstate />} />
-
-          {/* Product details page */}
-          <Route path="/product/:id" element={<ProductDetails />} />
-        </Routes>
-        <Footer />
-      </div>
+    <Router basename="/cholo-kini">
+      <CartProvider>
+        <div>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <HeroSection />
+                  <ImageSlider />
+                  <ProductCards />
+                </>
+              }
+            />
+            <Route path="/electronics" element={<Electronics />} />
+            <Route path="/cosmetics" element={<Cosmetics />} />
+            <Route path="/realEstate" element={<RealEstate />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/cart" element={<Cart />} /> {/* New Cart Route */}
+          </Routes>
+          <Footer />
+        </div>
+      </CartProvider>
     </Router>
   );
 }

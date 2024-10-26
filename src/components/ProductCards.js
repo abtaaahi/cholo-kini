@@ -18,7 +18,7 @@ const ProductCards = () => {
           <img src={product.image} alt={product.name} />
           <h3>{product.name}</h3>
           <p>{product.price}</p>
-          <button className="add-to-cart">Add to Cart</button>
+          <button className="see-details">See Details</button>
         </div>
       ))}
     </div>

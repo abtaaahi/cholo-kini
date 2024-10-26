@@ -10,7 +10,7 @@ const Footer = () => {
         <a href="https://twitter.com">Twitter</a>
         <a href="https://instagram.com">Instagram</a>
       </div>
-      <p>&copy; 2024 Your Company Name</p>
+      <p>&copy; 2024 Cholo Kini</p>
     </footer>
   );
 };

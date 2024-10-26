@@ -4,11 +4,11 @@ export const products = [
     { id: 3, name: "Product 3", price: "$30", description: "This is a description for Product 3.", image: "https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=600" },
     { id: 4, name: "Product 4", price: "$40", description: "This is a description for Product 4.", image: "https://images.pexels.com/photos/3804415/pexels-photo-3804415.jpeg?auto=compress&cs=tinysrgb&w=600" },
     { id: 5, name: "Product 5", price: "$50", description: "This is a description for Product 5.", image: "https://images.pexels.com/photos/29054041/pexels-photo-29054041/free-photo-of-modern-workspace-with-laptop-and-buddha-decor.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 6, name: "Product 6", price: "৳100", description: "This is a description for Product 6.", image: "https://images.pexels.com/photos/1762539/pexels-photo-1762539.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 7, name: "Product 7", price: "৳200", description: "This is a description for Product 7.", image: "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 8, name: "Product 8", price: "৳300", description: "This is a description for Product 8.", image: "https://images.pexels.com/photos/28993049/pexels-photo-28993049/free-photo-of-hands-typing-on-a-modern-white-keyboard.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 9, name: "Product 9", price: "৳400", description: "This is a description for Product 9.", image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 10, name: "Product 10", price: "৳500", description: "This is a description for Product 10.", image: "https://images.pexels.com/photos/16592625/pexels-photo-16592625/free-photo-of-air-conditioner-in-a-house.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { id: 6, name: "Product 6", price: "$100", description: "This is a description for Product 6.", image: "https://images.pexels.com/photos/1762539/pexels-photo-1762539.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { id: 7, name: "Product 7", price: "$200", description: "This is a description for Product 7.", image: "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { id: 8, name: "Product 8", price: "$300", description: "This is a description for Product 8.", image: "https://images.pexels.com/photos/28993049/pexels-photo-28993049/free-photo-of-hands-typing-on-a-modern-white-keyboard.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { id: 9, name: "Product 9", price: "$400", description: "This is a description for Product 9.", image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { id: 10, name: "Product 10", price: "$500", description: "This is a description for Product 10.", image: "https://images.pexels.com/photos/16592625/pexels-photo-16592625/free-photo-of-air-conditioner-in-a-house.jpeg?auto=compress&cs=tinysrgb&w=600" },
   ];
 
   export const electronicsProducts = [

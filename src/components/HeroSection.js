@@ -15,7 +15,9 @@ const HeroSection = () => {
         <Link to="/realEstate">Real Estate</Link>
       </div>
       <div className="hero-cart">
+      <Link to="/cart">
         <button className="cart-button">Cart</button>
+        </Link>
       </div>
     </div>
   );
