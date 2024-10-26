@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/cholo-kini/static/css/main.05a507b2.css",
-    "main.js": "/cholo-kini/static/js/main.a34a7d45.js",
+    "main.css": "/cholo-kini/static/css/main.544cc724.css",
+    "main.js": "/cholo-kini/static/js/main.d131f099.js",
     "static/js/453.2308bfee.chunk.js": "/cholo-kini/static/js/453.2308bfee.chunk.js",
     "static/media/slick.svg": "/cholo-kini/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/cholo-kini/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/cholo-kini/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/cholo-kini/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cholo-kini/index.html",
-    "main.05a507b2.css.map": "/cholo-kini/static/css/main.05a507b2.css.map",
-    "main.a34a7d45.js.map": "/cholo-kini/static/js/main.a34a7d45.js.map",
+    "main.544cc724.css.map": "/cholo-kini/static/css/main.544cc724.css.map",
+    "main.d131f099.js.map": "/cholo-kini/static/js/main.d131f099.js.map",
     "453.2308bfee.chunk.js.map": "/cholo-kini/static/js/453.2308bfee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05a507b2.css",
-    "static/js/main.a34a7d45.js"
+    "static/css/main.544cc724.css",
+    "static/js/main.d131f099.js"
   ]
 }
