@@ -59,7 +59,7 @@ const Cart = () => {
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const response = await fetch("https://your-backend-url.com/api/send-order-email", {
+        const response = await fetch("https://cholo-kini.onrender.com/404/api/send-order-email", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
