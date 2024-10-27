@@ -2,7 +2,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
-import { products } from "../data/products"; // Import centralized products data
+import { sliderProducts } from "../data/products"; // Import centralized products data
 import "./ImageSlider.css";
 
 const ImageSlider = () => {
@@ -23,7 +23,7 @@ const ImageSlider = () => {
         autoplay={true}
         autoplaySpeed={3000}
       >
-        {products.map((product) => (
+        {sliderProducts.map((product) => (
           <div key={product.id} onClick={() => handleImageClick(product.id)}>
             <img src={product.image} alt={product.name} />
           </div>

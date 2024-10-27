@@ -46,3 +46,9 @@ export const realEstateProducts = [
   { id: 302, name: "Villa", price: "$1,200,000", image: "https://images.pexels.com/photos/2215166/pexels-photo-2215166.jpeg?auto=compress&cs=tinysrgb&w=600" },
   { id: 303, name: "Office Space", price: "$500,000", image: "https://images.pexels.com/photos/276551/pexels-photo-276551.jpeg?auto=compress&cs=tinysrgb&w=600" },
 ];
+
+export const sliderProducts = [
+  { id: 301, name: "Apartment", price: "$300,000", image: "https://images.pexels.com/photos/2285099/pexels-photo-2285099.jpeg?auto=compress&cs=tinysrgb&w=600" },
+  { id: 302, name: "Villa", price: "$1,200,000", image: "https://images.pexels.com/photos/2215166/pexels-photo-2215166.jpeg?auto=compress&cs=tinysrgb&w=600" },
+  { id: 303, name: "Office Space", price: "$500,000", image: "https://images.pexels.com/photos/276551/pexels-photo-276551.jpeg?auto=compress&cs=tinysrgb&w=600" },
+];

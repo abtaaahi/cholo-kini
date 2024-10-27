@@ -54,17 +54,35 @@ const Cart = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      // Place order logic (e.g., send to API) can go here
-      alert("Order placed successfully!");
-      handleCloseModal();
+      try {
+        const response = await fetch("https://your-backend-url.com/api/send-order-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            cartItems,
+            totalAmount,
+            customerDetails: formData,
+          }),
+        });
+  
+        if (response.ok) {
+          alert("Order placed successfully! Check your email for confirmation.");
+          handleCloseModal();
+        } else {
+          alert("There was an error placing your order. Please try again.");
+        }
+      } catch (error) {
+        console.error("Error placing order:", error);
+        alert("Failed to place order.");
+      }
     } else {
       setErrors(validationErrors);
     }
-  };
+  };   
 
   if (cartItems.length === 0) {
     return <p className="empty-cart">No items in cart.</p>;
