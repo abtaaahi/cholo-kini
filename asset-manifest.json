@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cholo-kini/static/css/main.15094c83.css",
-    "main.js": "/cholo-kini/static/js/main.83cf6b67.js",
+    "main.js": "/cholo-kini/static/js/main.a41c2548.js",
     "static/js/453.2308bfee.chunk.js": "/cholo-kini/static/js/453.2308bfee.chunk.js",
     "static/media/slick.svg": "/cholo-kini/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/cholo-kini/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,11 +9,11 @@
     "static/media/slick.woff": "/cholo-kini/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cholo-kini/index.html",
     "main.15094c83.css.map": "/cholo-kini/static/css/main.15094c83.css.map",
-    "main.83cf6b67.js.map": "/cholo-kini/static/js/main.83cf6b67.js.map",
+    "main.a41c2548.js.map": "/cholo-kini/static/js/main.a41c2548.js.map",
     "453.2308bfee.chunk.js.map": "/cholo-kini/static/js/453.2308bfee.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.15094c83.css",
-    "static/js/main.83cf6b67.js"
+    "static/js/main.a41c2548.js"
   ]
 }
