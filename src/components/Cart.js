@@ -67,7 +67,7 @@ const Cart = () => {
     if (Object.keys(validationErrors).length === 0) {
       setIsLoading(true);  // Start loading
       try {
-        const response = await fetch("https://cholo-kini.onrender.com/404/api/send-order-email", {
+        const response = await fetch("https://cholo-kini-api-production.up.railway.app/404/api/send-order-email", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
