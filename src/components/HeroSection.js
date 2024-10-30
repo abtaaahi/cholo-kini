@@ -10,9 +10,9 @@ const HeroSection = () => {
         <h1>Cholo Kini</h1>
       </div>
       <div className="hero-sections">
+        <Link to="/realEstate">Real Estate</Link>
         <Link to="/electronics">Electronics</Link>
         <Link to="/cosmetics">Cosmetics</Link>
-        <Link to="/realEstate">Real Estate</Link>
       </div>
       <div className="hero-cart">
       <Link to="/cart">

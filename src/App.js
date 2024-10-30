@@ -29,9 +29,9 @@ function App() {
                 </>
               }
             />
+            <Route path="/realEstate" element={<RealEstate />} />
             <Route path="/electronics" element={<Electronics />} />
             <Route path="/cosmetics" element={<Cosmetics />} />
-            <Route path="/realEstate" element={<RealEstate />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} /> {/* New Cart Route */}
           </Routes>

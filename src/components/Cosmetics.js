@@ -18,7 +18,7 @@ const Cosmetics = () => {
         <div className="cosmetics-card" key={product.id} onClick={() => handleProductClick(product.id)}>
           <img src={product.image} alt={product.name} />
           <h3>{product.name}</h3>
-          <p>{product.price}</p>
+          <p>BDT {product.price}</p>
         </div>
       ))}
     </div>

@@ -6,7 +6,6 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  max-width: 600px;
   margin: auto;
 }
 
@@ -33,6 +32,7 @@
   background-color: #0056b3;
 }
 
+/* Move the title to the left side */
 .product-title {
   position: fixed; /* Position fixed to place it relative to the viewport */
   top: 20px;
@@ -43,10 +43,10 @@
 }
 
 .product-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  max-height: 400px;
+  width: 100%; /* Full width for larger image */
+  max-width: 800px; /* Increased maximum width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 500px;
   object-fit: cover;
   border-radius: 10px;
   margin-top: 2rem;
@@ -82,6 +82,94 @@
   line-height: 1.5;
 }
 
+/* Styles for More Images Section */
+.more-images {
+  width: 100%; /* Full width */
+  margin-top: 20px; /* Space between product info and more images */
+  padding: 20px; /* Padding for the more images section */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.more-images-title {
+  font-size: 22px; /* Title font size */
+  margin-bottom: 10px; /* Space below title */
+  text-align: left; /* Align title to left */
+}
+
+.image-gallery {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: flex-start; /* Align items to the start */
+}
+
+.album-image {
+  width: calc(25% - 10px); /* Four images per row with spacing */
+  height: auto; /* Maintain aspect ratio */
+  margin: 5px; /* Space between images */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for images */
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 0; /* Ensure no padding in the modal */
+}
+
+.modal-content {
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  background-color: transparent;
+  margin: 0; /* Remove margin */
+  border: none; /* Ensure no border around the image */
+  box-shadow: none; /* Remove any box shadow */
+}
+
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .album-image {
+    width: calc(33.33% - 10px); /* Three images per row */
+  }
+}
+
+@media (max-width: 800px) {
+  .album-image {
+    width: calc(50% - 10px); /* Two images per row */
+  }
+}
+
+@media (max-width: 600px) {
+  /* .album-image {
+    width: calc(100% - 10px);
+    one image per row
+  } */
+
+  .album-image {
+    width: calc(50% - 10px); /* Two images per row */
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .product-details {
@@ -95,6 +183,7 @@
   .product-price {
     font-size: 18px;
   }
+
   .product-image {
     margin-top: 5rem;
   }

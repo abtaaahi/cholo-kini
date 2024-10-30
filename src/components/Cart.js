@@ -1,7 +1,11 @@
 // src/components/Cart.js
 import React, { useContext, useState } from "react";
 import { CartContext } from "../contexts/CartContext";
+import pdfMake from "pdfmake/build/pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts";
 import "./Cart.css";
+
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity } = useContext(CartContext);
@@ -14,12 +18,14 @@ const Cart = () => {
     email: "",
   });
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [isOrderSuccessful, setIsOrderSuccessful] = useState(false);
 
   // Calculate the total amount
   const totalAmount = cartItems.reduce((total, item) => {
-    const priceNumber = parseInt(item.price.replace(/[^\d]/g, ''), 10); // Remove currency symbol and convert to integer
-    return total + priceNumber * item.quantity; // Calculate total
-  }, 0);
+    // const priceNumber = parseFloat(item.price.replace(/[^0-9.-]+/g,"")); 
+    return total + (item.price * item.quantity);
+  }, 0);  
 
   const handlePlaceOrder = () => {
     setModalOpen(true);
@@ -34,6 +40,7 @@ const Cart = () => {
       email: "",
     });
     setErrors({});
+    setIsOrderSuccessful(false);
   };
 
   const handleInputChange = (e) => {
@@ -58,6 +65,7 @@ const Cart = () => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
+      setIsLoading(true);  // Start loading
       try {
         const response = await fetch("https://cholo-kini.onrender.com/404/api/send-order-email", {
           method: "POST",
@@ -68,21 +76,79 @@ const Cart = () => {
             customerDetails: formData,
           }),
         });
-  
+
+        console.log("Cart Items:", cartItems);
+        console.log("Total Amount:", totalAmount);
+        console.log("Customer Details:", formData);
+
         if (response.ok) {
+          setIsOrderSuccessful(true);
           alert("Order placed successfully! Check your email for confirmation.");
-          handleCloseModal();
         } else {
           alert("There was an error placing your order. Please try again.");
         }
       } catch (error) {
         console.error("Error placing order:", error);
         alert("Failed to place order.");
+      } finally {
+        setIsLoading(false);  // Stop loading
       }
     } else {
       setErrors(validationErrors);
     }
-  };   
+  };
+
+  const generateInvoice = () => {
+    const dateTime = new Date().toLocaleString().replace(/[/,:]/g, '-'); // Format date and time
+    const docDefinition = {
+        content: [
+            { text: 'Cholo Kini - Order Invoice', style: 'header' },
+            { text: `Date: ${new Date().toLocaleString()}`, style: 'subheader' },
+            {
+                table: {
+                    widths: ['*', '*'],
+                    body: [
+                        [{ text: 'Name', bold: true }, formData.name],
+                        [{ text: 'Address', bold: true }, formData.address],
+                        [{ text: 'Phone', bold: true }, formData.phone],
+                        [{ text: 'Email', bold: true }, formData.email],
+                    ],
+                },
+                layout: 'lightHorizontalLines', // Layout for table with light horizontal lines
+            },
+            {
+                text: 'Order Summary',
+                style: 'subheader',
+                margin: [0, 20, 0, 8],
+            },
+            {
+                table: {
+                    widths: ['*', 'auto', 'auto'],
+                    body: [
+                        [{ text: 'Product', bold: true }, { text: 'Quantity', bold: true }, { text: 'Price', bold: true }],
+                        ...cartItems.map(item => [item.name, item.quantity, item.price*item.quantity]),
+                        [{ text: 'Total', bold: true, colSpan: 2 }, {}, { text: totalAmount.toFixed(2) }], // Show total amount here
+                    ],
+                },
+                layout: 'lightHorizontalLines',
+            },
+        ],
+        styles: {
+            header: {
+                fontSize: 22,
+                bold: true,
+                margin: [0, 0, 0, 10],
+            },
+            subheader: {
+                fontSize: 16,
+                bold: true,
+                margin: [0, 10, 0, 5],
+            },
+        },
+    };
+
+    pdfMake.createPdf(docDefinition).download(`Invoice_${dateTime}.pdf`);
+};
 
   if (cartItems.length === 0) {
     return <p className="empty-cart">No items in cart.</p>;
@@ -96,7 +162,7 @@ const Cart = () => {
           <img src={item.image} alt={item.name} className="cart-item-image" />
           <div className="cart-item-info">
             <h2>{item.name}</h2>
-            <p>Price: {item.price}</p> {/* Display price as is */}
+            <p>Price: BDT {item.price}</p>
             <div className="cart-item-controls">
               <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
               <span>{item.quantity}</span>
@@ -107,7 +173,7 @@ const Cart = () => {
         </div>
       ))}
       <div className="cart-total">
-        <h2>Total Amount: ${totalAmount}</h2> {/* Display total amount */}
+        <h2>Total Amount: BDT {totalAmount}</h2>
         <button onClick={handlePlaceOrder} className="place-order-button">Place Order</button>
       </div>
 
@@ -119,9 +185,9 @@ const Cart = () => {
             <div>
               <h3>Products:</h3>
               {cartItems.map((item) => (
-                <p key={item.id}>{item.name} (x{item.quantity})</p>
+                <p key={item.id}>{item.name} (BDT {item.price} x {item.quantity} piece)</p>
               ))}
-              <h3>Total Amount: ${totalAmount}</h3>
+              <h3>Total Amount: BDT {totalAmount}</h3>
             </div>
             <form onSubmit={handleSubmit}>
               <input
@@ -164,7 +230,15 @@ const Cart = () => {
               />
               {errors.email && <span className="error">{errors.email}</span>}
 
-              <button type="submit">Place Order</button>
+              {/* Show loading spinner or Place Order button */}
+              {isLoading ? (
+                <div className="loading-spinner">Placing Order...</div>
+              ) : isOrderSuccessful ? (
+                <button type="button" onClick={generateInvoice} className="download-invoice-button">Download Invoice</button>
+              ) : (
+                <button type="submit">Place Order</button>
+              )}
+
               <button type="button" onClick={handleCloseModal}>Cancel</button>
             </form>
           </div>
