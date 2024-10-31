@@ -12,6 +12,7 @@ const HeroSection = () => {
       <div className="hero-sections">
         <Link to="/realEstate">Real Estate</Link>
         <Link to="/electronics">Electronics</Link>
+        <Link to="/footwear">Footwear</Link>
         <Link to="/cosmetics">Cosmetics</Link>
       </div>
       <div className="hero-cart">

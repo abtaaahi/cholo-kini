@@ -113,3 +113,68 @@ export const sliderProducts = [
   { id: 402, name: "Apartment", price: 10, image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308986/two_t1a0a1.png" },
   { id: 403, name: "Apartment", price: 10, image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308985/three_sr2kqi.png" },
 ];
+
+
+// src/data/products.js
+export const footwearProducts = [
+  {
+    id: 71,
+    name: "Running Shoes",
+    price: 2500,
+    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+  },
+  {
+    id: 72,
+    name: "Sneakers",
+    price: 3000,
+    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+  },
+  {
+    id: 73,
+    name: "Formal Shoes",
+    price: 4500,
+    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+  },
+  {
+    id: 74,
+    name: "Loafers",
+    price: 3500,
+    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+  },
+  {
+    id: 75,
+    name: "Casual Shoes",
+    price: 2800,
+    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+  },
+  {
+    id: 76,
+    name: "Sports Shoes",
+    price: 3200,
+    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+  },
+  {
+    id: 77,
+    name: "Slip-Ons",
+    price: 2400,
+    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+  },
+  {
+    id: 78,
+    name: "Sandals",
+    price: 2000,
+    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+  },
+  {
+    id: 79,
+    name: "Boots",
+    price: 5000,
+    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+  },
+  {
+    id: 80,
+    name: "Flip Flops",
+    price: 1500,
+    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+  }
+];

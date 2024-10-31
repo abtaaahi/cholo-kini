@@ -1,7 +1,7 @@
 // src/components/ProductDetails.js
 import React, { useEffect, useContext, useState } from "react";
 import { useParams } from "react-router-dom";
-import { products, electronicsProducts, cosmeticProducts, realEstateProducts, sliderProducts } from "../data/products";
+import { products, electronicsProducts, cosmeticProducts, realEstateProducts, sliderProducts, footwearProducts } from "../data/products";
 import { Link } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
 import "./ProductDetails.css";
@@ -22,7 +22,8 @@ const ProductDetails = () => {
     electronicsProducts.find((p) => p.id === productId) ||
     cosmeticProducts.find((p) => p.id === productId) ||
     realEstateProducts.find((p) => p.id === productId) ||
-    sliderProducts.find((p) => p.id === productId);
+    sliderProducts.find((p) => p.id === productId) ||
+    footwearProducts.find((p) => p.id === productId);
 
   const handleAddToCart = (product) => {
     addToCart(product);
