@@ -5,7 +5,6 @@ import ImageSlider from "./components/ImageSlider";
 import ProductCards from "./components/ProductCards";
 import Electronics from "./components/Electronics";
 import Cosmetics from "./components/Cosmetics";
-import RealEstate from "./components/RealEstate";
 import Footwear from "./components/Footwear"; // Import Footwear component
 import Footer from "./components/Footer";
 import ProductDetails from "./components/ProductDetails";
@@ -15,7 +14,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router basename="/cholo-kini">
+    <Router basename="/">
       <CartProvider>
         <div>
           <Routes>
@@ -29,7 +28,7 @@ function App() {
                 </>
               }
             />
-            <Route path="/realEstate" element={<RealEstate />} />
+            {/* <Route path="/realEstate" element={<RealEstate />} /> */}
             <Route path="/electronics" element={<Electronics />} />
             <Route path="/footwear" element={<Footwear />} />
             <Route path="/cosmetics" element={<Cosmetics />} />

@@ -3,6 +3,8 @@ import React, { useContext, useState } from "react";
 import { CartContext } from "../contexts/CartContext";
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
+import { toast, ToastContainer } from 'react-toastify'; // Import toast and ToastContainer
+import 'react-toastify/dist/ReactToastify.css'; // Import toast styles
 import "./Cart.css";
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
@@ -23,7 +25,6 @@ const Cart = () => {
 
   // Calculate the total amount
   const totalAmount = cartItems.reduce((total, item) => {
-    // const priceNumber = parseFloat(item.price.replace(/[^0-9.-]+/g,"")); 
     return total + (item.price * item.quantity);
   }, 0);  
 
@@ -45,10 +46,20 @@ const Cart = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+  
+    if (name === "phone") {
+      if (/^\d*$/.test(value) && value.length <= 11) { // Allow only digits and max length 12
+        setFormData({
+          ...formData,
+          [name]: value,
+        });
+      }
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const validateForm = () => {
@@ -58,6 +69,12 @@ const Cart = () => {
         newErrors[key] = "This field is required";
       }
     });
+
+    if (formData.phone && (!/^\d{11}$/.test(formData.phone))) {
+      newErrors.phone = "Phone number must be valid and not less than 11 digits";
+    }
+  
+    setErrors(newErrors);
     return newErrors;
   };
 
@@ -67,7 +84,7 @@ const Cart = () => {
     if (Object.keys(validationErrors).length === 0) {
       setIsLoading(true);  // Start loading
       try {
-        const response = await fetch("https://cholo-kini-api-production.up.railway.app/404/api/send-order-email", {
+        const response = await fetch("https://api.backend.sahossain.com/404/api/send-order-email", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -83,13 +100,22 @@ const Cart = () => {
 
         if (response.ok) {
           setIsOrderSuccessful(true);
-          alert("Order placed successfully! Check your email for confirmation.");
+          toast.success("Order placed successfully! Check your email for confirmation.", {
+            position: "top-right",
+            autoClose: 5000,
+          });
         } else {
-          alert("There was an error placing your order. Please try again.");
+          toast.error("There was an error placing your order. Please try again.", {
+            position: "top-right",
+            autoClose: 5000,
+          });
         }
       } catch (error) {
         console.error("Error placing order:", error);
-        alert("Failed to place order.");
+        toast.error("Failed to place order.", {
+          position: "top-right",
+          autoClose: 5000,
+        });
       } finally {
         setIsLoading(false);  // Stop loading
       }
@@ -126,7 +152,7 @@ const Cart = () => {
                     widths: ['*', 'auto', 'auto'],
                     body: [
                         [{ text: 'Product', bold: true }, { text: 'Quantity', bold: true }, { text: 'Price', bold: true }],
-                        ...cartItems.map(item => [item.name, item.quantity, item.price*item.quantity]),
+                        ...cartItems.map(item => [item.name, item.quantity, item.price * item.quantity]),
                         [{ text: 'Total', bold: true, colSpan: 2 }, {}, { text: totalAmount.toFixed(2) }], // Show total amount here
                     ],
                 },
@@ -156,6 +182,7 @@ const Cart = () => {
 
   return (
     <div className="cart">
+      <ToastContainer /> {/* Add ToastContainer to render the toasts */}
       <h1>Shopping Cart</h1>
       {cartItems.map((item) => (
         <div key={item.id} className="cart-item">
@@ -239,7 +266,7 @@ const Cart = () => {
                 <button type="submit">Place Order</button>
               )}
 
-              <button type="button" onClick={handleCloseModal}>Cancel</button>
+              <button type="cancel" onClick={handleCloseModal}>Cancel</button>
             </form>
           </div>
         </div>

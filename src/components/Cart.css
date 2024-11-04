@@ -125,7 +125,7 @@
   color: white;
 }
 
-.modal-content button[type="button"] {
+.modal-content button[type="cancel"] {
   background-color: #f44336;
   color: white;
 }

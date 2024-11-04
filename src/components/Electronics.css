@@ -14,8 +14,10 @@
 
 .electronics-card {
     width: 200px;
-    border: 1px solid #ddd;
-    padding: 10px;
+    background-color: #DFF2EB;
+    /* border: 1px solid #e2b5b5; */
+    border-radius: 1.5rem;
+    padding: 20px;
     text-align: center;
     cursor: pointer;
 }
@@ -25,4 +27,10 @@
     height: 150px; /* Fixed height for uniformity */
     object-fit: cover; /* Ensures images cover the area without stretching */
     margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .electronics-card {
+        width: 90%;
+    }
 }

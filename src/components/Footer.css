@@ -1,25 +1,39 @@
 .footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
+  background-color: #F4DEB3;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.social-icons a:hover {
+  color: #0056b3;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  font-size: 30px;
+  color: black;
+  display: inline-flex;
+  transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #ee00ff; /* Optional: Change to a color of your choice on hover */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
-  
-  .social-icons a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #007bff;
-  }
-  
-  .social-icons a:hover {
-    color: #0056b3;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-  }
-  
+}

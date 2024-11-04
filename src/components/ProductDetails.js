@@ -1,9 +1,10 @@
 // src/components/ProductDetails.js
 import React, { useEffect, useContext, useState } from "react";
-import { useParams } from "react-router-dom";
-import { products, electronicsProducts, cosmeticProducts, realEstateProducts, sliderProducts, footwearProducts } from "../data/products";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts } from "../data/products";
 import { CartContext } from "../contexts/CartContext";
+import { toast, ToastContainer } from 'react-toastify'; // Import toast and ToastContainer
+import 'react-toastify/dist/ReactToastify.css'; // Import toast styles
 import "./ProductDetails.css";
 
 const ProductDetails = () => {
@@ -21,13 +22,12 @@ const ProductDetails = () => {
   const product = products.find((p) => p.id === productId) ||
     electronicsProducts.find((p) => p.id === productId) ||
     cosmeticProducts.find((p) => p.id === productId) ||
-    realEstateProducts.find((p) => p.id === productId) ||
     sliderProducts.find((p) => p.id === productId) ||
     footwearProducts.find((p) => p.id === productId);
 
   const handleAddToCart = (product) => {
     addToCart(product);
-    window.alert(`${product.name} has been added to the cart!`);
+    toast.success(`${product.name} has been added to the cart!`); // Use toast to show success message
   };
 
   const openModal = (image) => {
@@ -42,6 +42,7 @@ const ProductDetails = () => {
 
   return (
     <div className="product-details">
+      <ToastContainer /> {/* Add ToastContainer to render the toasts */}
       <div className="product-cart">
         <Link to="/cart">
           <button className="cart-button">Cart</button>

@@ -3,13 +3,37 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #F4DEB3;
+  padding-bottom: 2rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.hero-cart {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-logo {
   flex: 1;
-  display: flex; /* Add flex to center the logo vertically */
-  justify-content: center; /* Center the logo horizontally */
+  display: flex;
+  padding-left: 5rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.hero-logo h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: #3f3e3e;
 }
 
 .hero-sections {
@@ -20,46 +44,107 @@
   font-weight: bold;
 }
 
-.hero-sections a {
-  text-decoration: none;
-  color: #333;
-}
-
-.hero-cart {
-  flex: 1;
+.hero-header {
   display: flex;
-  justify-content: flex-end;
-  align-items: center; /* Align cart button vertically */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.cart-button {
-  padding: 8px 15px; /* Adjust padding for a smaller size */
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px; /* Smaller font size */
+/* Style for hero sections links with underline animation */
+.hero-sections a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
 }
 
-.cart-button:hover {
-  background-color: #0056b3;
+.hero-sections a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #333;
+  transition: width 0.3s ease;
 }
 
-/* Responsive */
+.hero-sections a:hover {
+  color: #007bff;
+}
+
+.hero-sections a:hover::after {
+  width: 100%;
+}
+
+.cart-icon {
+  color: black;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.cart-icon:hover {
+  color: #0056b3;
+}
+
+/* Large Screen Styles */
+.large-screen {
+  display: flex;
+}
+
+.mobile-screen {
+  display: none; /* Hide mobile screen by default */
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
+  .large-screen {
+    display: none; /* Hide large screen section on mobile */
   }
 
-  .hero-sections {
+  .mobile-screen {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-header {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .hero-logo {
+    padding-left: 0.5rem;
+  }
+  
+  .hero-logo h1 {
+    font-size: 1.3rem;
+    text-align: start;
+  }
+  
+  .hero-logo h2 {
+    font-size: 1rem;
+    text-align: start;
+  }
+  
+  .hero-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 18px;
+    font-size: 0.8rem;
+    justify-items: center;
+    margin-top: 10px;
   }
 
   .hero-cart {
-    justify-content: center; /* Center cart button in mobile view */
-    margin-top: 10px; /* Add margin for spacing */
+    justify-content: flex-end;
+  }
+
+  .cart-icon {
+    font-size: 1.8rem;
   }
 }

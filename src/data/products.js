@@ -1,15 +1,17 @@
 export const products = [
-    { id: 1, name: "Product 1", price: 10, description: "This is a description for Product 1.", image: "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 2, name: "Product 2", price: 10, description: "This is a description for Product 2.", image: "https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 3, name: "Product 3", price: 10, description: "This is a description for Product 3.", image: "https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 4, name: "Product 4", price: 10, description: "This is a description for Product 4.", image: "https://images.pexels.com/photos/3804415/pexels-photo-3804415.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 5, name: "Product 5", price: 10, description: "This is a description for Product 5.", image: "https://images.pexels.com/photos/29054041/pexels-photo-29054041/free-photo-of-modern-workspace-with-laptop-and-buddha-decor.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 6, name: "Product 6", price: 10, description: "This is a description for Product 6.", image: "https://images.pexels.com/photos/1762539/pexels-photo-1762539.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 7, name: "Product 7", price: 10, description: "This is a description for Product 7.", image: "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 8, name: "Product 8", price: 10, description: "This is a description for Product 8.", image: "https://images.pexels.com/photos/28993049/pexels-photo-28993049/free-photo-of-hands-typing-on-a-modern-white-keyboard.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 9, name: "Product 9", price: 10, description: "This is a description for Product 9.", image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 10, name: "Product 10", price: 10, description: "This is a description for Product 10.", image: "https://images.pexels.com/photos/16592625/pexels-photo-16592625/free-photo-of-air-conditioner-in-a-house.jpeg?auto=compress&cs=tinysrgb&w=600" },
-  ];
+  { id: 1, name: "Product 1", price: 10, description: "This is a description for Product 1.", image: "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Electronics" },
+  { id: 2, name: "Product 2", price: 10, description: "This is a description for Product 2.", image: "https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Footwear" },
+  { id: 3, name: "Product 3", price: 10, description: "This is a description for Product 3.", image: "https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Cosmetics" },
+  { id: 4, name: "Product 4", price: 10, description: "This is a description for Product 4.", image: "https://images.pexels.com/photos/3804415/pexels-photo-3804415.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Electronics" },
+  { id: 5, name: "Product 5", price: 10, description: "This is a description for Product 5.", image: "https://images.pexels.com/photos/29054041/pexels-photo-29054041/free-photo-of-modern-workspace-with-laptop-and-buddha-decor.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Footwear" },
+  { id: 6, name: "Product 6", price: 10, description: "This is a description for Product 6.", image: "https://images.pexels.com/photos/1762539/pexels-photo-1762539.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Cosmetics" },
+  { id: 7, name: "Product 7", price: 10, description: "This is a description for Product 7.", image: "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Electronics" },
+  { id: 8, name: "Product 8", price: 10, description: "This is a description for Product 8.", image: "https://images.pexels.com/photos/28993049/pexels-photo-28993049/free-photo-of-hands-typing-on-a-modern-white-keyboard.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Footwear" },
+  { id: 9, name: "Product 9", price: 10, description: "This is a description for Product 9.", image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Cosmetics" },
+  { id: 10, name: "Product 10", price: 10, description: "This is a description for Product 10.", image: "https://images.pexels.com/photos/16592625/pexels-photo-16592625/free-photo-of-air-conditioner-in-a-house.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Electronics" },
+  { id: 11, name: "Product 11", price: 10, description: "This is a description for Product 11.", image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Footwear" },
+  { id: 12, name: "Product 12", price: 10, description: "This is a description for Product 12.", image: "https://images.pexels.com/photos/16592625/pexels-photo-16592625/free-photo-of-air-conditioner-in-a-house.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Cosmetics" },
+];
 
   export const electronicsProducts = [
     { id: 101, name: "Laptop", price: 10, description: "High-performance laptop.", image: "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" },
@@ -41,15 +43,9 @@ export const products = [
     { id: 212, name: "Makeup Remover", price: 10, description: "Gentle makeup remover for sensitive skin.", image: "https://images.pexels.com/photos/6634678/pexels-photo-6634678.jpeg?auto=compress&cs=tinysrgb&w=600" },
 ];
 
-export const realEstateProducts = [
-  { id: 301, name: "Apartment", price: 10, description: "Gentle makeup remover for sensitive skin.", image: "https://images.pexels.com/photos/2285099/pexels-photo-2285099.jpeg?auto=compress&cs=tinysrgb&w=600" },
-  { id: 302, name: "Villa", price: 10, image: "https://images.pexels.com/photos/2215166/pexels-photo-2215166.jpeg?auto=compress&cs=tinysrgb&w=600" },
-  { id: 303, name: "Office Space", price: 10, image: "https://images.pexels.com/photos/276551/pexels-photo-276551.jpeg?auto=compress&cs=tinysrgb&w=600" },
-];
-
 export const sliderProducts = [
-  { id: 401, name: "Apartment", price: 10, description: "Gentle makeup remover for sensitive skin.", 
-    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png" ,
+  { id: 401, name: "White Oak", price: 10, description: "Gentle makeup remover for sensitive skin.", 
+    image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ,
   moreImages: [
     "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
   "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
@@ -66,52 +62,10 @@ export const sliderProducts = [
   "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
   "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
   "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
   "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png"
   ] },
-  { id: 402, name: "Apartment", price: 10, image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308986/two_t1a0a1.png" },
-  { id: 403, name: "Apartment", price: 10, image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308985/three_sr2kqi.png" },
+  { id: 402, name: "Apartment", price: 10, image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { id: 403, name: "Apartment", price: 10, image: "https://images.unsplash.com/photo-1485125639709-a60c3a500bf1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
 ];
 
 
@@ -121,13 +75,13 @@ export const footwearProducts = [
     id: 71,
     name: "Running Shoes",
     price: 2500,
-    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 72,
     name: "Sneakers",
     price: 3000,
-    image: "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+    image: "https://images.unsplash.com/photo-1485125639709-a60c3a500bf1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 73,

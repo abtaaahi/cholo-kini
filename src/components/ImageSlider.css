@@ -1,17 +1,26 @@
 .slider-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
+  width: 80%; /* Set width to 70-80% of the screen */
+  max-width: 1200px; /* Optional max width to prevent it from getting too large on very wide screens */
+  margin: 20px auto; /* Center the container horizontally */
+  box-sizing: border-box;
+  padding: 0 15px;
 }
 
 .slider-container img {
   border-radius: 2rem;
-  width: 100%;         /* Makes the image responsive to the container width */
-  height: 500px;       /* Set a fixed height */
-  object-fit: cover ; /* Ensures the entire image is shown without cropping */
-  /* background-color: #f5f5f5; Optional: add a background color to fill empty space */
+  width: 100%; /* Makes image take up full width of the container */
+  height: 500px;
+  object-fit: cover;
 }
 
-.slick-prev, .slick-next {
-  color: #007bff !important;
+/* Smaller image and padding adjustment for small screens */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 90%; /* Adjust width on smaller screens for better fit */
+    padding: 0 10px; /* Reduce padding on smaller screens */
+  }
+
+  .slider-container img {
+    height: auto;
+  }
 }
