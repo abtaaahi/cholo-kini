@@ -1,9 +1,7 @@
 .footer {
   padding: 20px;
   text-align: center;
-  background-color: #F4DEB3;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  background-color: #f9f4f1;
 }
 
 .social-icons a {
@@ -31,6 +29,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  /* .footer {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  } */
   .social-icons {
     display: flex;
     justify-content: center;

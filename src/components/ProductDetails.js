@@ -1,4 +1,3 @@
-// src/components/ProductDetails.js
 import React, { useEffect, useContext, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts } from "../data/products";
@@ -10,7 +9,7 @@ import "./ProductDetails.css";
 const ProductDetails = () => {
   const { id } = useParams();
   const productId = parseInt(id);
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, cartCount } = useContext(CartContext);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
@@ -42,11 +41,12 @@ const ProductDetails = () => {
 
   return (
     <div className="product-details">
-      <ToastContainer /> {/* Add ToastContainer to render the toasts */}
+      <ToastContainer position="bottom-right"/>
       <div className="product-cart">
-        <Link to="/cart">
-          <button className="cart-button">Cart</button>
-        </Link>
+      <Link to="/cart" className="product-cart-icon">
+            <i className="ri-shopping-cart-2-fill" tooltp></i>
+            {cartCount > 0 && <span className="product-cart-count">{cartCount}</span>}
+          </Link>
       </div>
       {product ? (
         <>
@@ -61,7 +61,6 @@ const ProductDetails = () => {
           <p className="product-description">{product.description}</p>
           <button onClick={() => handleAddToCart(product)} className="add-to-cart">Add to Cart</button>
           
-          {/* New section for "More Images" */}
           <div className="more-images">
             <h2 className="more-images-title">More Images</h2>
             <div className="image-gallery">
@@ -85,7 +84,6 @@ const ProductDetails = () => {
         <p>Product not found</p>
       )}
 
-      {/* Modal for full-screen image */}
       {isModalOpen && (
         <div className="modal">
           <span className="close" onClick={closeModal}>&times;</span>

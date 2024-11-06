@@ -4,6 +4,8 @@ html, body {
   overflow-x: hidden;
   width: 100vw;
   box-sizing: border-box;
+  /* background-color: #f6f6f6; */
+  /* font-family: 'Cambo', serif; */
 }
 
 *, *::before, *::after {

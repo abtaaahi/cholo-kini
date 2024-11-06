@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import ImageSlider from "./components/ImageSlider";
+import FeatureSection from "./components/FeatureSection";
 import ProductCards from "./components/ProductCards";
 import Electronics from "./components/Electronics";
 import Cosmetics from "./components/Cosmetics";
@@ -24,7 +25,9 @@ function App() {
                 <>
                   <HeroSection />
                   <ImageSlider />
+                  
                   <ProductCards />
+                  <FeatureSection />
                 </>
               }
             />

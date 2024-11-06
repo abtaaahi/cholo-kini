@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from "../contexts/CartContext";
 import './HeroSection.css';
 import 'remixicon/fonts/remixicon.css';
 
 const HeroSection = () => {
+  const { cartCount } = useContext(CartContext);
+
   return (
     <>
       {/* Large Screen Hero Section */}
@@ -21,6 +24,7 @@ const HeroSection = () => {
         <div className="hero-cart">
           <Link to="/cart" className="cart-icon">
             <i className="ri-shopping-cart-2-fill" tooltp></i>
+            {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
           </Link>
         </div>
       </div>
@@ -35,6 +39,7 @@ const HeroSection = () => {
           <div className="hero-cart">
             <Link to="/cart" className="cart-icon">
               <i className="ri-shopping-cart-2-fill" tooltp></i>
+              {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
             </Link>
           </div>
         </div>
