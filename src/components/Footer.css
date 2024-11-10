@@ -1,31 +1,22 @@
 .footer {
   padding: 20px;
   text-align: center;
-  background-color: #f9f4f1;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #007bff;
-}
-
-.social-icons a:hover {
-  color: #0056b3;
+  color: white;
+  background-color: #214a25;
 }
 
 .footer .social-icons a {
   margin: 0 10px;
   font-size: 30px;
-  color: black;
+  color: #fab634;
   display: inline-flex;
+  text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer .social-icons a:hover {
-  color: #ee00ff; /* Optional: Change to a color of your choice on hover */
+  color: white; /* Optional: Change to a color of your choice on hover */
 }
-
 
 /* Responsive */
 @media (max-width: 768px) {

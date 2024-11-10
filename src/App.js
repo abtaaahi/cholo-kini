@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HeroTopSection from './components/HeroTopSection';
 import HeroSection from "./components/HeroSection";
+import BannerSection from "./components/BannerSection";
 import ImageSlider from "./components/ImageSlider";
 import FeatureSection from "./components/FeatureSection";
 import ProductCards from "./components/ProductCards";
@@ -23,7 +25,9 @@ function App() {
               path="/"
               element={
                 <>
+                <HeroTopSection />
                   <HeroSection />
+                  <BannerSection />
                   <ImageSlider />
                   
                   <ProductCards />
