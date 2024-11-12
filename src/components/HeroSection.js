@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import SearchBox from './SearchBox';
 import { CartContext } from "../contexts/CartContext";
 import './HeroSection.css';
 import 'remixicon/fonts/remixicon.css';
@@ -21,12 +22,15 @@ const HeroSection = () => {
           <Link to="/cosmetics">Cosmetics</Link>
           <a href="https://cholo.kini.realestate.sahossain.com/" target="_blank" rel="noopener noreferrer">Real Estate</a>
         </div>
+        
         <div className="hero-cart">
+        <SearchBox />
           <Link to="/cart" className="cart-icon">
             <i className="ri-shopping-cart-2-fill" tooltp></i>
             {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
           </Link>
         </div>
+        
       </div>
 
       {/* Mobile Screen Hero Section */}
@@ -37,6 +41,7 @@ const HeroSection = () => {
           <h2>Shop</h2>
           </div>
           <div className="hero-cart">
+          <SearchBox />
             <Link to="/cart" className="cart-icon">
               <i className="ri-shopping-cart-2-fill" tooltp></i>
               {cartCount > 0 && <span className="cart-count">{cartCount}</span>}

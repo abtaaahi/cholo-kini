@@ -15,7 +15,7 @@ const ImageSlider = () => {
   return (
     <div className="slider-container">
       <Slider
-        dots={true}
+        dots={false}
         infinite={true}
         speed={500}
         slidesToShow={1}

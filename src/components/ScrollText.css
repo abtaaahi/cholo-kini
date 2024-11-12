@@ -1,0 +1,38 @@
+.scroll-container {
+    background-color: #214a25;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+  
+  .scroll-text {
+    display: flex;
+    color: #fab634;
+    justify-content: flex-start;
+    overflow: hidden;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .scroll-text h1 {
+    animation: move-rtl 12000ms linear infinite;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  @keyframes move-rtl {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+  @media (max-width: 460px) {
+    .scroll-text {
+        font-size: 0.8rem;
+      }
+  }

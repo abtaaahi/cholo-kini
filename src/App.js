@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HeroTopSection from './components/HeroTopSection';
 import HeroSection from "./components/HeroSection";
 import BannerSection from "./components/BannerSection";
+import ScrollText from "./components/ScrollText";
 import ImageSlider from "./components/ImageSlider";
 import FeatureSection from "./components/FeatureSection";
 import ProductCards from "./components/ProductCards";
@@ -29,7 +30,7 @@ function App() {
                   <HeroSection />
                   <BannerSection />
                   <ImageSlider />
-                  
+                  <ScrollText />
                   <ProductCards />
                   <FeatureSection />
                 </>

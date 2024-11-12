@@ -1,16 +1,112 @@
 export const products = [
-  { id: 1, name: "Sneakers", price: 10, description: "This is a description for Product 1.", image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", type: "Electronics" },
-  { id: 2, name: "Boots", price: 10, description: "This is a description for Product 2.", image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", type: "Footwear" },
-  { id: 3, name: "Keds", price: 10, description: "This is a description for Product 3.", image: "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", type: "Cosmetics" },
-  { id: 4, name: "Shoes", price: 10, description: "This is a description for Product 4.", image: "https://images.unsplash.com/photo-1604868189265-219ba7bf7ea3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", type: "Electronics" },
-  { id: 5, name: "Product 5", price: 10, description: "This is a description for Product 5.", image: "https://images.pexels.com/photos/29054041/pexels-photo-29054041/free-photo-of-modern-workspace-with-laptop-and-buddha-decor.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Footwear" },
-  { id: 6, name: "Product 6", price: 10, description: "This is a description for Product 6.", image: "https://images.pexels.com/photos/1762539/pexels-photo-1762539.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Cosmetics" },
-  { id: 7, name: "Product 7", price: 10, description: "This is a description for Product 7.", image: "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Electronics" },
-  { id: 8, name: "Product 8", price: 10, description: "This is a description for Product 8.", image: "https://images.pexels.com/photos/28993049/pexels-photo-28993049/free-photo-of-hands-typing-on-a-modern-white-keyboard.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Footwear" },
-  { id: 9, name: "Product 9", price: 10, description: "This is a description for Product 9.", image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Cosmetics" },
-  { id: 10, name: "Product 10", price: 10, description: "This is a description for Product 10.", image: "https://images.pexels.com/photos/16592625/pexels-photo-16592625/free-photo-of-air-conditioner-in-a-house.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Electronics" },
-  { id: 11, name: "Product 11", price: 10, description: "This is a description for Product 11.", image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Footwear" },
-  { id: 12, name: "Product 12", price: 10, description: "This is a description for Product 12.", image: "https://images.pexels.com/photos/16592625/pexels-photo-16592625/free-photo-of-air-conditioner-in-a-house.jpeg?auto=compress&cs=tinysrgb&w=600", type: "Cosmetics" },
+  { 
+    id: 1, 
+    name: "Sneakers", 
+    price: 10, 
+    description: "This is a description for Product 1.", 
+    image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+    type: "Electronics",
+    keyword: ["sneaker", "running shoes", "trainers", "sports shoes", "footwear"]
+  },
+  { 
+    id: 2, 
+    name: "Boots", 
+    price: 10, 
+    description: "This is a description for Product 2.", 
+    image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+    type: "Footwear",
+    keyword: ["boots", "winter boots", "ankle boots", "leather boots", "work boots"]
+  },
+  { 
+    id: 3, 
+    name: "Keds", 
+    price: 10, 
+    description: "This is a description for Product 3.", 
+    image: "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+    type: "Cosmetics",
+    keyword: ["keds", "canvas shoes", "sneakers", "casual shoes", "footwear"]
+  },
+  { 
+    id: 4, 
+    name: "Shoes", 
+    price: 10, 
+    description: "This is a description for Product 4.", 
+    image: "https://images.unsplash.com/photo-1604868189265-219ba7bf7ea3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+    type: "Electronics",
+    keyword: ["shoes", "footwear", "dress shoes", "casual shoes", "sports shoes"]
+  },
+  { 
+    id: 5, 
+    name: "Product 5", 
+    price: 10, 
+    description: "This is a description for Product 5.", 
+    image: "https://images.pexels.com/photos/29054041/pexels-photo-29054041/free-photo-of-modern-workspace-with-laptop-and-buddha-decor.jpeg?auto=compress&cs=tinysrgb&w=600", 
+    type: "Footwear",
+    keyword: ["product 5", "modern workspace", "office decor", "productivity", "laptop"]
+  },
+  { 
+    id: 6, 
+    name: "Product 6", 
+    price: 10, 
+    description: "This is a description for Product 6.", 
+    image: "https://images.pexels.com/photos/1762539/pexels-photo-1762539.jpeg?auto=compress&cs=tinysrgb&w=600", 
+    type: "Cosmetics",
+    keyword: ["product 6", "beauty", "cosmetics", "skin care", "makeup"]
+  },
+  { 
+    id: 7, 
+    name: "Product 7", 
+    price: 10, 
+    description: "This is a description for Product 7.", 
+    image: "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600", 
+    type: "Electronics",
+    keyword: ["tech gadgets", "workspace", "laptop", "modern tech", "electronics"]
+  },
+  { 
+    id: 8, 
+    name: "Product 8", 
+    price: 10, 
+    description: "This is a description for Product 8.", 
+    image: "https://images.pexels.com/photos/28993049/pexels-photo-28993049/free-photo-of-hands-typing-on-a-modern-white-keyboard.jpeg?auto=compress&cs=tinysrgb&w=600", 
+    type: "Footwear",
+    keyword: ["keyboard", "typing", "office work", "tech gadgets", "work desk"]
+  },
+  { 
+    id: 9, 
+    name: "Product 9", 
+    price: 10, 
+    description: "This is a description for Product 9.", 
+    image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=600", 
+    type: "Cosmetics",
+    keyword: ["skincare", "cosmetics", "beauty", "personal care", "face cream"]
+  },
+  { 
+    id: 10, 
+    name: "Product 10", 
+    price: 10, 
+    description: "This is a description for Product 10.", 
+    image: "https://images.pexels.com/photos/16592625/pexels-photo-16592625/free-photo-of-air-conditioner-in-a-house.jpeg?auto=compress&cs=tinysrgb&w=600", 
+    type: "Electronics",
+    keyword: ["air conditioner", "electronics", "home appliance", "cooling", "HVAC"]
+  },
+  { 
+    id: 11, 
+    name: "Product 11", 
+    price: 10, 
+    description: "This is a description for Product 11.", 
+    image: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=600", 
+    type: "Footwear",
+    keyword: ["footwear", "shoes", "casual shoes", "boots", "leather shoes"]
+  },
+  { 
+    id: 12, 
+    name: "Product 12", 
+    price: 10, 
+    description: "This is a description for Product 12.", 
+    image: "https://images.pexels.com/photos/16592625/pexels-photo-16592625/free-photo-of-air-conditioner-in-a-house.jpeg?auto=compress&cs=tinysrgb&w=600", 
+    type: "Cosmetics",
+    keyword: ["cosmetics", "skincare", "beauty", "face cream", "personal care"]
+  },
 ];
 
   export const electronicsProducts = [
