@@ -12,7 +12,8 @@ const SearchBox = () => {
     setSearchQuery(query);
 
     const filtered = products.filter(product =>
-      product.name.toLowerCase().includes(query)
+      product.name.toLowerCase().includes(query) || 
+      product.keyword.some(keyword => keyword.toLowerCase().includes(query))
     );
 
     setFilteredProducts(filtered);
@@ -32,6 +33,7 @@ const SearchBox = () => {
           placeholder=""
           value={searchQuery}
           onChange={handleSearch}
+          autoComplete="off"
         />
         <button type="reset" />
       </div>

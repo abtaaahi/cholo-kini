@@ -9,11 +9,14 @@ import FeatureSection from "./components/FeatureSection";
 import ProductCards from "./components/ProductCards";
 import Electronics from "./components/Electronics";
 import Cosmetics from "./components/Cosmetics";
-import Footwear from "./components/Footwear"; // Import Footwear component
+import Footwear from "./components/Footwear";
 import Footer from "./components/Footer";
 import ProductDetails from "./components/ProductDetails";
 import Cart from "./components/Cart";
 import { CartProvider } from "./contexts/CartContext";
+import FloatingButtons from "./components/FloatingButtons";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { products, electronicsProducts, cosmeticsProducts, footwearProducts } from "./data/products";
 import "./App.css";
 
 function App() {
@@ -21,17 +24,23 @@ function App() {
     <Router basename="/">
       <CartProvider>
         <div>
+        <HeroTopSection />
+        <HeroSection />
           <Routes>
             <Route
               path="/"
               element={
                 <>
-                <HeroTopSection />
-                  <HeroSection />
+                {/* <HeroTopSection /> */}
+                  {/* <HeroSection /> */}
                   <BannerSection />
                   <ImageSlider />
                   <ScrollText />
-                  <ProductCards />
+                  <ProductCards 
+                    products={products} 
+                    sectionSubtitle="Latest Items"
+                    sectionMainTitle="Our Products Collections"
+                  />
                   <FeatureSection />
                 </>
               }
@@ -43,6 +52,7 @@ function App() {
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} /> {/* New Cart Route */}
           </Routes>
+          <FloatingButtons />
           <Footer />
         </div>
       </CartProvider>
