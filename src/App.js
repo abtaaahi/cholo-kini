@@ -16,7 +16,7 @@ import Cart from "./components/Cart";
 import { CartProvider } from "./contexts/CartContext";
 import FloatingButtons from "./components/FloatingButtons";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { products, electronicsProducts, cosmeticsProducts, footwearProducts } from "./data/products";
+import { products } from "./data/products";
 import "./App.css";
 
 function App() {
@@ -31,8 +31,6 @@ function App() {
               path="/"
               element={
                 <>
-                {/* <HeroTopSection /> */}
-                  {/* <HeroSection /> */}
                   <BannerSection />
                   <ImageSlider />
                   <ScrollText />
@@ -41,18 +39,17 @@ function App() {
                     sectionSubtitle="Latest Items"
                     sectionMainTitle="Our Products Collections"
                   />
-                  <FeatureSection />
                 </>
               }
             />
-            {/* <Route path="/realEstate" element={<RealEstate />} /> */}
             <Route path="/electronics" element={<Electronics />} />
             <Route path="/footwear" element={<Footwear />} />
             <Route path="/cosmetics" element={<Cosmetics />} />
             <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/cart" element={<Cart />} /> {/* New Cart Route */}
+            <Route path="/cart" element={<Cart />} />
           </Routes>
           <FloatingButtons />
+          <FeatureSection />
           <Footer />
         </div>
       </CartProvider>

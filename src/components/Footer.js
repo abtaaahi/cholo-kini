@@ -16,7 +16,7 @@ const Footer = () => {
           <i className="ri-youtube-fill"></i> {/* YouTube icon */}
         </a>
       </div>
-      <p>&copy; 2024 Cholo Kini</p>
+      <p>&copy; 2024 Cholo Kini. All Rights Reserved.</p>
     </footer>
   );
 };
