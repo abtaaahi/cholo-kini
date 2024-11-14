@@ -9,8 +9,10 @@ export const products = [
     type: "Footwear",
     keyword: ["sneaker", "running shoes", "trainers", "sports shoes", "footwear"],
     moreImages: [
-      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
     ]
   },
   { 
@@ -23,8 +25,10 @@ export const products = [
     type: "Footwear",
     keyword: ["boots", "winter boots", "ankle boots", "leather boots", "work boots"],
     moreImages: [
-      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
     ]
   },
   { 
@@ -124,7 +128,10 @@ export const electronicsProducts = [
     type: "Electronics",
     keyword: ["laptop", "high-performance", "computing", "technology", "electronics"],
     moreImages: [
-      "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
     ]
   },
   {
@@ -137,7 +144,10 @@ export const electronicsProducts = [
     type: "Electronics",
     keyword: ["smartphone", "advanced features", "mobile", "technology", "electronics"],
     moreImages: [
-      "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
     ]
   },
   {
@@ -150,7 +160,10 @@ export const electronicsProducts = [
     type: "Electronics",
     keyword: ["headphones", "noise-cancelling", "audio", "music", "electronics"],
     moreImages: [
-      "https://images.pexels.com/photos/3394659/pexels-photo-3394659.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
     ]
   },
   {
@@ -231,7 +244,10 @@ export const electronicsProducts = [
       type: "Cosmetics",
       keyword: ["moisturizer", "dry skin", "hydrating", "cream", "skincare"],
       moreImages: [
-        "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400"
+        "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+        "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+        "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
       ]
     },
     {
@@ -244,7 +260,10 @@ export const electronicsProducts = [
       type: "Cosmetics",
       keyword: ["lipstick", "matte", "long-lasting", "makeup", "beauty"],
       moreImages: [
-        "https://images.pexels.com/photos/1625037/pexels-photo-1625037.jpeg?auto=compress&cs=tinysrgb&w=400"
+        "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+        "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+        "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
       ]
     },
     {
@@ -339,9 +358,9 @@ export const sliderProducts = [
     keyword: ["makeup remover", "sensitive skin", "skincare", "cosmetics"],
     moreImages: [
       "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png"
+      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
     ]
   },
   {
@@ -386,8 +405,10 @@ export const footwearProducts = [
     type: "Footwear",
     keyword: ["running shoes", "sports footwear", "comfort", "speed", "training shoes"],
     moreImages: [
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
     ]
   },
   {
@@ -400,7 +421,10 @@ export const footwearProducts = [
     type: "Footwear",
     keyword: ["sneakers", "casual shoes", "everyday wear", "comfort", "fashion"],
     moreImages: [
-      "https://images.unsplash.com/photo-1485125639709-a60c3a500bf1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
     ]
   },
   {
@@ -413,7 +437,10 @@ export const footwearProducts = [
     type: "Footwear",
     keyword: ["formal shoes", "office wear", "elegant", "dress shoes", "events"],
     moreImages: [
-      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
     ]
   },
   {

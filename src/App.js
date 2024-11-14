@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import BannerSection from "./components/BannerSection";
 import ScrollText from "./components/ScrollText";
 import ImageSlider from "./components/ImageSlider";
+import CategorySection from "./components/CategorySection";
 import FeatureSection from "./components/FeatureSection";
 import ProductCards from "./components/ProductCards";
 import Electronics from "./components/Electronics";
@@ -32,6 +33,7 @@ function App() {
               element={
                 <>
                   <BannerSection />
+                  <CategorySection />
                   <ImageSlider />
                   <ScrollText />
                   <ProductCards 

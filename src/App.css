@@ -12,3 +12,13 @@ html, body {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+::selection {
+  background-color: #fab634;
+  color: black; 
+}
+
+::-moz-selection {
+  background-color: #fab634;
+  color: black;
+}

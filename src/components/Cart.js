@@ -1,15 +1,18 @@
-// src/components/Cart.js
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { CartContext } from "../contexts/CartContext";
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
-import { toast, ToastContainer } from 'react-toastify'; // Import toast and ToastContainer
-import 'react-toastify/dist/ReactToastify.css'; // Import toast styles
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 import "./Cart.css";
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const Cart = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const { cartItems, removeFromCart, updateQuantity } = useContext(CartContext);
 
   const [isModalOpen, setModalOpen] = useState(false);
@@ -182,10 +185,13 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <ToastContainer /> {/* Add ToastContainer to render the toasts */}
+      <ToastContainer />
       <h1>Shopping Cart</h1>
       {cartItems.map((item) => (
         <div key={item.id} className="cart-item">
+          <button onClick={() => removeFromCart(item.id)} className="remove-button">
+          <i class="fa-solid fa-trash"></i>
+        </button>
           <img src={item.image} alt={item.name} className="cart-item-image" />
           <div className="cart-item-info">
             <h2>{item.name}</h2>
@@ -195,7 +201,6 @@ const Cart = () => {
               <span>{item.quantity}</span>
               <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
             </div>
-            <button onClick={() => removeFromCart(item.id)} className="remove-button">Remove</button>
           </div>
         </div>
       ))}

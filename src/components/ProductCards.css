@@ -149,7 +149,6 @@
     /* padding: 0 10px; */
     }
 
-
     .badges {
       top: 1.2rem;
       left: 1.2rem;
@@ -158,8 +157,6 @@
     .badge {
      font-size: 12px;
     }
-
-    
   }
 
   @media (max-width: 360px) {
@@ -167,11 +164,11 @@
     .product-card {
       margin: 0;
       width: 280px;
+      width: 100%;
     }
 
     .product-card img {
-      width: 100%;          /* Image takes full width of the card */
-              /* Fixed height for uniformity */
+      width: 100%;
     }
 
     .badges {
@@ -181,5 +178,17 @@
     
     .badge {
       font-size: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+
+    .product-card {
+      margin: 0;
+      width: 100%;
+    }
+
+    .product-card img {
+      width: 100%;
     }
   }
