@@ -214,11 +214,28 @@ const Cart = () => {
         <div className="modal-overlay">
           <div className="modal-content">
             <h2>Order Summary</h2>
-            <div>
-              <h3>Products:</h3>
-              {cartItems.map((item) => (
-                <p key={item.id}>{item.name} (BDT {item.price} x {item.quantity} piece)</p>
-              ))}
+            <div class="cart-summary">
+              {/* <h3>Products:</h3> */}
+              <table class="cart-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Price (BDT)</th>
+                    <th>Quantity (Piece)</th>
+                    <th>Total (BDT)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cartItems.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.name}</td>
+                      <td>{item.price}</td>
+                      <td>{item.quantity}</td>
+                      <td>{item.price * item.quantity}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
               <h3>Total Amount: BDT {totalAmount}</h3>
             </div>
             <form onSubmit={handleSubmit}>
@@ -235,7 +252,7 @@ const Cart = () => {
               <input
                 type="text"
                 name="address"
-                placeholder="Address"
+                placeholder="Delivery Address"
                 value={formData.address}
                 onChange={handleInputChange}
                 required
@@ -262,7 +279,6 @@ const Cart = () => {
               />
               {errors.email && <span className="error">{errors.email}</span>}
 
-              {/* Show loading spinner or Place Order button */}
               {isLoading ? (
                 <div className="loading-spinner">Placing Order...</div>
               ) : isOrderSuccessful ? (

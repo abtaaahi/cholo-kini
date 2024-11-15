@@ -5,7 +5,6 @@ html, body {
   width: 100vw;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-  /* background-color: #f6f6f6; */
   /* font-family: 'Cambo', serif; */
 }
 
@@ -21,4 +20,13 @@ html, body {
 ::-moz-selection {
   background-color: #fab634;
   color: black;
+}
+
+* {
+  outline: none;
+}
+
+a, button, input, textarea {
+  -webkit-tap-highlight-color: transparent; 
+  outline: none;
 }

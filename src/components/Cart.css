@@ -27,7 +27,7 @@
 .cart-item-image {
   width: 80px;
   height: 80px;
-  border-radius: 5px;
+  border-radius: 10px;
   object-fit: cover;
   margin-right: 15px;
 }
@@ -140,13 +140,40 @@
 .modal-content {
   background-color: white;
   padding: 20px;
-  border-radius: 8px; /* Border radius for Material Design look */
+  border-radius: 8px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 400px; /* Adjust width as needed */
+  width: 600px;
 }
 
 .modal-content h2 {
   margin-top: 0;
+}
+
+.cart-summary {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cart-table {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.cart-table th, .cart-table td {
+  border: 1px solid #000; 
+  padding: 8px;
+}
+
+.cart-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.cart-summary h3 {
+  margin-top: 20px; 
+  font-size: 1.2em;
 }
 
 .modal-content form {
@@ -170,12 +197,14 @@
 }
 
 .modal-content button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #214a25;
+  font-weight: bold;
   color: white;
 }
 
 .modal-content button[type="cancel"] {
-  background-color: #f44336;
+  background-color: red;
+  font-weight: bold;
   color: white;
 }
 

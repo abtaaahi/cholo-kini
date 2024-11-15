@@ -1,12 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HeroTopSection.css';
 
 const HeroTopSection = () => {
+  const navigate = useNavigate();
+
+  const handleBuyNowClick = () => {
+    navigate('/footwear');
+  };
   return (
     <div className="hero-top-section">
       <div className="hero-top-info">
         <span>
-          <strong>GET 25% OFF</strong> for your first order. <strong className="buynow">Buy Now</strong>{' '}
+          <strong>GET 25% OFF</strong> for your first order. <strong className="buynow" onClick={handleBuyNowClick} >Buy Now</strong>{' '}
         </span>
       </div>
       <div className="hero-top-social">

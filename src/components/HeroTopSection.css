@@ -16,6 +16,12 @@
 
   .buynow{
     color: #fab634;
+    cursor: pointer; 
+  }
+
+  .buynow:hover{
+    color: white;
+    text-decoration: underline;
   }
   
   .hero-top-social a {
@@ -23,6 +29,10 @@
     color: #fab634;
     text-decoration: none;
     font-size: 1.5rem;
+  }
+
+  .hero-top-social a:hover{
+    color: white;
   }
   
   @media (max-width: 768px) {
