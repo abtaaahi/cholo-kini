@@ -202,9 +202,19 @@
   color: white;
 }
 
+.modal-content button[type="submit"]:hover {
+  background-color: #fab634;
+  color: black;
+}
+
 .modal-content button[type="cancel"] {
   background-color: red;
   font-weight: bold;
+  color: white;
+}
+
+.modal-content button[type="cancel"]:hover {
+  background-color: black;
   color: white;
 }
 

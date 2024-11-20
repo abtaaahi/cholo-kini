@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { products } from '../data/products'
+import { products } from '../data/products';
 import './SearchBox.css';
 
 const SearchBox = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const searchBoxRef = useRef(null);
 
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
 
     const filtered = products.filter(product =>
-      product.name.toLowerCase().includes(query) || 
+      product.name.toLowerCase().includes(query) ||
       product.keyword.some(keyword => keyword.toLowerCase().includes(query))
     );
 
@@ -24,8 +25,25 @@ const SearchBox = () => {
     setFilteredProducts([]);
   };
 
+  const handleClickOutside = (event) => {
+    if (searchBoxRef.current && !searchBoxRef.current.contains(event.target)) {
+      handleReset();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
+  const handleProductClick = () => {
+    handleReset();
+  };
+
   return (
-    <form className="search-container" onReset={handleReset}>
+    <form className="search-container" ref={searchBoxRef} onReset={handleReset}>
       <div className="search-box">
         <input
           id="search-input"
@@ -41,7 +59,12 @@ const SearchBox = () => {
       {searchQuery && filteredProducts.length > 0 && (
         <div className="search-results">
           {filteredProducts.map((product) => (
-            <Link to={`/product/${product.id}`} key={product.id} className="search-result-item">
+            <Link
+              to={`/product/${product.id}`}
+              key={product.id}
+              className="search-result-item"
+              onClick={handleProductClick}
+            >
               <img src={product.image} alt={product.name} className="search-product-image" />
               <p>{product.name}</p>
             </Link>
