@@ -29,7 +29,7 @@ const ProductCards = ({ products, sectionSubtitle, sectionMainTitle }) => {
                 <p className="product-type">{product.type}</p>
                 <h3>{product.name}</h3>
                 <div className="product-price">
-                  <span className="original-price">BDT 700</span>
+                  <span className="original-price">{product.originalPrice}</span>
                   <span className="current-price">BDT {product.price}</span>
                 </div>
               </div>

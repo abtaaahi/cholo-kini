@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { electronicsProducts } from '../data/products';
 import ProductCards from './ProductCards';
+import BrandCards from './BrandCards';
 import './Electronics.css';
 
 const Electronics = () => {
@@ -15,6 +16,7 @@ const Electronics = () => {
         sectionSubtitle="Latest Items"
         sectionMainTitle="Our Electronics Collections"
       />
+      <BrandCards/>
     </div>
   );
 };

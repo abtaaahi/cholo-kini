@@ -120,117 +120,124 @@ export const products = [
 export const electronicsProducts = [
   {
     id: 101,
-    name: "Laptop",
-    price: 10,
-    originalPrice: 12,
-    description: "High-performance laptop.",
-    image: "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
+    name: "Air Conditioner (AC)",
+    price: 55000,
+    originalPrice: 60000,
+    description:
+      "A high-performance air conditioner designed to keep your room cool and comfortable, even during the hottest days of summer. Energy-efficient and equipped with advanced cooling technology, it’s perfect for any home or office.",
+    image: "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-128235.jpg?t=st=1732085907~exp=1732089507~hmac=43afbb6f1399a1f9cd57c20175b394b0da95569d4cafc2ca7cec771c3ce6692d&w=996",
     type: "Electronics",
-    keyword: ["laptop", "high-performance", "computing", "technology", "electronics"],
-    moreImages: [
-      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
-      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
+    keyword: ["AC", "air conditioner", "cooling", "energy-efficient", "electronics"],
+    moreImages: ["https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-128235.jpg?t=st=1732085907~exp=1732089507~hmac=43afbb6f1399a1f9cd57c20175b394b0da95569d4cafc2ca7cec771c3ce6692d&w=996",
+       "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-142861.jpg?t=st=1732085930~exp=1732089530~hmac=d69e9b679c898296be0617ac1e11367d72b1b106a0068bb856a0361511fd66de&w=996",
+        "https://img.freepik.com/free-photo/air-conditioning-decoration-interior_74190-6226.jpg?t=st=1732085972~exp=1732089572~hmac=fbee6f58bcf67f40ef8de3e26631479d370f4a7c4521949127ea013950ca45a1&w=996",
+         "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-142862.jpg?t=st=1732086064~exp=1732089664~hmac=9883a9b0e9b97c756f936df5acd064ad84853e55b493be5e797c14297de052e1&w=996"],
   },
   {
     id: 102,
-    name: "Smartphone",
-    price: 10,
-    originalPrice: 12,
-    description: "Latest smartphone with advanced features.",
-    image: "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "4K LED TV",
+    price: 70000,
+    originalPrice: 75000,
+    description:
+      "Experience crystal-clear visuals with this 4K LED TV. Perfect for movie lovers and gamers, it offers vivid colors, deep contrast, and smart features for streaming your favorite shows seamlessly.",
+    image: "https://img.freepik.com/free-photo/television-houseplants-room-scene-generative-ai_188544-12145.jpg?t=st=1732086237~exp=1732089837~hmac=bcc5cb050a82509472f094ac396ddf3c91161eac16d665302c6f4ce42dc0c189&w=1060",
     type: "Electronics",
-    keyword: ["smartphone", "advanced features", "mobile", "technology", "electronics"],
-    moreImages: [
-      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
-      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
+    keyword: ["4K TV", "LED TV", "smart TV", "home entertainment", "electronics"],
+    moreImages: ["https://img.freepik.com/free-photo/television-houseplants-room-scene-generative-ai_188544-12145.jpg?t=st=1732086237~exp=1732089837~hmac=bcc5cb050a82509472f094ac396ddf3c91161eac16d665302c6f4ce42dc0c189&w=1060",
+      "https://img.freepik.com/free-photo/landscape-nature-scene-tv-appliance-generative-ai_188544-12122.jpg?t=st=1732086258~exp=1732089858~hmac=cf0005f56290d5cd4f59fd295212a608c5a94d9b7a5db16f1219fad613bccaa3&w=1060",
+       "https://img.freepik.com/free-photo/modern-domestic-room-with-technology-nature-accents-generative-ai_188544-19467.jpg?t=st=1732086275~exp=1732089875~hmac=d94f7d66eff6a21f7c7e06de9549702595a319df48869a2611f8409edbc4607a&w=1060", 
+       "https://img.freepik.com/free-photo/tv-with-city-skyline-illuminated-dusk-with-traffic-motion-generative-ai_188544-19469.jpg?t=st=1732086318~exp=1732089918~hmac=e40a68c053c552e0fdcea6d9c78708c78245181348527954cdaf1f4febdc5bce&w=1060"],
   },
   {
     id: 103,
-    name: "Headphones",
-    price: 10,
-    originalPrice: 12,
-    description: "Noise-cancelling headphones.",
-    image: "https://images.pexels.com/photos/3394659/pexels-photo-3394659.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "Refrigerator",
+    price: 40000,
+    originalPrice: 45000,
+    description:
+      "Keep your food fresh and beverages chilled with this energy-efficient refrigerator. Its sleek design and advanced cooling system make it a great addition to any modern kitchen.",
+    image: "https://img.freepik.com/free-photo/kitchen-facilities-picture-fridge-with-food-inside_259150-58056.jpg?t=st=1732086419~exp=1732090019~hmac=21a99646111e3d16421382a971be2b552155b629fdb3fe7f473ba442baad2708&w=360",
     type: "Electronics",
-    keyword: ["headphones", "noise-cancelling", "audio", "music", "electronics"],
-    moreImages: [
-      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
-      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
+    keyword: ["fridge", "refrigerator", "kitchen appliance", "cooling", "electronics"],
+    moreImages: ["https://img.freepik.com/free-photo/kitchen-facilities-picture-fridge-with-food-inside_259150-58056.jpg?t=st=1732086419~exp=1732090019~hmac=21a99646111e3d16421382a971be2b552155b629fdb3fe7f473ba442baad2708&w=360",
+       "https://img.freepik.com/free-photo/composition-healthy-raw-food-fridge_23-2149022082.jpg?t=st=1732086445~exp=1732090045~hmac=09f18155b0ff563c357158af819ca800a32ca25ead1b43b39a77e2e7ee90e223&w=360",
+        "https://img.freepik.com/free-photo/kitchen-facilities-picture-fridge-with-food-inside_259150-58055.jpg?t=st=1732086462~exp=1732090062~hmac=b823d226338ad69974b046d97c68a4334f3a1a70bafd331c4353ff16cefa71f7&w=996",
+         "https://img.freepik.com/free-photo/arrangement-healthy-food-fridge_23-2149022056.jpg?t=st=1732086486~exp=1732090086~hmac=6c22122093086c7da95560c5ca3113c764e9c2d7caaea3c5d1f9f36f76b62ec9&w=360"],
   },
   {
     id: 104,
-    name: "Smartwatch",
-    price: 10,
-    originalPrice: 12,
-    description: "Stylish smartwatch with fitness tracking.",
-    image: "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "Washing Machine",
+    price: 35000,
+    originalPrice: 38000,
+    description:
+      "Simplify your laundry with this powerful washing machine. Featuring multiple wash modes and a sleek design, it ensures your clothes stay clean and fresh with minimal effort.",
+    image: "https://img.freepik.com/free-photo/front-view-young-male-washing-clothes-with-help-washing-machine-white-wall_140725-107814.jpg?t=st=1732086601~exp=1732090201~hmac=a67558db583a8bb6670330a0b44eccdd51c796e184ad60471120c37dd0d1260f&w=360",
     type: "Electronics",
-    keyword: ["smartwatch", "fitness tracking", "wearables", "technology", "electronics"],
-    moreImages: [
-      "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
+    keyword: ["washing machine", "laundry", "home appliance", "electronics"],
+    moreImages: ["https://img.freepik.com/free-photo/front-view-young-male-washing-clothes-with-help-washing-machine-white-wall_140725-107814.jpg?t=st=1732086601~exp=1732090201~hmac=a67558db583a8bb6670330a0b44eccdd51c796e184ad60471120c37dd0d1260f&w=360",
+       "https://img.freepik.com/free-photo/front-view-young-female-taking-out-clean-clothes-from-washing-machine-white-wall_140725-109334.jpg?t=st=1732086628~exp=1732090228~hmac=9155d92cb12bb6569fa21b258dad787af4ab43b23fe35460e16bb67d9b0b6bcc&w=360",
+        "https://img.freepik.com/free-photo/front-view-young-male-with-washer-holding-red-bank-card-white-wall_140725-108033.jpg?t=st=1732086647~exp=1732090247~hmac=f676506ccc8bd3664ec3603e4b81100bc2e40e927bcbda32ee10ce265ec6f08f&w=360",
+         "https://img.freepik.com/free-photo/front-view-young-repairman-closing-tools-bag-washing-machine-white-wall_140725-143563.jpg?t=st=1732086666~exp=1732090266~hmac=81cd450dc4b92fbc03aa551abf5c26c28475a6211126166e1fe3c7aa783125f2&w=360"],
   },
   {
     id: 105,
-    name: "Tablet",
-    price: 10,
-    originalPrice: 12,
-    description: "Portable tablet with HD display.",
-    image: "https://images.pexels.com/photos/193004/pexels-photo-193004.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "Microwave Oven",
+    price: 20000,
+    originalPrice: 25000,
+    description:
+      "Cook, reheat, or bake with this versatile microwave oven. Its easy-to-use controls and modern design make it a perfect fit for any kitchen.",
+    image: "https://img.freepik.com/free-photo/small-oven-white-background_1232-1347.jpg?t=st=1732086742~exp=1732090342~hmac=4ed9502f8a2e205c84c38a4e5414a435101d187a6aa15c15a22e2364619dedd8&w=1060",
     type: "Electronics",
-    keyword: ["tablet", "HD display", "portable", "technology", "electronics"],
-    moreImages: [
-      "https://images.pexels.com/photos/193004/pexels-photo-193004.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
+    keyword: ["microwave", "oven", "cooking appliance", "electronics"],
+    moreImages: ["https://img.freepik.com/free-photo/small-oven-white-background_1232-1347.jpg?t=st=1732086742~exp=1732090342~hmac=4ed9502f8a2e205c84c38a4e5414a435101d187a6aa15c15a22e2364619dedd8&w=1060",
+       "https://img.freepik.com/free-photo/small-oven-white-background_1232-1349.jpg?t=st=1732086765~exp=1732090365~hmac=d8e3158c08a9c13d06e56bbd233711ae94351aeccb92c8963ef0a620a2cf6b28&w=1060",
+        "https://img.freepik.com/free-photo/people-cooking-enjoying-food_23-2149257436.jpg?t=st=1732086794~exp=1732090394~hmac=1efa0135b88d527ecf732043dafbbcd14e6ce0a0f1e45734d756ce63e01c0dd0&w=996",
+         "https://img.freepik.com/free-photo/microwave-oven-isolated-white_93675-128177.jpg?t=st=1732086814~exp=1732090414~hmac=1b40a1cc32e721f7d79fcc375786be01cf70af995f3b5269e0a1d94f099bd483&w=996"],
   },
   {
     id: 106,
-    name: "Camera",
-    price: 10,
-    originalPrice: 12,
-    description: "DSLR camera with high resolution.",
-    image: "https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "Water Purifier",
+    price: 12000,
+    originalPrice: 15000,
+    description:
+      "Ensure your family has access to clean and safe drinking water with this advanced water purifier. Its filtration system removes harmful contaminants while preserving essential minerals.",
+    image: "https://bd.pureitwater.com/uploads/products/classic-1.jpg",
     type: "Electronics",
-    keyword: ["camera", "DSLR", "high resolution", "photography", "electronics"],
-    moreImages: [
-      "https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
+    keyword: ["water purifier", "clean water", "health appliance", "electronics"],
+    moreImages: ["https://bd.pureitwater.com/uploads/products/classic-1.jpg",
+       "https://bd.pureitwater.com/uploads/products/Classic/3.jpg",
+        "https://bd.pureitwater.com/uploads/products/Classic/4.jpg", 
+       "https://bd.pureitwater.com/uploads/products/Classic/3.jpg"],
   },
   {
     id: 107,
-    name: "Gaming Console",
-    price: 10,
-    originalPrice: 12,
-    description: "Next-gen gaming console.",
-    image: "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "Iron",
+    price: 2500,
+    originalPrice: 3000,
+    description:
+      "Achieve wrinkle-free clothes with this lightweight and powerful iron. Designed for quick and efficient performance, it’s a must-have for every household.",
+    image: "https://img.freepik.com/free-photo/front-view-pile-towels-with-iron_23-2148251765.jpg?t=st=1732087050~exp=1732090650~hmac=45939c01ade9e650a01e64c227bcf9c9681536655f88bafa2199614e021e91fc&w=996",
     type: "Electronics",
-    keyword: ["gaming console", "next-gen", "gaming", "technology", "electronics"],
-    moreImages: [
-      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
+    keyword: ["iron", "clothes iron", "home appliance", "electronics"],
+    moreImages: ["https://img.freepik.com/free-photo/front-view-pile-towels-with-iron_23-2148251765.jpg?t=st=1732087050~exp=1732090650~hmac=45939c01ade9e650a01e64c227bcf9c9681536655f88bafa2199614e021e91fc&w=996",
+       "https://img.freepik.com/free-photo/front-view-beautiful-woman-doing-indoor-activity_23-2148813099.jpg?t=st=1732087077~exp=1732090677~hmac=3042a6247d6ebaf994c6ca16d1091676066a577bbbc03dc612809d7976ffd8ae&w=996",
+        "https://img.freepik.com/free-photo/new-iron-isolated-white-background_93675-131871.jpg?t=st=1732087098~exp=1732090698~hmac=1fd37eca9e3a6122310b58761b600c8429c2ccbb75b8ab0d49b34e10d981d0a5&w=740",
+         "https://img.freepik.com/free-photo/blue-blue-steam-iron_140725-7495.jpg?t=st=1732087122~exp=1732090722~hmac=89165de7e495c7b496e804d59d3e5653b0ba307966f75043ae4732810e2d76cd&w=740"],
   },
   {
     id: 108,
-    name: "Bluetooth Speaker",
-    price: 10,
-    originalPrice: 12,
-    description: "Portable Bluetooth speaker with deep bass.",
-    image: "https://images.pexels.com/photos/15485973/pexels-photo-15485973/free-photo-of-white-marshall-wireless-speaker-on-a-shelf.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "Blender",
+    price: 4000,
+    originalPrice: 4500,
+    description:
+      "Prepare smoothies, sauces, and more with this versatile blender. Its powerful motor and sharp blades make it an essential kitchen companion.",
+    image: "https://img.freepik.com/free-photo/blender-juice-machine_74190-4903.jpg?t=st=1732087175~exp=1732090775~hmac=97a7d557430cf92991a027efafb3dd9f135eb6681ce77cf9a348b27aa2510c54&w=996",
     type: "Electronics",
-    keyword: ["bluetooth speaker", "portable", "deep bass", "audio", "electronics"],
-    moreImages: [
-      "https://images.pexels.com/photos/15485973/pexels-photo-15485973/free-photo-of-white-marshall-wireless-speaker-on-a-shelf.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
-  }
+    keyword: ["blender", "kitchen appliance", "food prep", "electronics"],
+    moreImages: ["https://img.freepik.com/free-photo/blender-juice-machine_74190-4903.jpg?t=st=1732087175~exp=1732090775~hmac=97a7d557430cf92991a027efafb3dd9f135eb6681ce77cf9a348b27aa2510c54&w=996", 
+      "https://img.freepik.com/free-photo/blender-celery-arrangement_23-2149080584.jpg?t=st=1732087425~exp=1732091025~hmac=bea6e9ff8ce16118e3376c64b580973ce6d19356f589901095fa16aebcfe794b&w=360", 
+      "https://img.freepik.com/free-photo/blender-juice-machine_1203-7723.jpg?t=st=1732087197~exp=1732090797~hmac=09fa2103aef8fcede8a6e45dfa2d57757cfbe4973829b7e5580f7ebd48273c75&w=360", 
+      "https://img.freepik.com/free-photo/close-up-hand-holding-blender-handle_23-2148898556.jpg?t=st=1732087274~exp=1732090874~hmac=b5e908eaf0faff644fe2954eb152130c5c2dfae82b28cb8dbc561a1601f4edd7&w=360"],
+  },
 ];
 
   export const cosmeticProducts = [

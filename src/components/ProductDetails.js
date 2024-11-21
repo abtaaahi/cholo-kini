@@ -94,7 +94,7 @@ const ProductDetails = () => {
             <p className="rating-details">⭐⭐⭐⭐⭐</p>
             <div className="price">
               <span className="current-price-details">BDT {product.price}</span>
-              <span className="original-price-details">BDT 100.00</span>
+              <span className="original-price-details">BDT {product.originalPrice}</span>
             </div>
             <p className="product-description-details">{product.description}</p>
             <div className="action-buttons">
