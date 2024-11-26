@@ -12,6 +12,9 @@ import Electronics from "./components/Electronics";
 import Cosmetics from "./components/Cosmetics";
 import Footwear from "./components/Footwear";
 import Footer from "./components/Footer";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import ReturnPolicy from "./components/ReturnPolicy";
+import DataPolicy from "./components/DataPolicy";
 import ProductDetails from "./components/ProductDetails";
 import Cart from "./components/Cart";
 import { CartProvider } from "./contexts/CartContext";
@@ -49,6 +52,9 @@ function App() {
             <Route path="/cosmetics" element={<Cosmetics />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/return-policy" element={<ReturnPolicy />} />
+            <Route path="/data-policy" element={<DataPolicy />} />
           </Routes>
           <FloatingButtons />
           <FeatureSection />

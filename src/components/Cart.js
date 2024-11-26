@@ -5,6 +5,7 @@ import pdfFonts from "pdfmake/build/vfs_fonts";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 import "./Cart.css";
+import Loader from './Loader';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -12,8 +13,12 @@ const Cart = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
-  const { cartItems, removeFromCart, updateQuantity } = useContext(CartContext);
+
+  const [isLoaderLoading, setIsLoaderLoading] = useState(false);
+
+  const [orderTimestamp, setOrderTimestamp] = useState(null);
+
+  const { cartItems, removeFromCart, updateQuantity, clearCart } = useContext(CartContext);
 
   const [isModalOpen, setModalOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -26,7 +31,6 @@ const Cart = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isOrderSuccessful, setIsOrderSuccessful] = useState(false);
 
-  // Calculate the total amount
   const totalAmount = cartItems.reduce((total, item) => {
     return total + (item.price * item.quantity);
   }, 0);  
@@ -36,6 +40,9 @@ const Cart = () => {
   };
 
   const handleCloseModal = () => {
+    if (isOrderSuccessful) {
+      clearCart();
+    }
     setModalOpen(false);
     setFormData({
       name: "",
@@ -51,7 +58,7 @@ const Cart = () => {
     const { name, value } = e.target;
   
     if (name === "phone") {
-      if (/^\d*$/.test(value) && value.length <= 11) { // Allow only digits and max length 12
+      if (/^\d*$/.test(value) && value.length <= 11) {
         setFormData({
           ...formData,
           [name]: value,
@@ -85,7 +92,10 @@ const Cart = () => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      setIsLoading(true);  // Start loading
+      const timestamp = new Date().toLocaleString();
+      setOrderTimestamp(timestamp);
+      setIsLoading(true);
+      setIsLoaderLoading(true);
       try {
         const response = await fetch("https://api.backend.sahossain.com/404/api/send-order-email", {
           method: "POST",
@@ -94,9 +104,11 @@ const Cart = () => {
             cartItems,
             totalAmount,
             customerDetails: formData,
+            orderTime: timestamp,
           }),
         });
 
+        console.log("Order Time:", timestamp);
         console.log("Cart Items:", cartItems);
         console.log("Total Amount:", totalAmount);
         console.log("Customer Details:", formData);
@@ -120,7 +132,8 @@ const Cart = () => {
           autoClose: 5000,
         });
       } finally {
-        setIsLoading(false);  // Stop loading
+        setIsLoading(false);
+        setIsLoaderLoading(false);
       }
     } else {
       setErrors(validationErrors);
@@ -128,11 +141,15 @@ const Cart = () => {
   };
 
   const generateInvoice = () => {
-    const dateTime = new Date().toLocaleString().replace(/[/,:]/g, '-'); // Format date and time
+    if (!orderTimestamp) {
+      console.error("Order timestamp not available.");
+      return;
+    }
+
     const docDefinition = {
         content: [
             { text: 'Cholo Kini - Order Invoice', style: 'header' },
-            { text: `Date: ${new Date().toLocaleString()}`, style: 'subheader' },
+            { text: `Date: ${orderTimestamp}`, style: 'subheader' },
             {
                 table: {
                     widths: ['*', '*'],
@@ -143,7 +160,7 @@ const Cart = () => {
                         [{ text: 'Email', bold: true }, formData.email],
                     ],
                 },
-                layout: 'lightHorizontalLines', // Layout for table with light horizontal lines
+                layout: 'lightHorizontalLines',
             },
             {
                 text: 'Order Summary',
@@ -155,8 +172,8 @@ const Cart = () => {
                     widths: ['*', 'auto', 'auto'],
                     body: [
                         [{ text: 'Product', bold: true }, { text: 'Quantity', bold: true }, { text: 'Price', bold: true }],
-                        ...cartItems.map(item => [item.name, item.quantity, item.price * item.quantity]),
-                        [{ text: 'Total', bold: true, colSpan: 2 }, {}, { text: totalAmount.toFixed(2) }], // Show total amount here
+                        ...cartItems.map(item => [item.name, item.quantity, `BDT ${(item.price * item.quantity)}`]),
+                        [{ text: 'Total', bold: true, colSpan: 2 }, {}, { text: `BDT ${totalAmount}` }],
                     ],
                 },
                 layout: 'lightHorizontalLines',
@@ -176,7 +193,7 @@ const Cart = () => {
         },
     };
 
-    pdfMake.createPdf(docDefinition).download(`Invoice_${dateTime}.pdf`);
+    pdfMake.createPdf(docDefinition).download(`Invoice_${orderTimestamp.replace(/[/,:]/g, '-')}.pdf`);
 };
 
   if (cartItems.length === 0) {
@@ -290,8 +307,10 @@ const Cart = () => {
               <button type="cancel" onClick={handleCloseModal}>Cancel</button>
             </form>
           </div>
+          <Loader isVisible={isLoaderLoading} />
         </div>
       )}
+        
     </div>
   );
 };

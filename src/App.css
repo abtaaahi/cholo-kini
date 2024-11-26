@@ -30,3 +30,33 @@ a, button, input, textarea {
   -webkit-tap-highlight-color: transparent; 
   outline: none;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}  
+::-webkit-scrollbar-thumb {
+  background-color: #c3c1c1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+.Toastify__toast-container {
+  width: 100%; 
+  max-width: 500px; 
+}
+
+.Toastify__toast {
+  /* background-color: #333;  */
+  /* color: #fff; */
+  font-size: 16px; 
+  border-radius: 8px; 
+}
+
+/* .Toastify__progress-bar {
+  background-color: #f8b400; 
+} */
