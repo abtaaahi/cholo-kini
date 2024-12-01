@@ -20,6 +20,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-right">
+      <a href="https://cholo.kini.realestate.sahossain.com/" target="_blank" rel="noopener noreferrer">Real Estate</a>
         <Link to="/privacy-policy">Privacy Policy</Link>
         <Link to="/return-policy">Return Policy</Link>
         <Link to="/data-policy">Data Policy</Link>

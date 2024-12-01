@@ -1,0 +1,46 @@
+.real-estate-top-section {
+    background-color: #214a25; 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .real-estate-top-info {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+
+  .click-real-estate{
+    color: #fab634;
+    cursor: pointer; 
+  }
+
+  .click-real-estate:hover{
+    color: white;
+    text-decoration: underline;
+  }
+
+  
+  @media (max-width: 768px) {
+    .real-estate-top-section {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .real-estate-top-info {
+        text-align: center;
+        font-size: 1rem;
+        margin-left: 0;
+      }
+  
+  }
+
+  @media (max-width: 360px) {
+    .real-estate-top-info {
+      font-size: 0.8rem;
+    }
+  }

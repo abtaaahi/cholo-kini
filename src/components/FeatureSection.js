@@ -9,8 +9,8 @@ const features = [
   },
   { 
     number: "02", 
-    title: "Free Shipping", 
-    subtitle: "Enjoy complimentary shipping on all orders, delivered directly to your doorstep with care." 
+    title: "Cash on Delivery", 
+    subtitle: "Enjoy complimentary cash on delivery on all orders, delivered directly to your doorstep with care." 
   },
   { 
     number: "03", 

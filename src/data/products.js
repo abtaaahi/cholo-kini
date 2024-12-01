@@ -516,3 +516,98 @@ export const footwearProducts = [
     ]
   }
 ];
+
+export const foodproducts = [
+  { 
+    id: 501, 
+    name: "Horlicks Mothers Plus", 
+    price: 585, 
+    originalPrice: 635, 
+    description: "A specially formulated health drink for expecting and lactating mothers, Horlicks Mothers Plus is enriched with DHA, choline, and 27 vital nutrients. It supports the nutritional needs of both mom and baby, helping maintain energy and boosting immunity during this special phase of life.", 
+    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986101/IMG-20241129-WA0006_nppadu.jpg",
+    type: "Food",
+    keyword: ["health drink", "mothers nutrition", "pregnancy care", "DHA drink", "lactation support"],
+    moreImages: [
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986101/IMG-20241129-WA0006_nppadu.jpg"
+    ]
+  },
+  { 
+    id: 502, 
+    name: "Junior Horlicks Stage 1", 
+    price: 430, 
+    originalPrice: 480, 
+    description: "Junior Horlicks Stage 1 is a delicious and nutritious drink designed for toddlers aged 2-3 years. Packed with essential nutrients, it aids in physical and brain development, ensuring your little one gets the right start to their growth journey.", 
+    image: "https://www.dccbazar.com.bd/images/thumbnails/465/465/detailed/2/6.jpg",
+    type: "Food",
+    keyword: ["toddlers nutrition", "growth drink", "DHA for kids", "early brain development", "2-3 years health"],
+    moreImages: [
+  "https://www.dccbazar.com.bd/images/thumbnails/465/465/detailed/2/6.jpg"
+    ]
+  },
+  { 
+    id: 503, 
+    name: "Junior Horlicks Stage 2", 
+    price: 460, 
+    originalPrice: 510, 
+    description: "Specially created for growing kids aged 4-6 years, Junior Horlicks Stage 2 supports overall growth and development. With DHA, calcium, and other vital nutrients, it boosts immunity, strengthens bones, and fuels their boundless energy.", 
+    image: "https://diapersbd.com/wp-content/uploads/2021/10/junior-horlicks-jar-500-gm390tk.jpg", 
+    type: "Food",
+    keyword:  ["kids health", "growth booster", "DHA drink", "immunity for kids", "4-6 years nutrition"],
+    moreImages: [
+      "https://diapersbd.com/wp-content/uploads/2021/10/junior-horlicks-jar-500-gm390tk.jpg"
+    ]
+  },
+  { 
+    id: 504, 
+    name: "Horlicks Women's plus", 
+    price: 538, 
+    originalPrice: 588, 
+    description: "Horlicks Women’s Plus is a unique health drink tailored for women. It is enriched with calcium, vitamin D, and other essential nutrients to support bone health, energy levels, and overall wellness, making it the perfect addition to a woman’s daily routine.", 
+    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0008_ydjomz.jpg", 
+    type: "Food",
+    keyword: ["women health drink", "bone health", "calcium-rich", "vitamin D supplement", "women wellness"],
+    moreImages: [
+  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0008_ydjomz.jpg"
+    ]
+  },
+  { 
+    id: 505, 
+    name: "Lite Horlicks", 
+    price: 564, 
+    originalPrice: 614, 
+    description: "Lite Horlicks is the perfect choice for health-conscious adults. With zero added sugar, this malt-based drink provides essential nutrients like protein and vitamins, helping to keep you active and fit without compromising on taste.", 
+    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0009_cwtbm6.jpg", 
+    type: "Food",
+    keyword: ["low sugar drink", "adult nutrition", "fitness drink", "protein health", "lite malt drink"],
+    moreImages: [
+     "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0009_cwtbm6.jpg"
+    ]
+  },
+  { 
+    id: 506, 
+    name: "Standard Horlicks pouch pack", 
+    price: 290, 
+    originalPrice: 340, 
+    description: "The classic Horlicks you’ve loved for generations! This pouch pack is filled with the wholesome goodness of malted barley, wheat, and vital nutrients. It’s a nourishing drink that complements your daily diet, suitable for the whole family.", 
+    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/WhatsApp_Image_2024-11-29_at_21.07.10_affaee1e_iie2nt.jpg",
+    type: "Food",
+    keyword: ["family health", "classic malt drink", "daily nutrition", "energy booster", "Horlicks original"],
+    moreImages: [
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/WhatsApp_Image_2024-11-29_at_21.07.10_affaee1e_iie2nt.jpg"
+     ]
+  },
+  { 
+    id: 507, 
+    name: "Boost", 
+    price: 421, 
+    originalPrice: 471, 
+    description: "Boost is the secret to building stamina! Packed with 3X more protein and enriched with 17 essential nutrients, it’s the ultimate health drink for active kids. Its rich chocolate flavor is loved by children and adults alike.", 
+    image: "https://m.media-amazon.com/images/I/51ngFBC+zYL.jpg", 
+    type: "Food",
+    keyword: ["Boost","stamina booster", "chocolate drink", "energy drink", "kids health", "protein-rich drink"] ,
+    moreImages: [
+      "https://m.media-amazon.com/images/I/51ngFBC+zYL.jpg"
+     ]
+  },
+  
+];

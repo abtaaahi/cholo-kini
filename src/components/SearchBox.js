@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { products } from '../data/products';
+import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts, foodproducts } from "../data/products";
 import './SearchBox.css';
 
 const SearchBox = () => {
@@ -8,11 +8,20 @@ const SearchBox = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const searchBoxRef = useRef(null);
 
+  const allProducts = [
+    ...products,
+    ...electronicsProducts,
+    ...cosmeticProducts,
+    ...sliderProducts,
+    ...footwearProducts,
+    ...foodproducts,
+  ];
+
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
 
-    const filtered = products.filter(product =>
+    const filtered = allProducts.filter(product =>
       product.name.toLowerCase().includes(query) ||
       product.keyword.some(keyword => keyword.toLowerCase().includes(query))
     );

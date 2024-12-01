@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts } from "../data/products";
+import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts, foodproducts } from "../data/products";
 import { CartContext } from "../contexts/CartContext";
 import { toast, ToastContainer } from 'react-toastify';
 import ProductCards from "../components/ProductCards";
@@ -25,6 +25,7 @@ const ProductDetails = () => {
     electronicsProducts.find((p) => p.id === productId) ||
     cosmeticProducts.find((p) => p.id === productId) ||
     sliderProducts.find((p) => p.id === productId) ||
+    foodproducts.find((p) => p.id === productId) ||
     footwearProducts.find((p) => p.id === productId);
 
   const handleAddToCart = () => {
@@ -53,6 +54,8 @@ const ProductDetails = () => {
       relatedProducts = footwearProducts;
     } else if (product.type === "Cosmetics") {
       relatedProducts = cosmeticProducts;
+    } else if (product.type === "Food") {
+      relatedProducts = foodproducts;
     } else {
       relatedProducts = products;
     }
