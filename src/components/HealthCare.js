@@ -1,24 +1,24 @@
 import React, { useEffect } from 'react';
-import { foodproducts } from '../data/products';
+import { healthproducts } from '../data/products';
 import ProductCards from './ProductCards';
 import BrandCards from './BrandCards';
-import './Foods.css';
+import './Electronics.css';
 
-const Foods = () => {
+const HealthCare = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="foods-container">
+    <div className="healthcare-container">
       <ProductCards 
-        products={foodproducts}
+        products={healthproducts}
         sectionSubtitle="Latest Items"
-        sectionMainTitle="Our Food & Nutrition Collections"
+        sectionMainTitle="Our Health Care Products"
       />
       {/* <BrandCards/> */}
     </div>
   );
 };
 
-export default Foods;
+export default HealthCare;

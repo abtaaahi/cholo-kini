@@ -12,7 +12,7 @@ const ReturnPolicy = () => {
 # Return & Refund Policy  
 
 **Your satisfaction is our priority.**  
-At **Cholo Kini**, we strive to ensure that our customers have the best shopping experience. If you're not satisfied with your purchase, our return and refund policy makes it easy to resolve issues.
+At **Kinbo Ekhaney**, we strive to ensure that our customers have the best shopping experience. If you're not satisfied with your purchase, our return and refund policy makes it easy to resolve issues.
 
 ## Valid Reasons to Return  
 We accept returns under the following conditions:  
@@ -47,7 +47,7 @@ If you prefer an exchange over a refund:
 - Delivery charges may apply for exchanges unless the issue is due to our error.  
 
 ## How to Initiate a Return  
-1. Contact our customer support team at **support@cholokini.com** or call **01845117624**.  
+1. Contact our customer support team at **support@kinboekhaney.com** or call **01845117624**.  
 2. Provide your order ID, details of the product, and reason for the return.  
 3. Follow the instructions provided by our team for packaging and return shipping.  
 
@@ -57,10 +57,10 @@ If you prefer an exchange over a refund:
 
 **Contact Us**  
 For any concerns or queries about our return and refund policies, please feel free to reach out:  
-- **Email:** support@cholokini.com  
+- **Email:** support@kinboekhaney.com  
 - **Phone:** 01845117624 
 
-Thank you for trusting **Cholo Kini** for your shopping needs!  
+Thank you for trusting **Kinbo Ekhaney** for your shopping needs!  
   `;
 
   return (

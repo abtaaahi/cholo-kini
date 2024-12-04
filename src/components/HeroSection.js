@@ -14,15 +14,16 @@ const HeroSection = () => {
       <div className="hero large-screen">
         <div className="hero-logo">
         <Link to="/">
-        <h1>Cholo Kini</h1>
+        <h1>Kinbo Ekhaney</h1>
         <h2>Shop</h2>
       </Link>
         </div>
         <div className="hero-sections">
           <Link to="/electronics">Electronics</Link>
           {/* <Link to="/footwear">Footwear</Link> */}
-          <Link to="/cosmetics">Cosmetics</Link>
-          <Link to="/foods">Foods</Link>
+          {/* <Link to="/cosmetics">Cosmetics</Link> */}
+          <Link to="/foods">Food & Nutrition</Link>
+          <Link to="/health">Health Care</Link>
           {/* <a href="https://cholo.kini.realestate.sahossain.com/" target="_blank" rel="noopener noreferrer">Real Estate</a> */}
         </div>
         
@@ -41,7 +42,7 @@ const HeroSection = () => {
         <div className="hero-header">
           <div className="hero-logo">
           <Link to="/">
-          <h1>Cholo Kini</h1>
+          <h1>Kinbo Ekhaney</h1>
           <h2>Shop</h2>
         </Link>
           </div>
@@ -56,8 +57,9 @@ const HeroSection = () => {
         <div className="hero-sections">
           <Link to="/electronics">Electronics</Link>
           {/* <Link to="/footwear">Footwear</Link> */}
-          <Link to="/cosmetics">Cosmetics</Link>
-          <Link to="/foods">Foods</Link>
+          {/* <Link to="/cosmetics">Cosmetics</Link> */}
+          <Link to="/foods">Food & Nutrition</Link>
+          <Link to="/health">Health Care</Link>
           {/* <a href="https://cholo.kini.realestate.sahossain.com/" target="_blank" rel="noopener noreferrer">RealEstate</a> */}
         </div>
       </div>

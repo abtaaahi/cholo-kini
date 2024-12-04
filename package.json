@@ -1,8 +1,8 @@
 {
-  "name": "cholo-kini-shop",
+  "name": "kinbo-ekhaney-shop",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cholo.kini.sahossain.com/",
+  "homepage": "https://shop.kinboekhaney.com/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@testing-library/jest-dom": "^5.17.0",

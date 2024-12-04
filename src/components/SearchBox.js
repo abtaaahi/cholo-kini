@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts, foodproducts } from "../data/products";
+import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts, foodproducts, healthproducts } from "../data/products";
 import './SearchBox.css';
 
 const SearchBox = () => {
@@ -15,6 +15,7 @@ const SearchBox = () => {
     ...sliderProducts,
     ...footwearProducts,
     ...foodproducts,
+    ...healthproducts
   ];
 
   const handleSearch = (e) => {

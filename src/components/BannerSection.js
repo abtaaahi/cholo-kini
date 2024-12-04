@@ -6,11 +6,11 @@ const BannerSection = () => {
     const navigate = useNavigate();
 
     const handleShopNowClick = () => {
-      navigate('/footwear');
+      navigate('/electronics');
     };
 
     const handleViewAllClick = () => {
-        navigate('/electronics');
+        navigate('/foods');
     };
 
   return (
@@ -18,8 +18,8 @@ const BannerSection = () => {
       <div className="banner-content">
         <div className="banner-header">
           <span className="banner-badge">The Best Affordable Online Store</span>
-          <h1>Explore Our <span className="highlight">Modern Footwear Collection</span></h1>
-          <p>Discover the best in footwear, designed for comfort, style, and durability. Our collection features premium sneakers, classic boots, and everyday essentials crafted to support every step. From the latest trends to timeless designs, our footwear is built to enhance your look and provide unmatched comfort, no matter the occasion.</p>
+          <h1>Shop Everything, <span className="highlight">from Everyday to Home!</span></h1>
+          <p>Your one-stop shop for electronics, food, health care, and more! Explore products crafted to enhance your lifestyle and well-being. Stay tuned for our stylish and comfortable upcoming cosmetics & footwear collection!</p>
           <div className="banner-buttons">
             <button className="shop-now" onClick={handleShopNowClick} >Shop Now</button>
             <button className="view-products" onClick={handleViewAllClick}>View All Products</button>
@@ -38,13 +38,13 @@ const BannerSection = () => {
         </div>
         <div className="banner-product-card">
         <div className="banner-product-image">
-            <img src="https://images.unsplash.com/photo-1704949841973-9db544ac35ec?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sneakers" />
+            <img src="https://bd.pureitwater.com/uploads/products/classic-1.jpg" alt="Water Purifier" />
             <div className="hot-tag">HOT!</div>
         </div>
         <div className="banner-product-info">
-            <h3>Sneakers</h3>
+            <h3>Water Purifier</h3>
             <p>Browse More...</p>
-            <a href="/footwear">➔</a>
+            <a href="/electronics">➔</a>
         </div>
         </div>
       </div>

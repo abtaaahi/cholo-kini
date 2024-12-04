@@ -1,120 +1,130 @@
 export const products = [
-  { 
-    id: 1, 
-    name: "Sneakers", 
-    price: 10, 
-    originalPrice: 15, 
-    description: "These sneakers are perfect for running and casual wear, offering comfort and durability.", 
-    image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
-    type: "Footwear",
-    keyword: ["sneaker", "running shoes", "trainers", "sports shoes", "footwear"],
-    moreImages: [
-      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
-      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
-  },
-  { 
-    id: 2, 
-    name: "Boots", 
-    price: 10, 
-    originalPrice: 20, 
-    description: "These boots are ideal for cold weather, offering warmth and protection during winter.", 
-    image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
-    type: "Footwear",
-    keyword: ["boots", "winter boots", "ankle boots", "leather boots", "work boots"],
-    moreImages: [
-      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
-      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
-  },
-  { 
-    id: 3, 
-    name: "Keds", 
-    price: 10, 
-    originalPrice: 18, 
-    description: "Keds are a stylish and comfortable option for everyday wear, with a trendy look and casual appeal.", 
-    image: "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
-    type: "Footwear",
-    keyword: ["keds", "canvas shoes", "sneakers", "casual shoes", "footwear"],
-    moreImages: [
-      "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    ]
-  },
-  { 
-    id: 4, 
-    name: "Shoes", 
-    price: 10, 
-    originalPrice: 15, 
-    description: "These versatile shoes offer comfort for all-day wear with a classic style.", 
-    image: "https://images.unsplash.com/photo-1604868189265-219ba7bf7ea3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
-    type: "Footwear",
-    keyword: ["shoes", "footwear", "dress shoes", "casual shoes", "sports shoes"],
-    moreImages: [
-      "https://images.unsplash.com/photo-1604868189265-219ba7bf7ea3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1604868189265-219ba7bf7ea3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    ]
-  },
-  { 
-    id: 5, 
-    name: "Product 5", 
-    price: 10, 
-    originalPrice: 15, 
-    description: "Modern workspace decor with a laptop and Buddha figure for a serene atmosphere.", 
-    image: "https://images.pexels.com/photos/29054041/pexels-photo-29054041/free-photo-of-modern-workspace-with-laptop-and-buddha-decor.jpeg?auto=compress&cs=tinysrgb&w=600", 
-    type: "Electronics",
-    keyword: ["product 5", "modern workspace", "office decor", "productivity", "laptop"],
-    moreImages: [
-      "https://images.pexels.com/photos/29054041/pexels-photo-29054041/free-photo-of-modern-workspace-with-laptop-and-buddha-decor.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "https://images.pexels.com/photos/29054041/pexels-photo-29054041/free-photo-of-modern-workspace-with-laptop-and-buddha-decor.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
-  },
-  { 
-    id: 6, 
-    name: "Product 6", 
-    price: 10, 
-    originalPrice: 12, 
-    description: "A beauty product that enhances your skin and provides a glowing complexion.", 
-    image: "https://images.pexels.com/photos/1762539/pexels-photo-1762539.jpeg?auto=compress&cs=tinysrgb&w=600", 
-    type: "Cosmetics",
-    keyword: ["product 6", "beauty", "cosmetics", "skin care", "makeup"],
-    moreImages: [
-      "https://images.pexels.com/photos/1762539/pexels-photo-1762539.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "https://images.pexels.com/photos/1762539/pexels-photo-1762539.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
-  },
-  { 
-    id: 7, 
-    name: "Product 7", 
-    price: 10, 
-    originalPrice: 15, 
-    description: "Modern tech gadgets perfect for enhancing your workspace and productivity.", 
-    image: "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600", 
-    type: "Electronics",
-    keyword: ["product 7", "tech gadgets", "workspace", "productivity", "smart devices"],
-    moreImages: [
-      "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
-  },
-  { 
-    id: 8, 
-    name: "Product 8", 
-    price: 10, 
-    originalPrice: 15, 
-    description: "Modern tech gadgets perfect for enhancing your workspace and productivity.", 
-    image: "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600", 
-    type: "Electronics",
-    keyword: ["product 7", "tech gadgets", "workspace", "productivity", "smart devices"],
-    moreImages: [
-      "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "https://images.pexels.com/photos/28896170/pexels-photo-28896170/free-photo-of-stylish-workspace-with-modern-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=600"
-    ]
-  }
+  {
+      id: 101,
+      name: "Air Conditioner (AC)",
+      price: 55000,
+      originalPrice: 60000,
+      weight: 35,
+      description:
+        "A high-performance air conditioner designed to keep your room cool and comfortable, even during the hottest days of summer. Energy-efficient and equipped with advanced cooling technology, it’s perfect for any home or office.",
+      image: "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-128235.jpg?t=st=1732085907~exp=1732089507~hmac=43afbb6f1399a1f9cd57c20175b394b0da95569d4cafc2ca7cec771c3ce6692d&w=996",
+      type: "Electronics",
+      keyword: ["AC", "air conditioner", "cooling", "energy-efficient", "electronics"],
+      moreImages: ["https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-128235.jpg?t=st=1732085907~exp=1732089507~hmac=43afbb6f1399a1f9cd57c20175b394b0da95569d4cafc2ca7cec771c3ce6692d&w=996",
+         "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-142861.jpg?t=st=1732085930~exp=1732089530~hmac=d69e9b679c898296be0617ac1e11367d72b1b106a0068bb856a0361511fd66de&w=996",
+          "https://img.freepik.com/free-photo/air-conditioning-decoration-interior_74190-6226.jpg?t=st=1732085972~exp=1732089572~hmac=fbee6f58bcf67f40ef8de3e26631479d370f4a7c4521949127ea013950ca45a1&w=996",
+           "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-142862.jpg?t=st=1732086064~exp=1732089664~hmac=9883a9b0e9b97c756f936df5acd064ad84853e55b493be5e797c14297de052e1&w=996"],
+    },
+    {
+      id: 105,
+      name: "Microwave Oven",
+      price: 20000,
+      originalPrice: 25000,
+      weight: 5,
+      description:
+        "Cook, reheat, or bake with this versatile microwave oven. Its easy-to-use controls and modern design make it a perfect fit for any kitchen.",
+      image: "https://img.freepik.com/free-photo/small-oven-white-background_1232-1347.jpg?t=st=1732086742~exp=1732090342~hmac=4ed9502f8a2e205c84c38a4e5414a435101d187a6aa15c15a22e2364619dedd8&w=1060",
+      type: "Electronics",
+      keyword: ["microwave", "oven", "cooking appliance", "electronics"],
+      moreImages: ["https://img.freepik.com/free-photo/small-oven-white-background_1232-1347.jpg?t=st=1732086742~exp=1732090342~hmac=4ed9502f8a2e205c84c38a4e5414a435101d187a6aa15c15a22e2364619dedd8&w=1060",
+         "https://img.freepik.com/free-photo/small-oven-white-background_1232-1349.jpg?t=st=1732086765~exp=1732090365~hmac=d8e3158c08a9c13d06e56bbd233711ae94351aeccb92c8963ef0a620a2cf6b28&w=1060",
+          "https://img.freepik.com/free-photo/people-cooking-enjoying-food_23-2149257436.jpg?t=st=1732086794~exp=1732090394~hmac=1efa0135b88d527ecf732043dafbbcd14e6ce0a0f1e45734d756ce63e01c0dd0&w=996",
+           "https://img.freepik.com/free-photo/microwave-oven-isolated-white_93675-128177.jpg?t=st=1732086814~exp=1732090414~hmac=1b40a1cc32e721f7d79fcc375786be01cf70af995f3b5269e0a1d94f099bd483&w=996"],
+    },
+    { 
+      id: 506, 
+      name: "Standard Horlicks pouch pack", 
+      price: 290, 
+      originalPrice: 340, 
+      weight: 0.5,
+      description: "The classic Horlicks you’ve loved for generations! This pouch pack is filled with the wholesome goodness of malted barley, wheat, and vital nutrients. It’s a nourishing drink that complements your daily diet, suitable for the whole family.", 
+      image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/WhatsApp_Image_2024-11-29_at_21.07.10_affaee1e_iie2nt.jpg",
+      type: "Food",
+      keyword: ["family health", "classic malt drink", "daily nutrition", "energy booster", "Horlicks original"],
+      moreImages: [
+        "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/WhatsApp_Image_2024-11-29_at_21.07.10_affaee1e_iie2nt.jpg"
+       ]
+    },
+    { 
+      id: 507, 
+      name: "Boost", 
+      price: 421, 
+      originalPrice: 471, 
+      weight: 0.5,
+      description: "Boost is the secret to building stamina! Packed with 3X more protein and enriched with 17 essential nutrients, it’s the ultimate health drink for active kids. Its rich chocolate flavor is loved by children and adults alike.", 
+      image: "https://m.media-amazon.com/images/I/51ngFBC+zYL.jpg", 
+      type: "Food",
+      keyword: ["Boost","stamina booster", "chocolate drink", "energy drink", "kids health", "protein-rich drink"] ,
+      moreImages: [
+        "https://m.media-amazon.com/images/I/51ngFBC+zYL.jpg"
+       ]
+    },
+    { 
+      id: 501, 
+      name: "Horlicks Mothers Plus", 
+      price: 585, 
+      originalPrice: 635, 
+      weight: 0.5,
+      description: "A specially formulated health drink for expecting and lactating mothers, Horlicks Mothers Plus is enriched with DHA, choline, and 27 vital nutrients. It supports the nutritional needs of both mom and baby, helping maintain energy and boosting immunity during this special phase of life.", 
+      image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986101/IMG-20241129-WA0006_nppadu.jpg",
+      type: "Food",
+      keyword: ["health drink", "mothers nutrition", "pregnancy care", "DHA drink", "lactation support"],
+      moreImages: [
+        "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986101/IMG-20241129-WA0006_nppadu.jpg"
+      ]
+    },
+    { 
+      id: 601, 
+      name: " Pepsodent Gumcare 140gm", 
+      price: 220, 
+      originalPrice: 250, 
+      weight: 0.5,
+      description: "Pepsodent sensitive expert Gumcare - Rid of gum bleeding", 
+      image: "https://images.othoba.com/images/thumbs/0072403_pepsodent-advanced-gum-care-140gm_400.jpeg",
+      type: "Health",
+      keyword: ["pepsodent gum care", "pepsodent sensitive teeth", "pepsodent oral hygiene", " pepsodent toothpaste for gums", " pepsodent gum bleeding solution"],
+      moreImages: [
+        "https://images.othoba.com/images/thumbs/0072403_pepsodent-advanced-gum-care-140gm_400.jpeg",
+        "https://rukminim1.flixcart.com/image/832/832/toothpaste/8/9/s/pepsodent-80-gum-care-toothpaste-original-imadj6cjmmqyktzh.jpeg?q=70",
+        "https://m.media-amazon.com/images/S/aplus-media/sota/171b3d37-8365-4b31-bb63-0dfbc508b319.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+        "https://m.media-amazon.com/images/S/aplus-media/vc/c7c7b645-34eb-43a4-ba37-a622074fe8dd.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+        
+      ]
+    },
+    { 
+      id: 602, 
+      name: " Pepsodent Senex Professional 140gm", 
+      price: 180, 
+      originalPrice: 230, 
+      weight: 0.5,
+      description: "Pepsodent sensitive expert professional - Relief sensitivity within 30 seconds", 
+      image: "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82MDQwM1wvNjA0MDMtMi1rbTVjbGYucG5nIiwiZWRpdHMiOltdfQ==",
+      type: "Health",
+      keyword: [" pepsodent sensitive toothpaste", "pepsodent teeth sensitivity", "pepsodent oral care", " pepsodent tooth enamel care", " pepsodent fast relief toothpaste"],
+      moreImages: [
+        "https://www.freshbazarbd.com/wp-content/uploads/2021/01/FBPepsodent-Sensitive-Expert-Professional-Fresh-140GM.jpg",
+        "https://cdn1.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtZWRpY2luZVwvMzZcLzM2NDk2LTEtMS1vc3ZsNXEucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19",
+        "https://img.mbizmarket.co.id/products/thumbs/800x800/2022/10/05/fe3e99d22f8f659c78d01a544308c135.jpg",
+        "https://toothpastetop.com/wp-content/uploads/2021/09/PEP-SEN-EX-PRNL-140G-NP-1.jpg"
+      ]
+    },
+  
+    {
+      id: 102,
+      name: "4K LED TV",
+      price: 70000,
+      originalPrice: 75000,
+      weight: 10,
+      description:
+        "Experience crystal-clear visuals with this 4K LED TV. Perfect for movie lovers and gamers, it offers vivid colors, deep contrast, and smart features for streaming your favorite shows seamlessly.",
+      image: "https://img.freepik.com/free-photo/television-houseplants-room-scene-generative-ai_188544-12145.jpg?t=st=1732086237~exp=1732089837~hmac=bcc5cb050a82509472f094ac396ddf3c91161eac16d665302c6f4ce42dc0c189&w=1060",
+      type: "Electronics",
+      keyword: ["4K TV", "LED TV", "smart TV", "home entertainment", "electronics"],
+      moreImages: ["https://img.freepik.com/free-photo/television-houseplants-room-scene-generative-ai_188544-12145.jpg?t=st=1732086237~exp=1732089837~hmac=bcc5cb050a82509472f094ac396ddf3c91161eac16d665302c6f4ce42dc0c189&w=1060",
+        "https://img.freepik.com/free-photo/landscape-nature-scene-tv-appliance-generative-ai_188544-12122.jpg?t=st=1732086258~exp=1732089858~hmac=cf0005f56290d5cd4f59fd295212a608c5a94d9b7a5db16f1219fad613bccaa3&w=1060",
+         "https://img.freepik.com/free-photo/modern-domestic-room-with-technology-nature-accents-generative-ai_188544-19467.jpg?t=st=1732086275~exp=1732089875~hmac=d94f7d66eff6a21f7c7e06de9549702595a319df48869a2611f8409edbc4607a&w=1060", 
+         "https://img.freepik.com/free-photo/tv-with-city-skyline-illuminated-dusk-with-traffic-motion-generative-ai_188544-19469.jpg?t=st=1732086318~exp=1732089918~hmac=e40a68c053c552e0fdcea6d9c78708c78245181348527954cdaf1f4febdc5bce&w=1060"],
+    },
 ];
 
 export const electronicsProducts = [
@@ -240,119 +250,6 @@ export const electronicsProducts = [
   },
 ];
 
-  export const cosmeticProducts = [
-    {
-      id: 201,
-      name: "Moisturizing Cream",
-      price: 10,
-      originalPrice: 12,
-      description: "Hydrating cream for dry skin.",
-      image: "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
-      type: "Cosmetics",
-      keyword: ["moisturizer", "dry skin", "hydrating", "cream", "skincare"],
-      moreImages: [
-        "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-        "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
-        "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
-        "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
-      ]
-    },
-    {
-      id: 202,
-      name: "Lipstick",
-      price: 10,
-      originalPrice: 12,
-      description: "Long-lasting matte lipstick.",
-      image: "https://images.pexels.com/photos/1625037/pexels-photo-1625037.jpeg?auto=compress&cs=tinysrgb&w=400",
-      type: "Cosmetics",
-      keyword: ["lipstick", "matte", "long-lasting", "makeup", "beauty"],
-      moreImages: [
-        "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
-        "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
-        "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
-        "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
-      ]
-    },
-    {
-      id: 203,
-      name: "Eyeliner",
-      price: 10,
-      originalPrice: 12,
-      description: "Waterproof liquid eyeliner.",
-      image: "https://images.pexels.com/photos/2535913/pexels-photo-2535913.jpeg?auto=compress&cs=tinysrgb&w=400",
-      type: "Cosmetics",
-      keyword: ["eyeliner", "waterproof", "liquid", "makeup", "beauty"],
-      moreImages: [
-        "https://images.pexels.com/photos/2535913/pexels-photo-2535913.jpeg?auto=compress&cs=tinysrgb&w=400"
-      ]
-    },
-    {
-      id: 204,
-      name: "Foundation",
-      price: 10,
-      originalPrice: 12,
-      description: "Full coverage liquid foundation.",
-      image: "https://images.pexels.com/photos/354962/pexels-photo-354962.jpeg?auto=compress&cs=tinysrgb&w=400",
-      type: "Cosmetics",
-      keyword: ["foundation", "liquid", "full coverage", "makeup", "beauty"],
-      moreImages: [
-        "https://images.pexels.com/photos/354962/pexels-photo-354962.jpeg?auto=compress&cs=tinysrgb&w=400"
-      ]
-    },
-    {
-      id: 205,
-      name: "Blush",
-      price: 10,
-      originalPrice: 12,
-      description: "Silky powder blush for a radiant glow.",
-      image: "https://images.pexels.com/photos/3059639/pexels-photo-3059639.jpeg?auto=compress&cs=tinysrgb&w=400",
-      type: "Cosmetics",
-      keyword: ["blush", "powder", "radiant glow", "makeup", "beauty"],
-      moreImages: [
-        "https://images.pexels.com/photos/3059639/pexels-photo-3059639.jpeg?auto=compress&cs=tinysrgb&w=400"
-      ]
-    },
-    {
-      id: 206,
-      name: "Mascara",
-      price: 10,
-      originalPrice: 12,
-      description: "Volumizing mascara for fuller lashes.",
-      image: "https://images.pexels.com/photos/3373731/pexels-photo-3373731.jpeg?auto=compress&cs=tinysrgb&w=600",
-      type: "Cosmetics",
-      keyword: ["mascara", "volumizing", "fuller lashes", "makeup", "beauty"],
-      moreImages: [
-        "https://images.pexels.com/photos/3373731/pexels-photo-3373731.jpeg?auto=compress&cs=tinysrgb&w=600"
-      ]
-    },
-    {
-      id: 207,
-      name: "Face Serum",
-      price: 10,
-      originalPrice: 12,
-      description: "Anti-aging face serum with hyaluronic acid.",
-      image: "https://images.pexels.com/photos/8140917/pexels-photo-8140917.jpeg?auto=compress&cs=tinysrgb&w=600",
-      type: "Cosmetics",
-      keyword: ["face serum", "anti-aging", "hyaluronic acid", "skincare", "beauty"],
-      moreImages: [
-        "https://images.pexels.com/photos/8140917/pexels-photo-8140917.jpeg?auto=compress&cs=tinysrgb&w=600"
-      ]
-    },
-    {
-      id: 208,
-      name: "Sunscreen",
-      price: 10,
-      originalPrice: 12,
-      description: "Broad-spectrum sunscreen SPF 50.",
-      image: "https://images.pexels.com/photos/1029896/pexels-photo-1029896.jpeg?auto=compress&cs=tinysrgb&w=600",
-      type: "Cosmetics",
-      keyword: ["sunscreen", "SPF 50", "broad-spectrum", "skincare", "protection"],
-      moreImages: [
-        "https://images.pexels.com/photos/1029896/pexels-photo-1029896.jpeg?auto=compress&cs=tinysrgb&w=600"
-      ]
-    }
-  ];
-
 export const sliderProducts = [
   { 
     id: 401, 
@@ -397,6 +294,329 @@ export const sliderProducts = [
     keyword: ["apartment", "real estate", "luxury apartment", "modern living"],
     moreImages: [
       "https://images.unsplash.com/photo-1485125639709-a60c3a500bf1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ]
+  }
+];
+
+export const foodproducts = [
+  { 
+    id: 501, 
+    name: "Horlicks Mothers Plus", 
+    price: 585, 
+    originalPrice: 635, 
+    description: "A specially formulated health drink for expecting and lactating mothers, Horlicks Mothers Plus is enriched with DHA, choline, and 27 vital nutrients. It supports the nutritional needs of both mom and baby, helping maintain energy and boosting immunity during this special phase of life.", 
+    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986101/IMG-20241129-WA0006_nppadu.jpg",
+    type: "Food",
+    keyword: ["health drink", "mothers nutrition", "pregnancy care", "DHA drink", "lactation support"],
+    moreImages: [
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986101/IMG-20241129-WA0006_nppadu.jpg"
+    ]
+  },
+  { 
+    id: 502, 
+    name: "Junior Horlicks Stage 1", 
+    price: 430, 
+    originalPrice: 480, 
+    description: "Junior Horlicks Stage 1 is a delicious and nutritious drink designed for toddlers aged 2-3 years. Packed with essential nutrients, it aids in physical and brain development, ensuring your little one gets the right start to their growth journey.", 
+    image: "https://www.dccbazar.com.bd/images/thumbnails/465/465/detailed/2/6.jpg",
+    type: "Food",
+    keyword: ["toddlers nutrition", "growth drink", "DHA for kids", "early brain development", "2-3 years health"],
+    moreImages: [
+  "https://www.dccbazar.com.bd/images/thumbnails/465/465/detailed/2/6.jpg"
+    ]
+  },
+  { 
+    id: 503, 
+    name: "Junior Horlicks Stage 2", 
+    price: 460, 
+    originalPrice: 510, 
+    description: "Specially created for growing kids aged 4-6 years, Junior Horlicks Stage 2 supports overall growth and development. With DHA, calcium, and other vital nutrients, it boosts immunity, strengthens bones, and fuels their boundless energy.", 
+    image: "https://diapersbd.com/wp-content/uploads/2021/10/junior-horlicks-jar-500-gm390tk.jpg", 
+    type: "Food",
+    keyword:  ["kids health", "growth booster", "DHA drink", "immunity for kids", "4-6 years nutrition"],
+    moreImages: [
+      "https://diapersbd.com/wp-content/uploads/2021/10/junior-horlicks-jar-500-gm390tk.jpg"
+    ]
+  },
+  { 
+    id: 504, 
+    name: "Horlicks Women's plus", 
+    price: 538, 
+    originalPrice: 588, 
+    description: "Horlicks Women’s Plus is a unique health drink tailored for women. It is enriched with calcium, vitamin D, and other essential nutrients to support bone health, energy levels, and overall wellness, making it the perfect addition to a woman’s daily routine.", 
+    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0008_ydjomz.jpg", 
+    type: "Food",
+    keyword: ["women health drink", "bone health", "calcium-rich", "vitamin D supplement", "women wellness"],
+    moreImages: [
+  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0008_ydjomz.jpg"
+    ]
+  },
+  { 
+    id: 505, 
+    name: "Lite Horlicks", 
+    price: 564, 
+    originalPrice: 614, 
+    description: "Lite Horlicks is the perfect choice for health-conscious adults. With zero added sugar, this malt-based drink provides essential nutrients like protein and vitamins, helping to keep you active and fit without compromising on taste.", 
+    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0009_cwtbm6.jpg", 
+    type: "Food",
+    keyword: ["low sugar drink", "adult nutrition", "fitness drink", "protein health", "lite malt drink"],
+    moreImages: [
+     "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0009_cwtbm6.jpg"
+    ]
+  },
+  { 
+    id: 506, 
+    name: "Standard Horlicks pouch pack", 
+    price: 290, 
+    originalPrice: 340, 
+    description: "The classic Horlicks you’ve loved for generations! This pouch pack is filled with the wholesome goodness of malted barley, wheat, and vital nutrients. It’s a nourishing drink that complements your daily diet, suitable for the whole family.", 
+    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/WhatsApp_Image_2024-11-29_at_21.07.10_affaee1e_iie2nt.jpg",
+    type: "Food",
+    keyword: ["family health", "classic malt drink", "daily nutrition", "energy booster", "Horlicks original"],
+    moreImages: [
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/WhatsApp_Image_2024-11-29_at_21.07.10_affaee1e_iie2nt.jpg"
+     ]
+  },
+  { 
+    id: 507, 
+    name: "Boost", 
+    price: 421, 
+    originalPrice: 471, 
+    description: "Boost is the secret to building stamina! Packed with 3X more protein and enriched with 17 essential nutrients, it’s the ultimate health drink for active kids. Its rich chocolate flavor is loved by children and adults alike.", 
+    image: "https://m.media-amazon.com/images/I/51ngFBC+zYL.jpg", 
+    type: "Food",
+    keyword: ["Boost","stamina booster", "chocolate drink", "energy drink", "kids health", "protein-rich drink"] ,
+    moreImages: [
+      "https://m.media-amazon.com/images/I/51ngFBC+zYL.jpg"
+     ]
+  },
+  
+];
+
+export const healthproducts = [
+  { 
+    id: 601, 
+    name: " Pepsodent Gumcare 140gm", 
+    price: 220, 
+    originalPrice: 250, 
+    description: "Pepsodent sensitive expert Gumcare - Rid of gum bleeding", 
+    image: "https://images.othoba.com/images/thumbs/0072403_pepsodent-advanced-gum-care-140gm_400.jpeg",
+    type: "Health",
+    keyword: ["pepsodent gum care", "pepsodent sensitive teeth", "pepsodent oral hygiene", " pepsodent toothpaste for gums", " pepsodent gum bleeding solution"],
+    moreImages: [
+      "https://images.othoba.com/images/thumbs/0072403_pepsodent-advanced-gum-care-140gm_400.jpeg",
+      "https://rukminim1.flixcart.com/image/832/832/toothpaste/8/9/s/pepsodent-80-gum-care-toothpaste-original-imadj6cjmmqyktzh.jpeg?q=70",
+      "https://m.media-amazon.com/images/S/aplus-media/sota/171b3d37-8365-4b31-bb63-0dfbc508b319.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+      "https://m.media-amazon.com/images/S/aplus-media/vc/c7c7b645-34eb-43a4-ba37-a622074fe8dd.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+      
+    ]
+  },
+  { 
+    id: 602, 
+    name: " Pepsodent Senex Professional 140gm", 
+    price: 180, 
+    originalPrice: 230, 
+    description: "Pepsodent sensitive expert professional - Relief sensitivity within 30 seconds", 
+    image: "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82MDQwM1wvNjA0MDMtMi1rbTVjbGYucG5nIiwiZWRpdHMiOltdfQ==",
+    type: "Health",
+    keyword: [" pepsodent sensitive toothpaste", "pepsodent teeth sensitivity", "pepsodent oral care", " pepsodent tooth enamel care", " pepsodent fast relief toothpaste"],
+    moreImages: [
+      "https://www.freshbazarbd.com/wp-content/uploads/2021/01/FBPepsodent-Sensitive-Expert-Professional-Fresh-140GM.jpg",
+      "https://cdn1.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtZWRpY2luZVwvMzZcLzM2NDk2LTEtMS1vc3ZsNXEucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19",
+      "https://img.mbizmarket.co.id/products/thumbs/800x800/2022/10/05/fe3e99d22f8f659c78d01a544308c135.jpg",
+      "https://toothpastetop.com/wp-content/uploads/2021/09/PEP-SEN-EX-PRNL-140G-NP-1.jpg"
+    ]
+  },
+  { 
+    id: 603, 
+    name: " Pepsodent Senex Professional 70gm", 
+    price: 100, 
+    originalPrice: 150, 
+    description: "Pepsodent sensitive expert professional - Relief sensitivity within 30 seconds", 
+    image: "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0VmFyaWFudC1wdl9pbWFnZXNcLzY1NzUwXC82NTc1MC1fUGVwc29kZW50X1Rvb3RocGFzdGVfU2Vuc2l0aXZlX0V4cGVydF9QLVBlcHNvZGVudC1jMTEzZS00MTczNTYtc3JlZHZ2LnBuZyIsImVkaXRzIjpbXX0=", 
+    type: "Health",
+    keyword: ["pepsodent sensitive teeth care", "pepsodent small pack toothpaste", "pepsodent teeth protection", " pepsodent fast action toothpaste", "pepsodent oral health"],
+    moreImages: [
+      "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0VmFyaWFudC1wdl9pbWFnZXNcLzY1NzUwXC82NTc1MC1fUGVwc29kZW50X1Rvb3RocGFzdGVfU2Vuc2l0aXZlX0V4cGVydF9QLVBlcHNvZGVudC1jMTEzZS00MTczNTYtc3JlZHZ2LnBuZyIsImVkaXRzIjpbXX0=",
+      "https://down-ph.img.susercontent.com/file/8e03e1589c088cdd328f7ad15dde85b2",
+      "https://i.ytimg.com/vi/6XxNIB3tlX0/maxresdefault.jpg",
+      "https://th.bing.com/th/id/OIP.nXNSviMn_8N6lO3QuFV0QgHaHa?rs=1&pid=ImgDetMain"
+    ]
+  },
+  { 
+    id: 604, 
+    name: " Pepsodent Senex Professional 40gm", 
+    price: 80, 
+    originalPrice: 130, 
+    description: "Pepsodent sensitive expert professional - Relief sensitivity within 30 seconds", 
+    image: "https://img.drz.lazcdn.com/static/bd/p/2a020931aa8bc0bf28a11981f186e5b7.jpg_720x720q80.jpg", 
+    type: "Health",
+    keyword: ["pepsodent mini toothpaste", " Pepsodent sensitive teeth relief", "tooth enamel", "pepsodent travel toothpaste", "pepsodent oral care essentials"],
+    moreImages: [
+      "https://img.drz.lazcdn.com/static/bd/p/2a020931aa8bc0bf28a11981f186e5b7.jpg_720x720q80.jpg",
+      "https://images.shajgoj.com/wp-content/uploads/2022/03/46439778-professional-sensitive-expert-80g-tiff-1-small.jpg",
+      "https://th.bing.com/th/id/R.146da38412bbf6603bbcc65d08b3e42b?rik=wwB8NiC4WvCYeQ&pid=ImgRaw&r=0",
+      "https://th.bing.com/th/id/OIP.nXNSviMn_8N6lO3QuFV0QgHaHa?rs=1&pid=ImgDetMain",
+    ]
+  },
+];
+
+// export const sliderProducts = [
+//   {
+//       id: 106,
+//       name: "Water Purifier",
+//       price: 12000,
+//       originalPrice: 15000,
+//       description:
+//         "Ensure your family has access to clean and safe drinking water with this advanced water purifier. Its filtration system removes harmful contaminants while preserving essential minerals.",
+//       image: "https://bd.pureitwater.com/uploads/products/classic-1.jpg",
+//       type: "Electronics",
+//       keyword: ["water purifier", "clean water", "health appliance", "electronics"],
+//       moreImages: ["https://bd.pureitwater.com/uploads/products/classic-1.jpg",
+//          "https://bd.pureitwater.com/uploads/products/Classic/3.jpg",
+//           "https://bd.pureitwater.com/uploads/products/Classic/4.jpg", 
+//          "https://bd.pureitwater.com/uploads/products/Classic/3.jpg"],
+//     },
+//     { 
+//       id: 505, 
+//       name: "Lite Horlicks", 
+//       price: 564, 
+//       originalPrice: 614, 
+//       description: "Lite Horlicks is the perfect choice for health-conscious adults. With zero added sugar, this malt-based drink provides essential nutrients like protein and vitamins, helping to keep you active and fit without compromising on taste.", 
+//       image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0009_cwtbm6.jpg", 
+//       type: "Food",
+//       keyword: ["low sugar drink", "adult nutrition", "fitness drink", "protein health", "lite malt drink"],
+//       moreImages: [
+//        "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0009_cwtbm6.jpg"
+//       ]
+//     },
+//     { 
+//       id: 604, 
+//       name: " Pepsodent Senex Professional 40gm", 
+//       price: 80, 
+//       originalPrice: 130, 
+//       description: "Pepsodent sensitive expert professional - Relief sensitivity within 30 seconds", 
+//       image: "https://img.drz.lazcdn.com/static/bd/p/2a020931aa8bc0bf28a11981f186e5b7.jpg_720x720q80.jpg", 
+//       type: "Health",
+//       keyword: ["pepsodent mini toothpaste", " Pepsodent sensitive teeth relief", "tooth enamel", "pepsodent travel toothpaste", "pepsodent oral care essentials"],
+//       moreImages: [
+//         "https://img.drz.lazcdn.com/static/bd/p/2a020931aa8bc0bf28a11981f186e5b7.jpg_720x720q80.jpg",
+//         "https://images.shajgoj.com/wp-content/uploads/2022/03/46439778-professional-sensitive-expert-80g-tiff-1-small.jpg",
+//         "https://th.bing.com/th/id/R.146da38412bbf6603bbcc65d08b3e42b?rik=wwB8NiC4WvCYeQ&pid=ImgRaw&r=0",
+//         "https://th.bing.com/th/id/OIP.nXNSviMn_8N6lO3QuFV0QgHaHa?rs=1&pid=ImgDetMain",
+//       ]
+//     },
+// ];
+
+export const cosmeticProducts = [
+  {
+    id: 201,
+    name: "Moisturizing Cream",
+    price: 10,
+    originalPrice: 12,
+    description: "Hydrating cream for dry skin.",
+    image: "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+    type: "Cosmetics",
+    keyword: ["moisturizer", "dry skin", "hydrating", "cream", "skincare"],
+    moreImages: [
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ]
+  },
+  {
+    id: 202,
+    name: "Lipstick",
+    price: 10,
+    originalPrice: 12,
+    description: "Long-lasting matte lipstick.",
+    image: "https://images.pexels.com/photos/1625037/pexels-photo-1625037.jpeg?auto=compress&cs=tinysrgb&w=400",
+    type: "Cosmetics",
+    keyword: ["lipstick", "matte", "long-lasting", "makeup", "beauty"],
+    moreImages: [
+      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1730308991/one_jo8gx2.png",
+      "https://images.pexels.com/photos/6963141/pexels-photo-6963141.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg",
+      "https://images.pexels.com/photos/133579/pexels-photo-133579.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ]
+  },
+  {
+    id: 203,
+    name: "Eyeliner",
+    price: 10,
+    originalPrice: 12,
+    description: "Waterproof liquid eyeliner.",
+    image: "https://images.pexels.com/photos/2535913/pexels-photo-2535913.jpeg?auto=compress&cs=tinysrgb&w=400",
+    type: "Cosmetics",
+    keyword: ["eyeliner", "waterproof", "liquid", "makeup", "beauty"],
+    moreImages: [
+      "https://images.pexels.com/photos/2535913/pexels-photo-2535913.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ]
+  },
+  {
+    id: 204,
+    name: "Foundation",
+    price: 10,
+    originalPrice: 12,
+    description: "Full coverage liquid foundation.",
+    image: "https://images.pexels.com/photos/354962/pexels-photo-354962.jpeg?auto=compress&cs=tinysrgb&w=400",
+    type: "Cosmetics",
+    keyword: ["foundation", "liquid", "full coverage", "makeup", "beauty"],
+    moreImages: [
+      "https://images.pexels.com/photos/354962/pexels-photo-354962.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ]
+  },
+  {
+    id: 205,
+    name: "Blush",
+    price: 10,
+    originalPrice: 12,
+    description: "Silky powder blush for a radiant glow.",
+    image: "https://images.pexels.com/photos/3059639/pexels-photo-3059639.jpeg?auto=compress&cs=tinysrgb&w=400",
+    type: "Cosmetics",
+    keyword: ["blush", "powder", "radiant glow", "makeup", "beauty"],
+    moreImages: [
+      "https://images.pexels.com/photos/3059639/pexels-photo-3059639.jpeg?auto=compress&cs=tinysrgb&w=400"
+    ]
+  },
+  {
+    id: 206,
+    name: "Mascara",
+    price: 10,
+    originalPrice: 12,
+    description: "Volumizing mascara for fuller lashes.",
+    image: "https://images.pexels.com/photos/3373731/pexels-photo-3373731.jpeg?auto=compress&cs=tinysrgb&w=600",
+    type: "Cosmetics",
+    keyword: ["mascara", "volumizing", "fuller lashes", "makeup", "beauty"],
+    moreImages: [
+      "https://images.pexels.com/photos/3373731/pexels-photo-3373731.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ]
+  },
+  {
+    id: 207,
+    name: "Face Serum",
+    price: 10,
+    originalPrice: 12,
+    description: "Anti-aging face serum with hyaluronic acid.",
+    image: "https://images.pexels.com/photos/8140917/pexels-photo-8140917.jpeg?auto=compress&cs=tinysrgb&w=600",
+    type: "Cosmetics",
+    keyword: ["face serum", "anti-aging", "hyaluronic acid", "skincare", "beauty"],
+    moreImages: [
+      "https://images.pexels.com/photos/8140917/pexels-photo-8140917.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ]
+  },
+  {
+    id: 208,
+    name: "Sunscreen",
+    price: 10,
+    originalPrice: 12,
+    description: "Broad-spectrum sunscreen SPF 50.",
+    image: "https://images.pexels.com/photos/1029896/pexels-photo-1029896.jpeg?auto=compress&cs=tinysrgb&w=600",
+    type: "Cosmetics",
+    keyword: ["sunscreen", "SPF 50", "broad-spectrum", "skincare", "protection"],
+    moreImages: [
+      "https://images.pexels.com/photos/1029896/pexels-photo-1029896.jpeg?auto=compress&cs=tinysrgb&w=600"
     ]
   }
 ];
@@ -515,99 +735,4 @@ export const footwearProducts = [
       "https://img.drz.lazcdn.com/static/bd/p/6502ea35eac4cbdc199499e394609c5f.jpg_720x720q80.jpg"
     ]
   }
-];
-
-export const foodproducts = [
-  { 
-    id: 501, 
-    name: "Horlicks Mothers Plus", 
-    price: 585, 
-    originalPrice: 635, 
-    description: "A specially formulated health drink for expecting and lactating mothers, Horlicks Mothers Plus is enriched with DHA, choline, and 27 vital nutrients. It supports the nutritional needs of both mom and baby, helping maintain energy and boosting immunity during this special phase of life.", 
-    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986101/IMG-20241129-WA0006_nppadu.jpg",
-    type: "Food",
-    keyword: ["health drink", "mothers nutrition", "pregnancy care", "DHA drink", "lactation support"],
-    moreImages: [
-      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986101/IMG-20241129-WA0006_nppadu.jpg"
-    ]
-  },
-  { 
-    id: 502, 
-    name: "Junior Horlicks Stage 1", 
-    price: 430, 
-    originalPrice: 480, 
-    description: "Junior Horlicks Stage 1 is a delicious and nutritious drink designed for toddlers aged 2-3 years. Packed with essential nutrients, it aids in physical and brain development, ensuring your little one gets the right start to their growth journey.", 
-    image: "https://www.dccbazar.com.bd/images/thumbnails/465/465/detailed/2/6.jpg",
-    type: "Food",
-    keyword: ["toddlers nutrition", "growth drink", "DHA for kids", "early brain development", "2-3 years health"],
-    moreImages: [
-  "https://www.dccbazar.com.bd/images/thumbnails/465/465/detailed/2/6.jpg"
-    ]
-  },
-  { 
-    id: 503, 
-    name: "Junior Horlicks Stage 2", 
-    price: 460, 
-    originalPrice: 510, 
-    description: "Specially created for growing kids aged 4-6 years, Junior Horlicks Stage 2 supports overall growth and development. With DHA, calcium, and other vital nutrients, it boosts immunity, strengthens bones, and fuels their boundless energy.", 
-    image: "https://diapersbd.com/wp-content/uploads/2021/10/junior-horlicks-jar-500-gm390tk.jpg", 
-    type: "Food",
-    keyword:  ["kids health", "growth booster", "DHA drink", "immunity for kids", "4-6 years nutrition"],
-    moreImages: [
-      "https://diapersbd.com/wp-content/uploads/2021/10/junior-horlicks-jar-500-gm390tk.jpg"
-    ]
-  },
-  { 
-    id: 504, 
-    name: "Horlicks Women's plus", 
-    price: 538, 
-    originalPrice: 588, 
-    description: "Horlicks Women’s Plus is a unique health drink tailored for women. It is enriched with calcium, vitamin D, and other essential nutrients to support bone health, energy levels, and overall wellness, making it the perfect addition to a woman’s daily routine.", 
-    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0008_ydjomz.jpg", 
-    type: "Food",
-    keyword: ["women health drink", "bone health", "calcium-rich", "vitamin D supplement", "women wellness"],
-    moreImages: [
-  "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0008_ydjomz.jpg"
-    ]
-  },
-  { 
-    id: 505, 
-    name: "Lite Horlicks", 
-    price: 564, 
-    originalPrice: 614, 
-    description: "Lite Horlicks is the perfect choice for health-conscious adults. With zero added sugar, this malt-based drink provides essential nutrients like protein and vitamins, helping to keep you active and fit without compromising on taste.", 
-    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0009_cwtbm6.jpg", 
-    type: "Food",
-    keyword: ["low sugar drink", "adult nutrition", "fitness drink", "protein health", "lite malt drink"],
-    moreImages: [
-     "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0009_cwtbm6.jpg"
-    ]
-  },
-  { 
-    id: 506, 
-    name: "Standard Horlicks pouch pack", 
-    price: 290, 
-    originalPrice: 340, 
-    description: "The classic Horlicks you’ve loved for generations! This pouch pack is filled with the wholesome goodness of malted barley, wheat, and vital nutrients. It’s a nourishing drink that complements your daily diet, suitable for the whole family.", 
-    image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/WhatsApp_Image_2024-11-29_at_21.07.10_affaee1e_iie2nt.jpg",
-    type: "Food",
-    keyword: ["family health", "classic malt drink", "daily nutrition", "energy booster", "Horlicks original"],
-    moreImages: [
-      "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/WhatsApp_Image_2024-11-29_at_21.07.10_affaee1e_iie2nt.jpg"
-     ]
-  },
-  { 
-    id: 507, 
-    name: "Boost", 
-    price: 421, 
-    originalPrice: 471, 
-    description: "Boost is the secret to building stamina! Packed with 3X more protein and enriched with 17 essential nutrients, it’s the ultimate health drink for active kids. Its rich chocolate flavor is loved by children and adults alike.", 
-    image: "https://m.media-amazon.com/images/I/51ngFBC+zYL.jpg", 
-    type: "Food",
-    keyword: ["Boost","stamina booster", "chocolate drink", "energy drink", "kids health", "protein-rich drink"] ,
-    moreImages: [
-      "https://m.media-amazon.com/images/I/51ngFBC+zYL.jpg"
-     ]
-  },
-  
 ];

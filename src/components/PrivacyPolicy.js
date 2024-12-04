@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
   const markdown = `
 # Privacy Policy  
 
-**Welcome to Cholo Kini!**  
+**Welcome to Kinbo Ekhaney!**  
 We value your trust and are dedicated to safeguarding your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you interact with our platform.  
 
 ## Information We Collect  
@@ -67,11 +67,11 @@ This policy may be updated periodically to reflect changes in our practices. Sig
 
 ## Contact Us  
 For any concerns or queries about our privacy practices, reach out to us:  
-- **Email:** support@cholokini.com  
+- **Email:** support@kinboekhaney.com  
 - **Phone:** 01845117624  
-- **Office Address:** Cholo Kini, 123 Business Avenue, Chattogram, Bangladesh  
+- **Office Address:** Kinbo Ekhaney, 123 Business Avenue, Chattogram, Bangladesh  
 
-Thank you for trusting **Cholo Kini** with your data. Your privacy is our commitment!  
+Thank you for trusting **Kinbo Ekhaney** with your data. Your privacy is our commitment!  
   `;
 
   return (

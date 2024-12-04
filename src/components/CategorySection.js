@@ -6,13 +6,13 @@ const CategorySection = () => {
     <div className="category-section">
       <div className="category-card">
         <div className="category-info">
-          <span className="item-count">2500+ Items</span>
-          <h2>For Women's</h2>
+          <span className="item-count">Coming Soon</span>
+          <h2>Footwear</h2>
           <ul>
-            <li>Blazers</li>
-            <li>T-Shirts and Blouses</li>
-            <li>Dresses</li>
-            <li>Jackets & Coats</li>
+            <li>Sneakers</li>
+            <li>Keds</li>
+            <li>Boots</li>
+            <li>Shoes...</li>
           </ul>
         </div>
         <div className="category-image woman"></div>
@@ -20,13 +20,13 @@ const CategorySection = () => {
 
       <div className="category-card">
         <div className="category-info">
-          <span className="item-count">1500+ Items</span>
-          <h2>For Men's</h2>
+          <span className="item-count">Coming Soon</span>
+          <h2>Cosmetics</h2>
           <ul>
-            <li>Blazers</li>
-            <li>T-Shirts and Shirts</li>
-            <li>Jackets & Coats</li>
-            <li>Jeans</li>
+            <li>Sunscreen</li>
+            <li>Serum</li>
+            <li>Mascara</li>
+            <li>Foundation...</li>
           </ul>
         </div>
         <div className="category-image man"></div>
@@ -34,13 +34,13 @@ const CategorySection = () => {
 
       <div className="category-card">
         <div className="category-info">
-          <span className="item-count">800+ Items</span>
+          <span className="item-count">Coming Soon</span>
           <h2>Accessories</h2>
           <ul>
             <li>Handbags</li>
             <li>Watches</li>
             <li>Sunglasses</li>
-            <li>Hat</li>
+            <li>Hat...</li>
           </ul>
         </div>
         <div className="category-image accessories"></div>

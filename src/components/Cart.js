@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 import "./Cart.css";
 import Loader from './Loader';
+import DeliveryPlan from "./DeliveryPlan";
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -97,7 +98,7 @@ const Cart = () => {
       setIsLoading(true);
       setIsLoaderLoading(true);
       try {
-        const response = await fetch("https://api.backend.sahossain.com/404/api/send-order-email", {
+        const response = await fetch("https://api.backend.sahossain.com/api/send-order-email", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -148,7 +149,7 @@ const Cart = () => {
 
     const docDefinition = {
         content: [
-            { text: 'Cholo Kini - Order Invoice', style: 'header' },
+            { text: 'Kinbo Ekhaney - Order Invoice', style: 'header' },
             { text: `Date: ${orderTimestamp}`, style: 'subheader' },
             {
                 table: {
@@ -310,7 +311,7 @@ const Cart = () => {
           <Loader isVisible={isLoaderLoading} />
         </div>
       )}
-        
+        <DeliveryPlan/>
     </div>
   );
 };

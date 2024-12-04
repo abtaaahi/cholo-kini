@@ -3,7 +3,7 @@ import './RealEstateBanner.css';
 
 const RealEstateBanner = () => {
   const handleRealEstateClick = () => {
-    window.open("https://cholo.kini.realestate.sahossain.com/", "_blank", "noopener,noreferrer");
+    window.open("https://realestate.kinboekhaney.com/", "_blank", "noopener,noreferrer");
   };
 
   return (

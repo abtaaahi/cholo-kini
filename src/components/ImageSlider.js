@@ -24,7 +24,8 @@ const ImageSlider = () => {
         autoplaySpeed={3000}
       >
         {sliderProducts.map((product) => (
-          <div key={product.id} onClick={() => handleImageClick(product.id)}>
+          // <div key={product.id} onClick={() => handleImageClick(product.id)}>
+          <div key={product.id}>
             <img src={product.image} alt={product.name} />
           </div>
         ))}

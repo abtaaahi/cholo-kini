@@ -6,7 +6,7 @@ const HeroTopSection = () => {
   const navigate = useNavigate();
 
   const handleBuyNowClick = () => {
-    navigate('/footwear');
+    navigate('/electronics');
   };
   return (
     <div className="hero-top-section">
@@ -19,6 +19,12 @@ const HeroTopSection = () => {
       <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <i className="ri-facebook-circle-fill"></i>
         </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <i className="ri-messenger-fill"></i>
+          </a>
+          <a href="https://wp.me" target="_blank" rel="noopener noreferrer">
+            <i className="ri-whatsapp-fill"></i>
+          </a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
           <i className="ri-instagram-fill"></i> 
         </a>

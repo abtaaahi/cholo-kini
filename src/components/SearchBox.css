@@ -132,7 +132,7 @@
 
   @media (max-width: 600px) {
     :root {
-        --open-width: 10em;
+        --open-width: 9em;
     }
 
     .search-container {
@@ -146,6 +146,6 @@
 
 @media (max-width: 360px) {
   :root {
-      --open-width: 8em;
+      --open-width: 7em;
   }
 }

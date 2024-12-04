@@ -12,6 +12,7 @@ import Electronics from "./components/Electronics";
 import Cosmetics from "./components/Cosmetics";
 import Footwear from "./components/Footwear";
 import Foods from "./components/Foods";
+import HealthCare from "./components/HealthCare";
 import Footer from "./components/Footer";
 import RealEstateBanner from "./components/RealEstateBanner";
 import PrivacyPolicy from "./components/PrivacyPolicy";
@@ -53,6 +54,7 @@ function App() {
             <Route path="/footwear" element={<Footwear />} />
             <Route path="/cosmetics" element={<Cosmetics />} />
             <Route path="/foods" element={<Foods />} />
+            <Route path="/health" element={<HealthCare />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />

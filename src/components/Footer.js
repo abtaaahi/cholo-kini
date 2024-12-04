@@ -6,10 +6,16 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-left">
-        <p>Follow us on:</p>
+        <p>Stay connected with us on:</p>
         <div className="social-icons">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <i className="ri-facebook-circle-fill"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <i className="ri-messenger-fill"></i>
+          </a>
+          <a href="https://wp.me" target="_blank" rel="noopener noreferrer">
+            <i className="ri-whatsapp-fill"></i>
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <i className="ri-instagram-fill"></i>
@@ -26,7 +32,7 @@ const Footer = () => {
         <Link to="/data-policy">Data Policy</Link>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 Cholo Kini. All Rights Reserved.</p>
+        <p>&copy; 2024 Kinbo Ekhaney. All Rights Reserved.</p>
       </div>
     </footer>
   );

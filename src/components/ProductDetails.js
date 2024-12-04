@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts, foodproducts } from "../data/products";
+import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts, foodproducts, healthproducts } from "../data/products";
 import { CartContext } from "../contexts/CartContext";
 import { toast, ToastContainer } from 'react-toastify';
 import ProductCards from "../components/ProductCards";
@@ -26,6 +26,7 @@ const ProductDetails = () => {
     cosmeticProducts.find((p) => p.id === productId) ||
     sliderProducts.find((p) => p.id === productId) ||
     foodproducts.find((p) => p.id === productId) ||
+    healthproducts.find((p) => p.id === productId) ||
     footwearProducts.find((p) => p.id === productId);
 
   const handleAddToCart = () => {
@@ -99,6 +100,7 @@ const ProductDetails = () => {
               <span className="current-price-details">BDT {product.price}</span>
               <span className="original-price-details">BDT {product.originalPrice}</span>
             </div>
+            <p>Weight: {product.weight} KG</p>
             <p className="product-description-details">{product.description}</p>
             <div className="action-buttons">
               <button onClick={handleAddToCart} className="add-to-cart">Add to Cart</button>
