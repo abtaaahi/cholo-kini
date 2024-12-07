@@ -16,7 +16,7 @@ const DeliveryPlan = () => {
       notes: [
         "1% COD charge will be applicable",
         "This price is exclusive of any VAT/TAX.",
-        "For weight more than 2KG, additional 15TK/Per KG (SAME CITY) will be applicable.",
+        "For weight more than 2KG, additional 15TK/Per KG will be applicable.",
       ],
     },
     outside: {

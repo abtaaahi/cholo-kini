@@ -20,7 +20,7 @@ export const products = [
       name: "Microwave Oven",
       price: 20000,
       originalPrice: 25000,
-      weight: 5,
+      weight: 20,
       description:
         "Cook, reheat, or bake with this versatile microwave oven. Its easy-to-use controls and modern design make it a perfect fit for any kitchen.",
       image: "https://img.freepik.com/free-photo/small-oven-white-background_1232-1347.jpg?t=st=1732086742~exp=1732090342~hmac=4ed9502f8a2e205c84c38a4e5414a435101d187a6aa15c15a22e2364619dedd8&w=1060",
@@ -36,7 +36,7 @@ export const products = [
       name: "Standard Horlicks pouch pack", 
       price: 290, 
       originalPrice: 340, 
-      weight: 0.5,
+      weight: 1,
       description: "The classic Horlicks you’ve loved for generations! This pouch pack is filled with the wholesome goodness of malted barley, wheat, and vital nutrients. It’s a nourishing drink that complements your daily diet, suitable for the whole family.", 
       image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/WhatsApp_Image_2024-11-29_at_21.07.10_affaee1e_iie2nt.jpg",
       type: "Food",
@@ -50,7 +50,7 @@ export const products = [
       name: "Boost", 
       price: 421, 
       originalPrice: 471, 
-      weight: 0.5,
+      weight: 1,
       description: "Boost is the secret to building stamina! Packed with 3X more protein and enriched with 17 essential nutrients, it’s the ultimate health drink for active kids. Its rich chocolate flavor is loved by children and adults alike.", 
       image: "https://m.media-amazon.com/images/I/51ngFBC+zYL.jpg", 
       type: "Food",
@@ -64,7 +64,7 @@ export const products = [
       name: "Horlicks Mothers Plus", 
       price: 585, 
       originalPrice: 635, 
-      weight: 0.5,
+      weight: 1,
       description: "A specially formulated health drink for expecting and lactating mothers, Horlicks Mothers Plus is enriched with DHA, choline, and 27 vital nutrients. It supports the nutritional needs of both mom and baby, helping maintain energy and boosting immunity during this special phase of life.", 
       image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986101/IMG-20241129-WA0006_nppadu.jpg",
       type: "Food",
@@ -78,7 +78,7 @@ export const products = [
       name: " Pepsodent Gumcare 140gm", 
       price: 220, 
       originalPrice: 250, 
-      weight: 0.5,
+      weight: 0.14,
       description: "Pepsodent sensitive expert Gumcare - Rid of gum bleeding", 
       image: "https://images.othoba.com/images/thumbs/0072403_pepsodent-advanced-gum-care-140gm_400.jpeg",
       type: "Health",
@@ -96,7 +96,7 @@ export const products = [
       name: " Pepsodent Senex Professional 140gm", 
       price: 180, 
       originalPrice: 230, 
-      weight: 0.5,
+      weight: 0.14,
       description: "Pepsodent sensitive expert professional - Relief sensitivity within 30 seconds", 
       image: "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82MDQwM1wvNjA0MDMtMi1rbTVjbGYucG5nIiwiZWRpdHMiOltdfQ==",
       type: "Health",
@@ -133,6 +133,7 @@ export const electronicsProducts = [
     name: "Air Conditioner (AC)",
     price: 55000,
     originalPrice: 60000,
+    weight: 35,
     description:
       "A high-performance air conditioner designed to keep your room cool and comfortable, even during the hottest days of summer. Energy-efficient and equipped with advanced cooling technology, it’s perfect for any home or office.",
     image: "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-128235.jpg?t=st=1732085907~exp=1732089507~hmac=43afbb6f1399a1f9cd57c20175b394b0da95569d4cafc2ca7cec771c3ce6692d&w=996",
@@ -148,6 +149,7 @@ export const electronicsProducts = [
     name: "4K LED TV",
     price: 70000,
     originalPrice: 75000,
+    weight: 10,
     description:
       "Experience crystal-clear visuals with this 4K LED TV. Perfect for movie lovers and gamers, it offers vivid colors, deep contrast, and smart features for streaming your favorite shows seamlessly.",
     image: "https://img.freepik.com/free-photo/television-houseplants-room-scene-generative-ai_188544-12145.jpg?t=st=1732086237~exp=1732089837~hmac=bcc5cb050a82509472f094ac396ddf3c91161eac16d665302c6f4ce42dc0c189&w=1060",
@@ -163,6 +165,7 @@ export const electronicsProducts = [
     name: "Refrigerator",
     price: 40000,
     originalPrice: 45000,
+    weight: 50,
     description:
       "Keep your food fresh and beverages chilled with this energy-efficient refrigerator. Its sleek design and advanced cooling system make it a great addition to any modern kitchen.",
     image: "https://img.freepik.com/free-photo/kitchen-facilities-picture-fridge-with-food-inside_259150-58056.jpg?t=st=1732086419~exp=1732090019~hmac=21a99646111e3d16421382a971be2b552155b629fdb3fe7f473ba442baad2708&w=360",
@@ -178,6 +181,7 @@ export const electronicsProducts = [
     name: "Washing Machine",
     price: 35000,
     originalPrice: 38000,
+    weight: 30,
     description:
       "Simplify your laundry with this powerful washing machine. Featuring multiple wash modes and a sleek design, it ensures your clothes stay clean and fresh with minimal effort.",
     image: "https://img.freepik.com/free-photo/front-view-young-male-washing-clothes-with-help-washing-machine-white-wall_140725-107814.jpg?t=st=1732086601~exp=1732090201~hmac=a67558db583a8bb6670330a0b44eccdd51c796e184ad60471120c37dd0d1260f&w=360",
@@ -193,6 +197,7 @@ export const electronicsProducts = [
     name: "Microwave Oven",
     price: 20000,
     originalPrice: 25000,
+    weight: 20,
     description:
       "Cook, reheat, or bake with this versatile microwave oven. Its easy-to-use controls and modern design make it a perfect fit for any kitchen.",
     image: "https://img.freepik.com/free-photo/small-oven-white-background_1232-1347.jpg?t=st=1732086742~exp=1732090342~hmac=4ed9502f8a2e205c84c38a4e5414a435101d187a6aa15c15a22e2364619dedd8&w=1060",
@@ -208,6 +213,7 @@ export const electronicsProducts = [
     name: "Water Purifier",
     price: 12000,
     originalPrice: 15000,
+    weight: 20,
     description:
       "Ensure your family has access to clean and safe drinking water with this advanced water purifier. Its filtration system removes harmful contaminants while preserving essential minerals.",
     image: "https://bd.pureitwater.com/uploads/products/classic-1.jpg",
@@ -223,6 +229,7 @@ export const electronicsProducts = [
     name: "Iron",
     price: 2500,
     originalPrice: 3000,
+    weight: 5,
     description:
       "Achieve wrinkle-free clothes with this lightweight and powerful iron. Designed for quick and efficient performance, it’s a must-have for every household.",
     image: "https://img.freepik.com/free-photo/front-view-pile-towels-with-iron_23-2148251765.jpg?t=st=1732087050~exp=1732090650~hmac=45939c01ade9e650a01e64c227bcf9c9681536655f88bafa2199614e021e91fc&w=996",
@@ -238,6 +245,7 @@ export const electronicsProducts = [
     name: "Blender",
     price: 4000,
     originalPrice: 4500,
+    weight: 2,
     description:
       "Prepare smoothies, sauces, and more with this versatile blender. Its powerful motor and sharp blades make it an essential kitchen companion.",
     image: "https://img.freepik.com/free-photo/blender-juice-machine_74190-4903.jpg?t=st=1732087175~exp=1732090775~hmac=97a7d557430cf92991a027efafb3dd9f135eb6681ce77cf9a348b27aa2510c54&w=996",
@@ -304,6 +312,7 @@ export const foodproducts = [
     name: "Horlicks Mothers Plus", 
     price: 585, 
     originalPrice: 635, 
+    weight: 1,
     description: "A specially formulated health drink for expecting and lactating mothers, Horlicks Mothers Plus is enriched with DHA, choline, and 27 vital nutrients. It supports the nutritional needs of both mom and baby, helping maintain energy and boosting immunity during this special phase of life.", 
     image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986101/IMG-20241129-WA0006_nppadu.jpg",
     type: "Food",
@@ -317,6 +326,7 @@ export const foodproducts = [
     name: "Junior Horlicks Stage 1", 
     price: 430, 
     originalPrice: 480, 
+    weight: 1,
     description: "Junior Horlicks Stage 1 is a delicious and nutritious drink designed for toddlers aged 2-3 years. Packed with essential nutrients, it aids in physical and brain development, ensuring your little one gets the right start to their growth journey.", 
     image: "https://www.dccbazar.com.bd/images/thumbnails/465/465/detailed/2/6.jpg",
     type: "Food",
@@ -330,6 +340,7 @@ export const foodproducts = [
     name: "Junior Horlicks Stage 2", 
     price: 460, 
     originalPrice: 510, 
+    weight: 1,
     description: "Specially created for growing kids aged 4-6 years, Junior Horlicks Stage 2 supports overall growth and development. With DHA, calcium, and other vital nutrients, it boosts immunity, strengthens bones, and fuels their boundless energy.", 
     image: "https://diapersbd.com/wp-content/uploads/2021/10/junior-horlicks-jar-500-gm390tk.jpg", 
     type: "Food",
@@ -343,6 +354,7 @@ export const foodproducts = [
     name: "Horlicks Women's plus", 
     price: 538, 
     originalPrice: 588, 
+    weight: 1,
     description: "Horlicks Women’s Plus is a unique health drink tailored for women. It is enriched with calcium, vitamin D, and other essential nutrients to support bone health, energy levels, and overall wellness, making it the perfect addition to a woman’s daily routine.", 
     image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0008_ydjomz.jpg", 
     type: "Food",
@@ -356,6 +368,7 @@ export const foodproducts = [
     name: "Lite Horlicks", 
     price: 564, 
     originalPrice: 614, 
+    weight: 1,
     description: "Lite Horlicks is the perfect choice for health-conscious adults. With zero added sugar, this malt-based drink provides essential nutrients like protein and vitamins, helping to keep you active and fit without compromising on taste.", 
     image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/IMG-20241129-WA0009_cwtbm6.jpg", 
     type: "Food",
@@ -369,6 +382,7 @@ export const foodproducts = [
     name: "Standard Horlicks pouch pack", 
     price: 290, 
     originalPrice: 340, 
+    weight: 1,
     description: "The classic Horlicks you’ve loved for generations! This pouch pack is filled with the wholesome goodness of malted barley, wheat, and vital nutrients. It’s a nourishing drink that complements your daily diet, suitable for the whole family.", 
     image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1732986102/WhatsApp_Image_2024-11-29_at_21.07.10_affaee1e_iie2nt.jpg",
     type: "Food",
@@ -382,6 +396,7 @@ export const foodproducts = [
     name: "Boost", 
     price: 421, 
     originalPrice: 471, 
+    weight: 1,
     description: "Boost is the secret to building stamina! Packed with 3X more protein and enriched with 17 essential nutrients, it’s the ultimate health drink for active kids. Its rich chocolate flavor is loved by children and adults alike.", 
     image: "https://m.media-amazon.com/images/I/51ngFBC+zYL.jpg", 
     type: "Food",
@@ -399,6 +414,7 @@ export const healthproducts = [
     name: " Pepsodent Gumcare 140gm", 
     price: 220, 
     originalPrice: 250, 
+    weight: 0.14,
     description: "Pepsodent sensitive expert Gumcare - Rid of gum bleeding", 
     image: "https://images.othoba.com/images/thumbs/0072403_pepsodent-advanced-gum-care-140gm_400.jpeg",
     type: "Health",
@@ -416,6 +432,7 @@ export const healthproducts = [
     name: " Pepsodent Senex Professional 140gm", 
     price: 180, 
     originalPrice: 230, 
+    weight: 0.14,
     description: "Pepsodent sensitive expert professional - Relief sensitivity within 30 seconds", 
     image: "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82MDQwM1wvNjA0MDMtMi1rbTVjbGYucG5nIiwiZWRpdHMiOltdfQ==",
     type: "Health",
@@ -432,6 +449,7 @@ export const healthproducts = [
     name: " Pepsodent Senex Professional 70gm", 
     price: 100, 
     originalPrice: 150, 
+    weight: 0.07,
     description: "Pepsodent sensitive expert professional - Relief sensitivity within 30 seconds", 
     image: "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0VmFyaWFudC1wdl9pbWFnZXNcLzY1NzUwXC82NTc1MC1fUGVwc29kZW50X1Rvb3RocGFzdGVfU2Vuc2l0aXZlX0V4cGVydF9QLVBlcHNvZGVudC1jMTEzZS00MTczNTYtc3JlZHZ2LnBuZyIsImVkaXRzIjpbXX0=", 
     type: "Health",
@@ -448,6 +466,7 @@ export const healthproducts = [
     name: " Pepsodent Senex Professional 40gm", 
     price: 80, 
     originalPrice: 130, 
+    weight: 0.04,
     description: "Pepsodent sensitive expert professional - Relief sensitivity within 30 seconds", 
     image: "https://img.drz.lazcdn.com/static/bd/p/2a020931aa8bc0bf28a11981f186e5b7.jpg_720x720q80.jpg", 
     type: "Health",
@@ -459,7 +478,466 @@ export const healthproducts = [
       "https://th.bing.com/th/id/OIP.nXNSviMn_8N6lO3QuFV0QgHaHa?rs=1&pid=ImgDetMain",
     ]
   },
-];
+  { 
+    id: 605, 
+    name: "Pepsodent Sensodyne Freshmint 40 gm", 
+    price: 110, 
+    originalPrice: 160, 
+    description: "Sensodyne Freshmint toothpaste for sensitive teeth.", 
+    image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg", 
+    type: "Health",
+    keyword: ["pepsodent sensodyne freshmint", " pepsodent toothpaste sensitive teeth"],
+    moreImages: [
+      "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg",
+      "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg",
+      "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg",
+      "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg"
+    ],
+    weight: 0.04 
+  },
+  { 
+    id: 606, 
+    name: " Pepsodent Sensodyne Freshmint 75 gm", 
+    price: 190, 
+    originalPrice: 240, 
+    description: "Sensodyne Freshmint toothpaste for sensitive teeth.", 
+    image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg", 
+    type: "Health",
+    keyword: ["sensodyne freshmint", "pepsodent toothpaste sensitive teeth"],
+    moreImages: [
+      "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg", 
+      "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg", 
+      "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg", 
+      "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg"
+    ],
+    weight: 0.075  
+  },
+
+  { 
+        id: 607, 
+        name: "Pepsodent Sensodyne Fresh Gel 40 gm", 
+        price: 110, 
+        originalPrice: 160,
+        description: "Sensodyne Fresh Gel toothpaste for sensitive teeth.", 
+        image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg", 
+        type: "Health",
+        keyword: ["Pepsodent sensodyne fresh gel", "Pepsodent toothpaste sensitive teeth"],
+        moreImages: [
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg"
+        ],
+        weight: 0.04
+      },
+      { 
+        id: 608, 
+        name: "Pepsodent Sensodyne Fresh Gel 75 gm", 
+        price: 190, 
+        originalPrice: 240,
+        description: "Sensodyne Fresh Gel toothpaste for sensitive teeth.", 
+        image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg", 
+        type: "Health",
+        keyword: ["Pepsodent sensodyne fresh gel", "Pepsodent toothpaste sensitive teeth"],
+        moreImages: [
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg"
+        ],
+        weight: 0.075
+      },
+      { 
+        id: 609, 
+        name: "Pepsodent Sensodyne Whitening 70 gm", 
+        price: 200, 
+        originalPrice: 250,
+        description: "Sensodyne Whitening toothpaste for brighter, sensitive teeth.", 
+        image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_2_j4fi5v.jpg", 
+        type: "Health",
+        keyword: ["Pepsodent sensodyne whitening", "Pepsodent toothpaste sensitive teeth"],
+        moreImages: [
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_2_j4fi5v.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_2_j4fi5v.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_2_j4fi5v.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_2_j4fi5v.jpg"
+        ],
+        weight: 0.07
+      },
+      { 
+        id: 610, 
+        name: "Pepsodent Sensodyne Deep Clean 70 gm", 
+        price: 200, 
+        originalPrice: 250,
+        description: "Sensodyne Deep Clean toothpaste for sensitive teeth.", 
+        image: "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/sensodyne-v3/en_CA/homepage/menu-deep-en.png?auto=format", 
+        type: "Health",
+        keyword: ["Pepsodent sensodyne deep clean", "Pepsodent toothpaste sensitive teeth"],
+        moreImages: [
+          "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/sensodyne-v3/en_CA/homepage/menu-deep-en.png?auto=format", 
+          "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/sensodyne-v3/en_CA/homepage/menu-deep-en.png?auto=format", 
+          "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/sensodyne-v3/en_CA/homepage/menu-deep-en.png?auto=format", 
+          "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/sensodyne-v3/en_CA/homepage/menu-deep-en.png?auto=format"
+        ],
+        weight: 0.07
+      },
+      { 
+        id: 611, 
+        name: "Pepsodent Sensodyne Rapid Relief 40 gm", 
+        price: 170, 
+        originalPrice: 220,
+        description: "Sensodyne Rapid Relief toothpaste for instant sensitivity relief.", 
+        image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_c6wzps.jpg", 
+        type: "Health",
+        keyword: ["Pepsodent sensodyne rapid relief", "Pepsodent toothpaste sensitive teeth"],
+        moreImages: [
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_c6wzps.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_c6wzps.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_c6wzps.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_c6wzps.jpg"
+        ],
+        weight: 0.04
+      },
+      { 
+        id: 612, 
+        name: "Pepsodent Sensodyne Rapid Relief 80 gm", 
+        price: 310, 
+        originalPrice: 370, 
+        description: "Sensodyne Rapid Relief toothpaste for instant sensitivity relief.", 
+        image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_c6wzps.jpg", 
+        type: "Health",
+        keyword: ["Pepsodent sensodyne rapid relief", "Pepsodent toothpaste sensitive teeth"],
+        moreImages: [
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_c6wzps.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_c6wzps.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_c6wzps.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_c6wzps.jpg"
+        ],
+        weight: 0.08
+      },
+      { 
+        id: 613, 
+        name: "Pepsodent Sensodyne Freshmint 150 gm", 
+        price: 340, 
+        originalPrice: 390, 
+        description: "Sensodyne Freshmint toothpaste for sensitive teeth.", 
+        image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg", 
+        type: "Health",
+        keyword: ["Pepsodent sensodyne freshmint", "Pepsodent toothpaste sensitive teeth"],
+        moreImages: [
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411755/WhatsApp_Image_2024-12-05_at_9.12.24_PM_1_dcbmoi.jpg"
+        ],
+        weight: 0.15
+      },
+      { 
+        id: 614, 
+        name: "Pepsodent Sensodyne Freshgel 150 gm", 
+        price: 340, 
+        originalPrice: 390,
+        description: "Sensodyne Freshgel toothpaste for sensitive teeth.", 
+        image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg", 
+        type: "Health",
+        keyword: ["Pepsodent sensodyne freshgel", "Pepsodent toothpaste sensitive teeth"],
+        moreImages: [
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_jgovvy.jpg"
+        ],
+        weight: 0.15
+      },
+      { 
+        id: 615, 
+        name: "Pepsodent Sensodyne Repair & Protect 70 gm", 
+        price: 340,
+        originalPrice: 370, 
+        description: "Sensodyne Repair & Protect toothpaste for sensitive teeth.", 
+        image: "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/sensodyne/en_AE/Packshot_update/Promo_Image_Repair_Protect.png?auto=format", 
+        type: "Health",
+        keyword: ["Pepsodent sensodyne repair and protect", "Pepsodent toothpaste sensitive teeth"],
+        moreImages: [
+          "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/sensodyne/en_AE/Packshot_update/Promo_Image_Repair_Protect.png?auto=format",
+          "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/sensodyne/en_AE/Packshot_update/Promo_Image_Repair_Protect.png?auto=format",
+          "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/sensodyne/en_AE/Packshot_update/Promo_Image_Repair_Protect.png?auto=format",
+          "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/sensodyne/en_AE/Packshot_update/Promo_Image_Repair_Protect.png?auto=format"
+        ],
+        weight: 0.07
+      },
+      { 
+        id: 616, 
+        name: "ENO Lemon Flavour (150 gm)", 
+        price: 15, 
+        originalPrice: 30, 
+        description: "ENO Lemon Flavour for instant relief from acidity.", 
+        image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_1_almbqt.jpg", 
+        type: "Health",
+        keyword: ["eno lemon", "acidity relief", "eno antacid"],
+        moreImages: [
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_1_almbqt.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_1_almbqt.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_1_almbqt.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411759/WhatsApp_Image_2024-12-05_at_9.12.22_PM_1_almbqt.jpg"
+        ], 
+        weight: 0.15
+      },
+      { 
+        id: 617, 
+        name: "ENO Orange Flavour (150 gm)", 
+        price: 15, 
+        originalPrice: 30, 
+        description: "ENO Orange Flavour for instant relief from acidity.", 
+        image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411753/WhatsApp_Image_2024-12-05_at_9.12.26_PM_2_prk1hw.jpg", 
+        type: "Health",
+        keyword: ["eno orange", "acidity relief", "eno antacid"],
+        moreImages: [
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411753/WhatsApp_Image_2024-12-05_at_9.12.26_PM_2_prk1hw.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411753/WhatsApp_Image_2024-12-05_at_9.12.26_PM_2_prk1hw.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411753/WhatsApp_Image_2024-12-05_at_9.12.26_PM_2_prk1hw.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411753/WhatsApp_Image_2024-12-05_at_9.12.26_PM_2_prk1hw.jpg"
+        ],
+        weight: 0.15
+      },
+      { 
+        id: 618, 
+        name: "Parodontax Daily Fluoride (75 gm)", 
+        price: 200, 
+        originalPrice: 250, 
+        description: "Parodontax Daily Fluoride for healthy gums and teeth.", 
+        image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411753/WhatsApp_Image_2024-12-05_at_9.12.27_PM_hvsgmg.jpg", 
+        type: "Health",
+        keyword: ["parodontax fluoride", "healthy gums", "toothpaste gum health"],
+        moreImages: [
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411753/WhatsApp_Image_2024-12-05_at_9.12.27_PM_hvsgmg.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411753/WhatsApp_Image_2024-12-05_at_9.12.27_PM_hvsgmg.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411753/WhatsApp_Image_2024-12-05_at_9.12.27_PM_hvsgmg.jpg", 
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411753/WhatsApp_Image_2024-12-05_at_9.12.27_PM_hvsgmg.jpg"
+        ], 
+        weight: 0.075
+      },
+      { 
+        id: 619, 
+        name: "Parodontax Ultra Clean (75 gm)", 
+        price: 200, 
+        originalPrice: 250, 
+        description: "Parodontax Ultra Clean toothpaste for healthy gums and fresh breath.", 
+        image: "https://m.media-amazon.com/images/I/51zK8fjm8lL._AC_UF894,1000_QL80_.jpg", 
+        type: "Health",
+        keyword: ["parodontax ultra clean", "healthy gums", "toothpaste fresh breath"],
+        moreImages: [
+          "https://m.media-amazon.com/images/I/51zK8fjm8lL._AC_UF894,1000_QL80_.jpg", 
+          "https://m.media-amazon.com/images/I/51zK8fjm8lL._AC_UF894,1000_QL80_.jpg", 
+          "https://m.media-amazon.com/images/I/51zK8fjm8lL._AC_UF894,1000_QL80_.jpg", 
+          "https://m.media-amazon.com/images/I/51zK8fjm8lL._AC_UF894,1000_QL80_.jpg"
+        ], 
+        weight: 0.075
+      },
+      { 
+        id: 620, 
+        name: " Pepsodent Sensitivity and Gum Paste 70 gm", 
+        price: 280, 
+        originalPrice: 330, 
+        description: "Toothpaste for sensitivity and gum care.", 
+        image: "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0VmFyaWFudC1wdl9pbWFnZXNcLzY1NzUwXC82NTc1MC1fUGVwc29kZW50X1Rvb3RocGFzdGVfU2Vuc2l0aXZlX0V4cGVydF9QLVBlcHNvZGVudC1jMTEzZS00MTczNTYtc3JlZHZ2LnBuZyIsImVkaXRzIjpbXX0=", 
+        type: "Health",
+        keyword: [" pepsodent sensitivity gum paste", "pepsodent toothpaste sensitive teeth", "toothpaste gum care"],
+        moreImages: [
+          "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0VmFyaWFudC1wdl9pbWFnZXNcLzY1NzUwXC82NTc1MC1fUGVwc29kZW50X1Rvb3RocGFzdGVfU2Vuc2l0aXZlX0V4cGVydF9QLVBlcHNvZGVudC1jMTEzZS00MTczNTYtc3JlZHZ2LnBuZyIsImVkaXRzIjpbXX0=",
+          "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0VmFyaWFudC1wdl9pbWFnZXNcLzY1NzUwXC82NTc1MC1fUGVwc29kZW50X1Rvb3RocGFzdGVfU2Vuc2l0aXZlX0V4cGVydF9QLVBlcHNvZGVudC1jMTEzZS00MTczNTYtc3JlZHZ2LnBuZyIsImVkaXRzIjpbXX0=",
+          "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0VmFyaWFudC1wdl9pbWFnZXNcLzY1NzUwXC82NTc1MC1fUGVwc29kZW50X1Rvb3RocGFzdGVfU2Vuc2l0aXZlX0V4cGVydF9QLVBlcHNvZGVudC1jMTEzZS00MTczNTYtc3JlZHZ2LnBuZyIsImVkaXRzIjpbXX0=",
+          "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0VmFyaWFudC1wdl9pbWFnZXNcLzY1NzUwXC82NTc1MC1fUGVwc29kZW50X1Rvb3RocGFzdGVfU2Vuc2l0aXZlX0V4cGVydF9QLVBlcHNvZGVudC1jMTEzZS00MTczNTYtc3JlZHZ2LnBuZyIsImVkaXRzIjpbXX0="
+        ],
+        weight: 0.07
+      },
+      { 
+        id: 621, 
+        name: "Pepsodent Sensitivity and Gum TB Single", 
+        price: 195, 
+        originalPrice: 210, 
+        description: "Single toothbrush for sensitivity and gum care.", 
+        image: "https://gofresh.com.bd/wp-content/uploads/2022/08/Pepsodent-Toothbrush-Double-Care-Sensitive-Soft-750x750-copy.jpg", 
+        type: "Health",
+        keyword: [" Pepsodent sensitivity toothbrush", "gum care toothbrush", "toothbrush sensitive teeth"],
+        moreImages: [
+          "https://gofresh.com.bd/wp-content/uploads/2022/08/Pepsodent-Toothbrush-Double-Care-Sensitive-Soft-750x750-copy.jpg", 
+          "https://gofresh.com.bd/wp-content/uploads/2022/08/Pepsodent-Toothbrush-Double-Care-Sensitive-Soft-750x750-copy.jpg", 
+          "https://gofresh.com.bd/wp-content/uploads/2022/08/Pepsodent-Toothbrush-Double-Care-Sensitive-Soft-750x750-copy.jpg", 
+          "https://gofresh.com.bd/wp-content/uploads/2022/08/Pepsodent-Toothbrush-Double-Care-Sensitive-Soft-750x750-copy.jpg"
+        ], 
+        weight: 0.01
+      },
+      { 
+        id: 622, 
+        name: "Pepsodent Sensitivity and Gum TB Family ", 
+        price: 390, 
+        originalPrice: 430, 
+        description: "Family pack toothbrush for sensitivity and gum care.", 
+        image: "https://m.media-amazon.com/images/I/81MyBgeIcQL.jpg",
+        keyword: ["Pepsodent sensitivity toothbrush family", "gum care toothbrush pack", "toothbrush sensitive teeth"],
+        moreImages: [
+          "https://m.media-amazon.com/images/I/81MyBgeIcQL.jpg",
+          "https://m.media-amazon.com/images/I/81MyBgeIcQL.jpg",
+          "https://m.media-amazon.com/images/I/81MyBgeIcQL.jpg",
+          "https://m.media-amazon.com/images/I/81MyBgeIcQL.jpg"
+        ], 
+        weight: 0.01
+      },
+      { 
+        id: 623, 
+        name: "Pepsodent Sensodyne Complete 70 gm", 
+        price: 220, 
+        originalPrice: 270,
+        description: "Sensodyne Complete toothpaste for comprehensive oral care.", 
+        image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_1_bdo6sf.jpg", 
+        type: "Health",
+        keyword: ["Pepsodent sensodyne complete", "Pepsodent toothpaste sensitive teeth", "complete oral care toothpaste"],
+        moreImages: [
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_1_bdo6sf.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_1_bdo6sf.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_1_bdo6sf.jpg",
+          "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411754/WhatsApp_Image_2024-12-05_at_9.12.25_PM_1_bdo6sf.jpg"
+        ], 
+        weight: 0.07
+      },
+      { 
+          id: 624, 
+          name: "Pepsodent Sensodyne Repair & protect  70gm", 
+          price: 220, 
+          originalPrice: 270,
+          description: "Pepsodent Sensodyne Repair & protect for comprehensive oral care.", 
+          image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411762/WhatsApp_Image_2024-12-05_at_9.12.21_PM_2_i8dygg.jpg", 
+          type: "Health",
+          keyword: ["Pepsodent sensodyne  repair & protect", "Pepsodent toothpaste sensitive teeth", "complete oral care toothpaste"],
+          moreImages: [
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411762/WhatsApp_Image_2024-12-05_at_9.12.21_PM_2_i8dygg.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411762/WhatsApp_Image_2024-12-05_at_9.12.21_PM_2_i8dygg.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411762/WhatsApp_Image_2024-12-05_at_9.12.21_PM_2_i8dygg.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411762/WhatsApp_Image_2024-12-05_at_9.12.21_PM_2_i8dygg.jpg"
+          ], 
+          weight: 0.07
+      },
+          {
+            id: 625,
+            name: "Pepsodent Sensodyne Daily Care Brush",
+            price: 60,
+            originalPrice: 80,
+            description: "Pepsodent Sensodyne Daily Care Brush for effective cleaning.",
+            image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411758/WhatsApp_Image_2024-12-05_at_9.12.22_PM_2_mnnaze.jpg",
+            type: "Health",
+            keyword: ["Pepsodent Sensodyne brush", "daily care toothbrush", "oral hygiene"],
+            moreImages: [
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411758/WhatsApp_Image_2024-12-05_at_9.12.22_PM_2_mnnaze.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411758/WhatsApp_Image_2024-12-05_at_9.12.22_PM_2_mnnaze.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411758/WhatsApp_Image_2024-12-05_at_9.12.22_PM_2_mnnaze.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411758/WhatsApp_Image_2024-12-05_at_9.12.22_PM_2_mnnaze.jpg"
+                ],
+            weight: 0.01
+          },
+          {
+            id: 626,
+            name: "Pepsodent Sensodyne EXPERT TB Single",
+            price: 168.00,
+            originalPrice: 210,
+            description: "Pepsodent Sensodyne EXPERT TB Single for professional cleaning experience.",
+            image: "https://bk.shajgoj.com/storage/2021/12/Sensodyne-Expert-Soft-Tooth-Brush-Single-Pack-2-1.jpg",
+            type: "Health",
+            keyword: ["Pepsodent Sensodyne toothbrush", "expert TB single", "oral hygiene toothbrush"],
+            moreImages: [
+              "https://bk.shajgoj.com/storage/2021/12/Sensodyne-Expert-Soft-Tooth-Brush-Single-Pack-2-1.jpg",
+              "https://bk.shajgoj.com/storage/2021/12/Sensodyne-Expert-Soft-Tooth-Brush-Single-Pack-2-1.jpg",
+              "https://bk.shajgoj.com/storage/2021/12/Sensodyne-Expert-Soft-Tooth-Brush-Single-Pack-2-1.jpg",
+              "https://bk.shajgoj.com/storage/2021/12/Sensodyne-Expert-Soft-Tooth-Brush-Single-Pack-2-1.jpg"
+            ],
+            weight: 0.01
+          },
+          {
+            id: 627,
+            name: "Pepsodent Sensodyne EXPERT TB Trio",
+            price: 328.00,
+            originalPrice: 420,
+            description: "Pepsodent Sensodyne EXPERT TB Trio pack for comprehensive oral care.",
+            image: "https://m.media-amazon.com/images/I/51axo2sRFDL._AC_UF1000,1000_QL80_.jpg",
+            type: "Health",
+            keyword: ["Pepsodent Sensodyne toothbrush", "expert TB trio", "oral hygiene toothbrush"],
+            moreImages: [
+              "https://m.media-amazon.com/images/I/51axo2sRFDL._AC_UF1000,1000_QL80_.jpg",
+              "https://m.media-amazon.com/images/I/51axo2sRFDL._AC_UF1000,1000_QL80_.jpg",
+              "https://m.media-amazon.com/images/I/51axo2sRFDL._AC_UF1000,1000_QL80_.jpg",
+              "https://m.media-amazon.com/images/I/51axo2sRFDL._AC_UF1000,1000_QL80_.jpg",
+          ],
+            weight: 0.01,
+          },
+          {
+            id: 628,
+            name: "Pepsodent Sensodyne Ultra TB Single",
+            price: 88.00,
+            originalPrice: 110,
+            description: "Pepsodent Sensodyne Ultra TB Single for sensitive teeth care.",
+            image: "https://m.media-amazon.com/images/I/810389Qo1pL.jpg",
+            type: "Health",
+            keyword: ["Pepsodent Sensodyne toothbrush", "ultra TB single", "sensitive teeth care"],
+            moreImages: [
+              "https://m.media-amazon.com/images/I/810389Qo1pL.jpg",
+              "https://m.media-amazon.com/images/I/810389Qo1pL.jpg",
+              "https://m.media-amazon.com/images/I/810389Qo1pL.jpg",
+              "https://m.media-amazon.com/images/I/810389Qo1pL.jpg"
+            ],
+            weight: 0.01
+          },
+          {
+            id: 629,
+            name: "Pepsodent Sensodyne Ultra TB Family",
+            price: 168.00,
+            originalPrice: 210,
+            description: "Pepsodent Sensodyne Ultra TB Family pack for the whole family's oral care.",
+            image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411758/WhatsApp_Image_2024-12-05_at_9.12.22_PM_2_mnnaze.jpg",
+            type: "Health",
+            keyword: ["Pepsodent Sensodyne toothbrush", "ultra TB family", "family oral care"],
+            moreImages: [
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411758/WhatsApp_Image_2024-12-05_at_9.12.22_PM_2_mnnaze.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411758/WhatsApp_Image_2024-12-05_at_9.12.22_PM_2_mnnaze.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411758/WhatsApp_Image_2024-12-05_at_9.12.22_PM_2_mnnaze.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411758/WhatsApp_Image_2024-12-05_at_9.12.22_PM_2_mnnaze.jpg"
+            ],
+            weight:0.03
+          },
+          {
+            id: 630,
+            name: "Pepsodent Deep Clean TB Single",
+            price: 112.00,
+            originalPrice: 140,
+            description: "Pepsodent Deep Clean TB Single for a thorough cleaning experience.",
+            image: "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411763/WhatsApp_Image_2024-12-05_at_9.12.21_PM_zjldtu.jpg",
+            type: "Health",
+            keyword: ["Pepsodent deep clean toothbrush", "single toothbrush", "oral hygiene"],
+            moreImages: [
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411763/WhatsApp_Image_2024-12-05_at_9.12.21_PM_zjldtu.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411763/WhatsApp_Image_2024-12-05_at_9.12.21_PM_zjldtu.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411763/WhatsApp_Image_2024-12-05_at_9.12.21_PM_zjldtu.jpg",
+              "https://res.cloudinary.com/dx3njh2ag/image/upload/v1733411763/WhatsApp_Image_2024-12-05_at_9.12.21_PM_zjldtu.jpg"
+            ],
+            weight: .01
+          },
+          {
+            id: 631,
+            name: "Pepsodent Deep Clean TB Family",
+            price: 224.00,
+            originalPrice: 280,
+            description: "Pepsodent Deep Clean TB Family pack for a complete family solution.",
+            image: "https://m.media-amazon.com/images/I/51axo2sRFDL._AC_UF1000,1000_QL80_.jpg",
+            type: "Health",
+            keyword: ["Pepsodent deep clean toothbrush", "family toothbrush pack", "oral care solution"],
+            moreImages: [
+              "https://m.media-amazon.com/images/I/51axo2sRFDL._AC_UF1000,1000_QL80_.jpg",
+              "https://m.media-amazon.com/images/I/51axo2sRFDL._AC_UF1000,1000_QL80_.jpg",
+              "https://m.media-amazon.com/images/I/51axo2sRFDL._AC_UF1000,1000_QL80_.jpg",
+              "https://m.media-amazon.com/images/I/51axo2sRFDL._AC_UF1000,1000_QL80_.jpg"
+            ],
+            weight: 0.03
+          }
+        ];        
 
 // export const sliderProducts = [
 //   {

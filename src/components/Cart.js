@@ -22,6 +22,11 @@ const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, clearCart } = useContext(CartContext);
 
   const [isModalOpen, setModalOpen] = useState(false);
+
+  const [isSummaryVisible, setIsSummaryVisible] = useState(false);
+
+  const [deliveryPlace, setDeliveryPlace] = useState("inside");
+  const [deliveryCharge, setDeliveryCharge] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     address: "",
@@ -32,12 +37,44 @@ const Cart = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isOrderSuccessful, setIsOrderSuccessful] = useState(false);
 
+  useEffect(() => {
+    calculateDeliveryCharge();
+  }, [deliveryPlace, cartItems]);
+
+  const calculateDeliveryCharge = () => {
+    if (!cartItems || cartItems.length === 0) {
+      setDeliveryCharge(0);
+      return;
+    }
+
+    let totalWeight = cartItems.reduce((total, item) => total + item.weight * item.quantity, 0);
+    let charge = 0;
+
+    if (deliveryPlace === "inside") {
+      if (totalWeight <= 0.5) charge = 60;
+      else if (totalWeight <= 1) charge = 70;
+      else if (totalWeight <= 2) charge = 90;
+      else charge = 90 + Math.ceil(totalWeight - 2) * 15;
+    } else {
+      if (totalWeight <= 0.5) charge = 120;
+      else if (totalWeight <= 1) charge = 145;
+      else if (totalWeight <= 2) charge = 180;
+      else charge = 180 + Math.ceil(totalWeight - 2) * 20;
+    }
+
+    setDeliveryCharge(charge);
+  };
+
   const totalAmount = cartItems.reduce((total, item) => {
     return total + (item.price * item.quantity);
   }, 0);  
 
+  const totalAmountWithDelivery = totalAmount + deliveryCharge;
+  const totalWeight = cartItems.reduce((total, item) => total + item.weight * item.quantity, 0);
+
   const handlePlaceOrder = () => {
     setModalOpen(true);
+    setIsSummaryVisible(true);
   };
 
   const handleCloseModal = () => {
@@ -45,6 +82,7 @@ const Cart = () => {
       clearCart();
     }
     setModalOpen(false);
+    setIsSummaryVisible(false);
     setFormData({
       name: "",
       address: "",
@@ -98,21 +136,18 @@ const Cart = () => {
       setIsLoading(true);
       setIsLoaderLoading(true);
       try {
-        const response = await fetch("https://api.backend.sahossain.com/api/send-order-email", {
+        const response = await fetch("https://order.kinboekhaney.com/send-email", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             cartItems,
             totalAmount,
+            deliveryCharge,
+            totalAmountWithDelivery,
             customerDetails: formData,
             orderTime: timestamp,
           }),
         });
-
-        console.log("Order Time:", timestamp);
-        console.log("Cart Items:", cartItems);
-        console.log("Total Amount:", totalAmount);
-        console.log("Customer Details:", formData);
 
         if (response.ok) {
           setIsOrderSuccessful(true);
@@ -141,61 +176,172 @@ const Cart = () => {
     }
   };
 
-  const generateInvoice = () => {
-    if (!orderTimestamp) {
+const generateInvoice = () => {
+  if (!orderTimestamp) {
       console.error("Order timestamp not available.");
       return;
-    }
+  }
 
-    const docDefinition = {
-        content: [
-            { text: 'Kinbo Ekhaney - Order Invoice', style: 'header' },
-            { text: `Date: ${orderTimestamp}`, style: 'subheader' },
-            {
-                table: {
-                    widths: ['*', '*'],
-                    body: [
-                        [{ text: 'Name', bold: true }, formData.name],
-                        [{ text: 'Address', bold: true }, formData.address],
-                        [{ text: 'Phone', bold: true }, formData.phone],
-                        [{ text: 'Email', bold: true }, formData.email],
-                    ],
-                },
-                layout: 'lightHorizontalLines',
-            },
-            {
-                text: 'Order Summary',
-                style: 'subheader',
-                margin: [0, 20, 0, 8],
-            },
-            {
-                table: {
-                    widths: ['*', 'auto', 'auto'],
-                    body: [
-                        [{ text: 'Product', bold: true }, { text: 'Quantity', bold: true }, { text: 'Price', bold: true }],
-                        ...cartItems.map(item => [item.name, item.quantity, `BDT ${(item.price * item.quantity)}`]),
-                        [{ text: 'Total', bold: true, colSpan: 2 }, {}, { text: `BDT ${totalAmount}` }],
-                    ],
-                },
-                layout: 'lightHorizontalLines',
-            },
-        ],
-        styles: {
-            header: {
-                fontSize: 22,
-                bold: true,
-                margin: [0, 0, 0, 10],
-            },
-            subheader: {
-                fontSize: 16,
-                bold: true,
-                margin: [0, 10, 0, 5],
-            },
-        },
-    };
+  const docDefinition = {
+      content: [
+          {
+              columns: [
+                  { text: 'Kinbo Ekhaney', style: 'topLeftTitle' },
+                  { text: 'Order Invoice', style: 'topRightTitle', alignment: 'right' },
+              ],
+              margin: [0, 0, 0, 10],
+          },
+          { text: `Date: ${orderTimestamp}`, style: 'date', margin: [0, 0, 0, 20] },
 
-    pdfMake.createPdf(docDefinition).download(`Invoice_${orderTimestamp.replace(/[/,:]/g, '-')}.pdf`);
+          {
+              text: 'Customer Details',
+              style: 'sectionHeader',
+              margin: [0, 20, 0, 8],
+          },
+          {
+              table: {
+                  widths: ['35%', '65%'],
+                  body: [
+                      [{ text: 'Name', style: 'tableHeader' }, { text: formData.name, style: 'tableContent' }],
+                      [{ text: 'Phone', style: 'tableHeader' }, { text: formData.phone, style: 'tableContent' }],
+                      [{ text: 'Email', style: 'tableHeader' }, { text: formData.email, style: 'tableContent' }],
+                      [{ text: 'Delivery Address', style: 'tableHeader' }, { text: formData.address, style: 'tableContent' }],
+                  ],
+              },
+              layout: {
+                  fillColor: (rowIndex, node, columnIndex) => {
+                      return columnIndex === 0 ? '#f4f4f4' : null;
+                  },
+                  hLineColor: () => '#6C757D', // Grey horizontal lines
+                  vLineColor: () => '#6C757D', // Grey vertical lines
+                  lineWidth: 0.5, // Set line thickness
+              },
+          },
+
+          // Order Summary Section
+          {
+              text: 'Order Summary',
+              style: 'sectionHeader',
+              margin: [0, 20, 0, 8],
+          },
+          {
+              table: {
+                  widths: ['50%', '25%', '25%'], // Full-width table
+                  body: [
+                      [
+                          { text: 'Product', style: 'tableHeader' },
+                          { text: 'Quantity', style: 'tableHeader', alignment: 'center' },
+                          { text: 'Price', style: 'tableHeader', alignment: 'right' },
+                      ],
+                      ...cartItems.map(item => [
+                          { text: item.name, style: 'tableContent' },
+                          { text: item.quantity, style: 'tableContent', alignment: 'center' },
+                          { text: `BDT ${(item.price * item.quantity)}`, style: 'tableContent', alignment: 'right' },
+                      ]),
+                      [
+                          { text: 'Subtotal', colSpan: 2, style: 'tableFooter' },
+                          {},
+                          { text: `BDT ${totalAmount}`, style: 'tableFooter', alignment: 'right' },
+                      ],
+                      [
+                          { text: 'Delivery Charge', colSpan: 2, style: 'tableFooter' },
+                          {},
+                          { text: `BDT ${deliveryCharge}`, style: 'tableFooter', alignment: 'right' },
+                      ],
+                      [
+                          { text: 'Total Amount', colSpan: 2, style: 'tableFooter' },
+                          {},
+                          { text: `BDT ${totalAmountWithDelivery}`, style: 'tableFooter', alignment: 'right' },
+                      ],
+                  ],
+              },
+              layout: {
+                  fillColor: (rowIndex) => (rowIndex === 0 ? '#f4f4f4' : null), // Highlight header row
+                  hLineColor: () => '#6C757D', // Grey horizontal lines
+                  vLineColor: () => '#6C757D', // Grey vertical lines
+                  lineWidth: 0.5, // Set line thickness
+              },
+          },
+      ],
+
+      footer: {
+          stack: [
+              {
+                  canvas: [
+                      {
+                          type: 'line',
+                          x1: 0,
+                          y1: 0,
+                          x2: 515,
+                          y2: 0,
+                          lineWidth: 0.5,
+                          lineColor: '#6C757D', // Grey divider line
+                      },
+                  ],
+              },
+              {
+                  text: 'If you have not authorized the transaction then please reply to this email with the reason. You can send us an e-mail at support@kinboekhaney.com',
+                  style: 'footerNote',
+                  margin: [0, 10, 0, 0],
+              },
+          ],
+          margin: [40, 0, 40, 20], // Place footer content with some margin at the bottom
+      },
+
+      // Styling
+      styles: {
+          topLeftTitle: {
+              fontSize: 18,
+              bold: true,
+              color: '#000000', // Black
+          },
+          topRightTitle: {
+              fontSize: 18,
+              bold: true,
+              color: '#000000', // Black
+          },
+          date: {
+              fontSize: 12,
+              alignment: 'right',
+              color: '#000000', // Black
+          },
+          sectionHeader: {
+              fontSize: 16,
+              bold: true,
+              color: '#000000', 
+          },
+          tableHeader: {
+              bold: true,
+              fontSize: 12,
+              color: '#000000', 
+          },
+          tableContent: {
+              fontSize: 12,
+              color: '#000000', 
+          },
+          tableFooter: {
+              bold: true,
+              fontSize: 12,
+              color: '#000000', 
+          },
+          footerNote: {
+              fontSize: 10,
+              italics: true,
+              color: '#6C757D', // Grey
+              alignment: 'center',
+          },
+      },
+
+      // Page Margins
+      pageMargins: [40, 60, 40, 80], // Ensure enough space for footer
+  };
+
+  pdfMake.createPdf(docDefinition).download(`Invoice_${orderTimestamp.replace(/[/,:]/g, '-')}.pdf`);
 };
+
+
+
+
 
   if (cartItems.length === 0) {
     return <p className="empty-cart">No items in cart.</p>;
@@ -214,6 +360,7 @@ const Cart = () => {
           <div className="cart-item-info">
             <h2>{item.name}</h2>
             <p>Price: BDT {item.price}</p>
+            <p>Weight: {item.weight} kg</p>
             <div className="cart-item-controls">
               <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
               <span>{item.quantity}</span>
@@ -224,11 +371,11 @@ const Cart = () => {
       ))}
       <div className="cart-total">
         <h2>Total Amount: BDT {totalAmount}</h2>
-        <button onClick={handlePlaceOrder} className="place-order-button">Place Order</button>
+        <button onClick={handlePlaceOrder} className="place-order-button">Checkout</button>
       </div>
 
       {/* Modal */}
-      {isModalOpen && (
+      {isSummaryVisible  && (
         <div className="modal-overlay">
           <div className="modal-content">
             <h2>Order Summary</h2>
@@ -240,6 +387,7 @@ const Cart = () => {
                     <th>Name</th>
                     <th>Price (BDT)</th>
                     <th>Quantity (Piece)</th>
+                    <th>Weight (kg)</th>
                     <th>Total (BDT)</th>
                   </tr>
                 </thead>
@@ -249,12 +397,16 @@ const Cart = () => {
                       <td>{item.name}</td>
                       <td>{item.price}</td>
                       <td>{item.quantity}</td>
+                      <td>{(item.weight * item.quantity).toFixed(2)}</td>
                       <td>{item.price * item.quantity}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
-              <h3>Total Amount: BDT {totalAmount}</h3>
+              <h5>Total Weight: {totalWeight.toFixed(2)} kg</h5>
+              <h5>Total Delivery Charge: BDT {deliveryCharge}</h5>
+              <h5>Total Amount: BDT {totalAmount}</h5>
+              <h5>Total Amount with Delivery Charge: BDT {totalAmountWithDelivery}</h5>
             </div>
             <form onSubmit={handleSubmit}>
               <input
@@ -296,6 +448,29 @@ const Cart = () => {
                 required
               />
               {errors.email && <span className="error">{errors.email}</span>}
+
+              <div className="delivery-options">
+              <label>
+                <input
+                  type="radio"
+                  name="deliveryPlace"
+                  value="inside"
+                  checked={deliveryPlace === "inside"}
+                  onChange={(e) => setDeliveryPlace(e.target.value)}
+                />
+                Inside Chattogram
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="deliveryPlace"
+                  value="outside"
+                  checked={deliveryPlace === "outside"}
+                  onChange={(e) => setDeliveryPlace(e.target.value)}
+                />
+                Outside Chattogram
+              </label>
+            </div>
 
               {isLoading ? (
                 <div className="loading-spinner">Placing Order...</div>
