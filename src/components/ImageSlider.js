@@ -1,16 +1,15 @@
-// src/components/ImageSlider.js
 import React from "react";
 import Slider from "react-slick";
-import { useNavigate } from "react-router-dom";
-import { sliderProducts } from "../data/products"; // Import centralized products data
+// import { useNavigate } from "react-router-dom";
+import { sliderProducts } from "../data/products"; 
 import "./ImageSlider.css";
 
 const ImageSlider = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleImageClick = (id) => {
-    navigate(`/product/${id}`);
-  };
+  // const handleImageClick = (id) => {
+  //   navigate(`/product/${id}`);
+  // };
 
   return (
     <div className="slider-container">

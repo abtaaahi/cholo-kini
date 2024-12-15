@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { foodproducts } from '../data/products';
 import ProductCards from './ProductCards';
-import BrandCards from './BrandCards';
+// import BrandCards from './BrandCards';
 import './Foods.css';
 
 const Foods = () => {

@@ -47,7 +47,7 @@ If you prefer an exchange over a refund:
 - Delivery charges may apply for exchanges unless the issue is due to our error.  
 
 ## How to Initiate a Return  
-1. Contact our customer support team at **support@kinboekhaney.com** or call **01845117624**.  
+1. Contact our customer support team at **contact@kinboekhaney.com** or call **+880 1700-707184**.  
 2. Provide your order ID, details of the product, and reason for the return.  
 3. Follow the instructions provided by our team for packaging and return shipping.  
 
@@ -57,8 +57,8 @@ If you prefer an exchange over a refund:
 
 **Contact Us**  
 For any concerns or queries about our return and refund policies, please feel free to reach out:  
-- **Email:** support@kinboekhaney.com  
-- **Phone:** 01845117624 
+- **Email:** contact@kinboekhaney.com  
+- **Phone:** 01409327811 
 
 Thank you for trusting **Kinbo Ekhaney** for your shopping needs!  
   `;

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { healthproducts } from '../data/products';
 import ProductCards from './ProductCards';
-import BrandCards from './BrandCards';
+// import BrandCards from './BrandCards';
 import './Electronics.css';
 
 const HealthCare = () => {

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts, foodproducts, healthproducts } from "../data/products";
 import './SearchBox.css';
@@ -35,18 +35,18 @@ const SearchBox = () => {
     setFilteredProducts([]);
   };
 
-  const handleClickOutside = (event) => {
+  const handleClickOutside = useCallback((event) => {
     if (searchBoxRef.current && !searchBoxRef.current.contains(event.target)) {
       handleReset();
     }
-  };
+  }, []);
 
   useEffect(() => {
     document.addEventListener('click', handleClickOutside);
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, []);
+  }, [handleClickOutside]); 
 
   const handleProductClick = () => {
     handleReset();

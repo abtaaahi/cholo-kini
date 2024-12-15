@@ -24,7 +24,7 @@ const FloatingButtons = () => {
   return (
     <div className="floating-buttons">
       <a
-        href="https://m.me/your-page-id"
+        href="https://m.me/524882610703640"
         target="_blank"
         rel="noopener noreferrer"
         className="messenger-button"

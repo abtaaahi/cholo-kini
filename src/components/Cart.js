@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useCallback } from "react";
 import { CartContext } from "../contexts/CartContext";
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
@@ -23,7 +23,7 @@ const Cart = () => {
 
   const [isModalOpen, setModalOpen] = useState(false);
 
-  const [isSummaryVisible, setIsSummaryVisible] = useState(false);
+  // const [isSummaryVisible, setIsSummaryVisible] = useState(false);
 
   const [deliveryPlace, setDeliveryPlace] = useState("inside");
   const [deliveryCharge, setDeliveryCharge] = useState(0);
@@ -37,11 +37,7 @@ const Cart = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isOrderSuccessful, setIsOrderSuccessful] = useState(false);
 
-  useEffect(() => {
-    calculateDeliveryCharge();
-  }, [deliveryPlace, cartItems]);
-
-  const calculateDeliveryCharge = () => {
+  const calculateDeliveryCharge = useCallback(() => {
     if (!cartItems || cartItems.length === 0) {
       setDeliveryCharge(0);
       return;
@@ -63,7 +59,11 @@ const Cart = () => {
     }
 
     setDeliveryCharge(charge);
-  };
+  }, [cartItems, deliveryPlace]);
+
+  useEffect(() => {
+    calculateDeliveryCharge();
+  }, [calculateDeliveryCharge]);
 
   const totalAmount = cartItems.reduce((total, item) => {
     return total + (item.price * item.quantity);
@@ -74,7 +74,7 @@ const Cart = () => {
 
   const handlePlaceOrder = () => {
     setModalOpen(true);
-    setIsSummaryVisible(true);
+    // setIsSummaryVisible(true);
   };
 
   const handleCloseModal = () => {
@@ -82,7 +82,7 @@ const Cart = () => {
       clearCart();
     }
     setModalOpen(false);
-    setIsSummaryVisible(false);
+    // setIsSummaryVisible(false);
     setFormData({
       name: "",
       address: "",
@@ -212,13 +212,12 @@ const generateInvoice = () => {
                   fillColor: (rowIndex, node, columnIndex) => {
                       return columnIndex === 0 ? '#f4f4f4' : null;
                   },
-                  hLineColor: () => '#6C757D', // Grey horizontal lines
-                  vLineColor: () => '#6C757D', // Grey vertical lines
-                  lineWidth: 0.5, // Set line thickness
+                  hLineColor: () => '#000000', 
+                  vLineColor: () => '#000000', 
+                  lineWidth: 0.5, 
               },
           },
 
-          // Order Summary Section
           {
               text: 'Order Summary',
               style: 'sectionHeader',
@@ -226,7 +225,7 @@ const generateInvoice = () => {
           },
           {
               table: {
-                  widths: ['50%', '25%', '25%'], // Full-width table
+                  widths: ['50%', '25%', '25%'],
                   body: [
                       [
                           { text: 'Product', style: 'tableHeader' },
@@ -256,10 +255,10 @@ const generateInvoice = () => {
                   ],
               },
               layout: {
-                  fillColor: (rowIndex) => (rowIndex === 0 ? '#f4f4f4' : null), // Highlight header row
-                  hLineColor: () => '#6C757D', // Grey horizontal lines
-                  vLineColor: () => '#6C757D', // Grey vertical lines
-                  lineWidth: 0.5, // Set line thickness
+                  fillColor: (rowIndex) => (rowIndex === 0 ? '#f4f4f4' : null), 
+                  hLineColor: () => '#000000', 
+                  vLineColor: () => '#000000', 
+                  lineWidth: 0.5, 
               },
           },
       ],
@@ -275,35 +274,34 @@ const generateInvoice = () => {
                           x2: 515,
                           y2: 0,
                           lineWidth: 0.5,
-                          lineColor: '#6C757D', // Grey divider line
+                          lineColor: '#6C757D', 
                       },
                   ],
               },
               {
-                  text: 'If you have not authorized the transaction then please reply to this email with the reason. You can send us an e-mail at support@kinboekhaney.com',
+                  text: 'If you have not authorized the transaction then please reply to this email with the reason. You can send us an e-mail at contact@kinboekhaney.com',
                   style: 'footerNote',
                   margin: [0, 10, 0, 0],
               },
           ],
-          margin: [40, 0, 40, 20], // Place footer content with some margin at the bottom
+          margin: [40, 0, 40, 20], 
       },
 
-      // Styling
       styles: {
           topLeftTitle: {
               fontSize: 18,
               bold: true,
-              color: '#000000', // Black
+              color: '#000000', 
           },
           topRightTitle: {
               fontSize: 18,
               bold: true,
-              color: '#000000', // Black
+              color: '#000000', 
           },
           date: {
               fontSize: 12,
               alignment: 'right',
-              color: '#000000', // Black
+              color: '#000000', 
           },
           sectionHeader: {
               fontSize: 16,
@@ -327,21 +325,16 @@ const generateInvoice = () => {
           footerNote: {
               fontSize: 10,
               italics: true,
-              color: '#6C757D', // Grey
+              color: '#6C757D', 
               alignment: 'center',
           },
       },
 
-      // Page Margins
-      pageMargins: [40, 60, 40, 80], // Ensure enough space for footer
+      pageMargins: [40, 60, 40, 80], 
   };
 
   pdfMake.createPdf(docDefinition).download(`Invoice_${orderTimestamp.replace(/[/,:]/g, '-')}.pdf`);
 };
-
-
-
-
 
   if (cartItems.length === 0) {
     return <p className="empty-cart">No items in cart.</p>;
@@ -375,7 +368,7 @@ const generateInvoice = () => {
       </div>
 
       {/* Modal */}
-      {isSummaryVisible  && (
+      {isModalOpen  && (
         <div className="modal-overlay">
           <div className="modal-content">
             <h2>Order Summary</h2>

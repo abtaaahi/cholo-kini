@@ -1,36 +1,38 @@
 export const products = [
   {
-      id: 101,
-      name: "Air Conditioner (AC)",
-      price: 55000,
-      originalPrice: 60000,
-      weight: 35,
-      description:
-        "A high-performance air conditioner designed to keep your room cool and comfortable, even during the hottest days of summer. Energy-efficient and equipped with advanced cooling technology, it’s perfect for any home or office.",
-      image: "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-128235.jpg?t=st=1732085907~exp=1732089507~hmac=43afbb6f1399a1f9cd57c20175b394b0da95569d4cafc2ca7cec771c3ce6692d&w=996",
-      type: "Electronics",
-      keyword: ["AC", "air conditioner", "cooling", "energy-efficient", "electronics"],
-      moreImages: ["https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-128235.jpg?t=st=1732085907~exp=1732089507~hmac=43afbb6f1399a1f9cd57c20175b394b0da95569d4cafc2ca7cec771c3ce6692d&w=996",
-         "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-142861.jpg?t=st=1732085930~exp=1732089530~hmac=d69e9b679c898296be0617ac1e11367d72b1b106a0068bb856a0361511fd66de&w=996",
-          "https://img.freepik.com/free-photo/air-conditioning-decoration-interior_74190-6226.jpg?t=st=1732085972~exp=1732089572~hmac=fbee6f58bcf67f40ef8de3e26631479d370f4a7c4521949127ea013950ca45a1&w=996",
-           "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-142862.jpg?t=st=1732086064~exp=1732089664~hmac=9883a9b0e9b97c756f936df5acd064ad84853e55b493be5e797c14297de052e1&w=996"],
-    },
-    {
-      id: 105,
-      name: "Microwave Oven",
-      price: 20000,
-      originalPrice: 25000,
-      weight: 20,
-      description:
-        "Cook, reheat, or bake with this versatile microwave oven. Its easy-to-use controls and modern design make it a perfect fit for any kitchen.",
-      image: "https://img.freepik.com/free-photo/small-oven-white-background_1232-1347.jpg?t=st=1732086742~exp=1732090342~hmac=4ed9502f8a2e205c84c38a4e5414a435101d187a6aa15c15a22e2364619dedd8&w=1060",
-      type: "Electronics",
-      keyword: ["microwave", "oven", "cooking appliance", "electronics"],
-      moreImages: ["https://img.freepik.com/free-photo/small-oven-white-background_1232-1347.jpg?t=st=1732086742~exp=1732090342~hmac=4ed9502f8a2e205c84c38a4e5414a435101d187a6aa15c15a22e2364619dedd8&w=1060",
-         "https://img.freepik.com/free-photo/small-oven-white-background_1232-1349.jpg?t=st=1732086765~exp=1732090365~hmac=d8e3158c08a9c13d06e56bbd233711ae94351aeccb92c8963ef0a620a2cf6b28&w=1060",
-          "https://img.freepik.com/free-photo/people-cooking-enjoying-food_23-2149257436.jpg?t=st=1732086794~exp=1732090394~hmac=1efa0135b88d527ecf732043dafbbcd14e6ce0a0f1e45734d756ce63e01c0dd0&w=996",
-           "https://img.freepik.com/free-photo/microwave-oven-isolated-white_93675-128177.jpg?t=st=1732086814~exp=1732090414~hmac=1b40a1cc32e721f7d79fcc375786be01cf70af995f3b5269e0a1d94f099bd483&w=996"],
-    },
+    id: 101,
+    name: "Air Conditioner (AC)",
+    price: 55000,
+    originalPrice: 60000,
+    weight: 35,
+    description:
+      "A high-performance air conditioner designed to keep your room cool and comfortable, even during the hottest days of summer. Energy-efficient and equipped with advanced cooling technology, it’s perfect for any home or office.",
+    image: "https://singerbd.com/media/catalog/product/cache/482df9e5219860e2561c4ec99993e0ed/e/l/elite-ac_fst-2.jpg",
+    type: "Electronics",
+    keyword: ["AC", "air conditioner", "cooling", "energy-efficient", "electronics"],
+    moreImages: ["https://singerbd.com/media/catalog/product/cache/482df9e5219860e2561c4ec99993e0ed/e/l/elite-ac_fst-2.jpg",
+"https://singerbd.com/media/catalog/product/cache/482df9e5219860e2561c4ec99993e0ed/e/l/elite-ac_fst-2.jpg",
+"https://singerbd.com/media/catalog/product/cache/482df9e5219860e2561c4ec99993e0ed/e/l/elite-ac_fst-2.jpg",
+"https://singerbd.com/media/catalog/product/cache/482df9e5219860e2561c4ec99993e0ed/e/l/elite-ac_fst-2.jpg"],
+  },
+  {
+    id: 105,
+    name: "Microwave Oven",
+    price: 20000,
+    originalPrice: 25000,
+    weight: 20,
+    description:
+      "Cook, reheat, or bake with this versatile microwave oven. Its easy-to-use controls and modern design make it a perfect fit for any kitchen.",
+    image: "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/81a5fd92-e21b-11ee-980c-76074272a907.jpg",
+    type: "Electronics",
+    keyword: ["microwave", "oven", "cooking appliance", "electronics"],
+    moreImages: [
+      "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/81a5fd92-e21b-11ee-980c-76074272a907.jpg",
+      "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/81a5fd92-e21b-11ee-980c-76074272a907.jpg",
+      "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/81a5fd92-e21b-11ee-980c-76074272a907.jpg",
+      "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/81a5fd92-e21b-11ee-980c-76074272a907.jpg"
+          ],
+  },
     { 
       id: 506, 
       name: "Standard Horlicks pouch pack", 
@@ -136,13 +138,13 @@ export const electronicsProducts = [
     weight: 35,
     description:
       "A high-performance air conditioner designed to keep your room cool and comfortable, even during the hottest days of summer. Energy-efficient and equipped with advanced cooling technology, it’s perfect for any home or office.",
-    image: "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-128235.jpg?t=st=1732085907~exp=1732089507~hmac=43afbb6f1399a1f9cd57c20175b394b0da95569d4cafc2ca7cec771c3ce6692d&w=996",
+    image: "https://singerbd.com/media/catalog/product/cache/482df9e5219860e2561c4ec99993e0ed/e/l/elite-ac_fst-2.jpg",
     type: "Electronics",
     keyword: ["AC", "air conditioner", "cooling", "energy-efficient", "electronics"],
-    moreImages: ["https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-128235.jpg?t=st=1732085907~exp=1732089507~hmac=43afbb6f1399a1f9cd57c20175b394b0da95569d4cafc2ca7cec771c3ce6692d&w=996",
-       "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-142861.jpg?t=st=1732085930~exp=1732089530~hmac=d69e9b679c898296be0617ac1e11367d72b1b106a0068bb856a0361511fd66de&w=996",
-        "https://img.freepik.com/free-photo/air-conditioning-decoration-interior_74190-6226.jpg?t=st=1732085972~exp=1732089572~hmac=fbee6f58bcf67f40ef8de3e26631479d370f4a7c4521949127ea013950ca45a1&w=996",
-         "https://img.freepik.com/free-photo/air-conditioner-mounted-white-wall_53876-142862.jpg?t=st=1732086064~exp=1732089664~hmac=9883a9b0e9b97c756f936df5acd064ad84853e55b493be5e797c14297de052e1&w=996"],
+    moreImages: ["https://singerbd.com/media/catalog/product/cache/482df9e5219860e2561c4ec99993e0ed/e/l/elite-ac_fst-2.jpg",
+"https://singerbd.com/media/catalog/product/cache/482df9e5219860e2561c4ec99993e0ed/e/l/elite-ac_fst-2.jpg",
+"https://singerbd.com/media/catalog/product/cache/482df9e5219860e2561c4ec99993e0ed/e/l/elite-ac_fst-2.jpg",
+"https://singerbd.com/media/catalog/product/cache/482df9e5219860e2561c4ec99993e0ed/e/l/elite-ac_fst-2.jpg"],
   },
   {
     id: 102,
@@ -200,13 +202,15 @@ export const electronicsProducts = [
     weight: 20,
     description:
       "Cook, reheat, or bake with this versatile microwave oven. Its easy-to-use controls and modern design make it a perfect fit for any kitchen.",
-    image: "https://img.freepik.com/free-photo/small-oven-white-background_1232-1347.jpg?t=st=1732086742~exp=1732090342~hmac=4ed9502f8a2e205c84c38a4e5414a435101d187a6aa15c15a22e2364619dedd8&w=1060",
+    image: "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/81a5fd92-e21b-11ee-980c-76074272a907.jpg",
     type: "Electronics",
     keyword: ["microwave", "oven", "cooking appliance", "electronics"],
-    moreImages: ["https://img.freepik.com/free-photo/small-oven-white-background_1232-1347.jpg?t=st=1732086742~exp=1732090342~hmac=4ed9502f8a2e205c84c38a4e5414a435101d187a6aa15c15a22e2364619dedd8&w=1060",
-       "https://img.freepik.com/free-photo/small-oven-white-background_1232-1349.jpg?t=st=1732086765~exp=1732090365~hmac=d8e3158c08a9c13d06e56bbd233711ae94351aeccb92c8963ef0a620a2cf6b28&w=1060",
-        "https://img.freepik.com/free-photo/people-cooking-enjoying-food_23-2149257436.jpg?t=st=1732086794~exp=1732090394~hmac=1efa0135b88d527ecf732043dafbbcd14e6ce0a0f1e45734d756ce63e01c0dd0&w=996",
-         "https://img.freepik.com/free-photo/microwave-oven-isolated-white_93675-128177.jpg?t=st=1732086814~exp=1732090414~hmac=1b40a1cc32e721f7d79fcc375786be01cf70af995f3b5269e0a1d94f099bd483&w=996"],
+    moreImages: [
+      "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/81a5fd92-e21b-11ee-980c-76074272a907.jpg",
+      "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/81a5fd92-e21b-11ee-980c-76074272a907.jpg",
+      "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/81a5fd92-e21b-11ee-980c-76074272a907.jpg",
+      "https://res.cloudinary.com/sharp-consumer-eu/image/fetch/w_3000,f_auto/https://s3.infra.brandquad.io/accounts-media/SHRP/DAM/origin/81a5fd92-e21b-11ee-980c-76074272a907.jpg"
+          ],
   },
   {
     id: 106,
@@ -232,13 +236,15 @@ export const electronicsProducts = [
     weight: 5,
     description:
       "Achieve wrinkle-free clothes with this lightweight and powerful iron. Designed for quick and efficient performance, it’s a must-have for every household.",
-    image: "https://img.freepik.com/free-photo/front-view-pile-towels-with-iron_23-2148251765.jpg?t=st=1732087050~exp=1732090650~hmac=45939c01ade9e650a01e64c227bcf9c9681536655f88bafa2199614e021e91fc&w=996",
+    image: "https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFnS0ZITUttb0wuX0FDX1NMMTUwMF8uanBn.jpg",
     type: "Electronics",
     keyword: ["iron", "clothes iron", "home appliance", "electronics"],
-    moreImages: ["https://img.freepik.com/free-photo/front-view-pile-towels-with-iron_23-2148251765.jpg?t=st=1732087050~exp=1732090650~hmac=45939c01ade9e650a01e64c227bcf9c9681536655f88bafa2199614e021e91fc&w=996",
-       "https://img.freepik.com/free-photo/front-view-beautiful-woman-doing-indoor-activity_23-2148813099.jpg?t=st=1732087077~exp=1732090677~hmac=3042a6247d6ebaf994c6ca16d1091676066a577bbbc03dc612809d7976ffd8ae&w=996",
-        "https://img.freepik.com/free-photo/new-iron-isolated-white-background_93675-131871.jpg?t=st=1732087098~exp=1732090698~hmac=1fd37eca9e3a6122310b58761b600c8429c2ccbb75b8ab0d49b34e10d981d0a5&w=740",
-         "https://img.freepik.com/free-photo/blue-blue-steam-iron_140725-7495.jpg?t=st=1732087122~exp=1732090722~hmac=89165de7e495c7b496e804d59d3e5653b0ba307966f75043ae4732810e2d76cd&w=740"],
+    moreImages: [
+      "https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFnS0ZITUttb0wuX0FDX1NMMTUwMF8uanBn.jpg",
+      "https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFnS0ZITUttb0wuX0FDX1NMMTUwMF8uanBn.jpg",
+      "https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFnS0ZITUttb0wuX0FDX1NMMTUwMF8uanBn.jpg",
+      "https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFnS0ZITUttb0wuX0FDX1NMMTUwMF8uanBn.jpg"
+          ],
   },
   {
     id: 108,
@@ -248,13 +254,15 @@ export const electronicsProducts = [
     weight: 2,
     description:
       "Prepare smoothies, sauces, and more with this versatile blender. Its powerful motor and sharp blades make it an essential kitchen companion.",
-    image: "https://img.freepik.com/free-photo/blender-juice-machine_74190-4903.jpg?t=st=1732087175~exp=1732090775~hmac=97a7d557430cf92991a027efafb3dd9f135eb6681ce77cf9a348b27aa2510c54&w=996",
+    image: "https://sonysmart.com.bd/public/uploads/all/k0Yf1IcQDpoR20JyyU9kepWxl5wLcDlIegf3tbgd.jpg",
     type: "Electronics",
     keyword: ["blender", "kitchen appliance", "food prep", "electronics"],
-    moreImages: ["https://img.freepik.com/free-photo/blender-juice-machine_74190-4903.jpg?t=st=1732087175~exp=1732090775~hmac=97a7d557430cf92991a027efafb3dd9f135eb6681ce77cf9a348b27aa2510c54&w=996", 
-      "https://img.freepik.com/free-photo/blender-celery-arrangement_23-2149080584.jpg?t=st=1732087425~exp=1732091025~hmac=bea6e9ff8ce16118e3376c64b580973ce6d19356f589901095fa16aebcfe794b&w=360", 
-      "https://img.freepik.com/free-photo/blender-juice-machine_1203-7723.jpg?t=st=1732087197~exp=1732090797~hmac=09fa2103aef8fcede8a6e45dfa2d57757cfbe4973829b7e5580f7ebd48273c75&w=360", 
-      "https://img.freepik.com/free-photo/close-up-hand-holding-blender-handle_23-2148898556.jpg?t=st=1732087274~exp=1732090874~hmac=b5e908eaf0faff644fe2954eb152130c5c2dfae82b28cb8dbc561a1601f4edd7&w=360"],
+    moreImages: [
+          "https://sonysmart.com.bd/public/uploads/all/k0Yf1IcQDpoR20JyyU9kepWxl5wLcDlIegf3tbgd.jpg",
+          "https://sonysmart.com.bd/public/uploads/all/k0Yf1IcQDpoR20JyyU9kepWxl5wLcDlIegf3tbgd.jpg",
+          "https://sonysmart.com.bd/public/uploads/all/k0Yf1IcQDpoR20JyyU9kepWxl5wLcDlIegf3tbgd.jpg",
+          "https://sonysmart.com.bd/public/uploads/all/k0Yf1IcQDpoR20JyyU9kepWxl5wLcDlIegf3tbgd.jpg"
+       ],
   },
 ];
 
@@ -936,6 +944,23 @@ export const healthproducts = [
               "https://m.media-amazon.com/images/I/51axo2sRFDL._AC_UF1000,1000_QL80_.jpg"
             ],
             weight: 0.03
+          },
+          {
+            id: 632,
+            name: "Pepsodent Sensitive Expert Fresh Toothpaste",
+            price: 200,
+            originalPrice: 250,
+            description: "Pepsodent Sensitive Expert Fresh Toothpaste for a complete family solution.",
+            image: "https://res.cloudinary.com/dasqmi9fl/image/upload/v1734275969/WhatsApp_Image_2024-12-15_at_10.54.58_b66eaf91_odrkoh.jpg",
+            type: "Health",
+            keyword: ["Pepsodent Sensitive Expert Fresh Toothpaste", "family toothbrush pack", "oral care solution"],
+            moreImages: [
+              "https://res.cloudinary.com/dasqmi9fl/image/upload/v1734275969/WhatsApp_Image_2024-12-15_at_10.54.58_b66eaf91_odrkoh.jpg",
+              "https://i.chaldn.com/_mpimage/pepsodent-toothpaste-sensitive-expert-fresh-140-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D166717&q=best&v=1",
+              "https://res.cloudinary.com/dasqmi9fl/image/upload/v1734275969/WhatsApp_Image_2024-12-15_at_10.54.58_b66eaf91_odrkoh.jpg",
+              "https://i.chaldn.com/_mpimage/pepsodent-toothpaste-sensitive-expert-fresh-140-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D166717&q=best&v=1"
+            ],
+            weight: 0.14
           }
         ];        
 

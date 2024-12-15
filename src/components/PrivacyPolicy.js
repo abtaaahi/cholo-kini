@@ -67,9 +67,8 @@ This policy may be updated periodically to reflect changes in our practices. Sig
 
 ## Contact Us  
 For any concerns or queries about our privacy practices, reach out to us:  
-- **Email:** support@kinboekhaney.com  
-- **Phone:** 01845117624  
-- **Office Address:** Kinbo Ekhaney, 123 Business Avenue, Chattogram, Bangladesh  
+- **Email:** contact@kinboekhaney.com  
+- **Phone:** 01409327811    
 
 Thank you for trusting **Kinbo Ekhaney** with your data. Your privacy is our commitment!  
   `;

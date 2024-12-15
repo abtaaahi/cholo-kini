@@ -12,7 +12,7 @@ const DataPolicy = () => {
 # Data & Individual Information Policy  
 
 **Your trust is important to us.**  
-At **Cholo Kini**, we are committed to maintaining the privacy and integrity of your personal data. This policy outlines how we collect, use, store, and protect your information.
+At **Kinbo Ekhaney**, we are committed to maintaining the privacy and integrity of your personal data. This policy outlines how we collect, use, store, and protect your information.
 
 ## Data We Collect  
 To provide you with the best shopping experience, we may collect the following information:  
@@ -49,10 +49,10 @@ We reserve the right to update this policy to reflect changes in our practices o
 
 **Contact Us:**  
 For any queries or concerns about this policy or your personal data, please reach out to us at:  
-- **Email:** support@cholokini.com  
-- **Phone:** 01845117624 
+- **Email:** contact@kinboekhaney.com  
+- **Phone:** 01409327811
 
-Thank you for trusting Cholo Kini!  
+Thank you for trusting Kinbo Ekhaney!  
   `;
 
   return (

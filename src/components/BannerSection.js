@@ -24,7 +24,7 @@ const BannerSection = () => {
             <button className="shop-now" onClick={handleShopNowClick} >Shop Now</button>
             <button className="view-products" onClick={handleViewAllClick}>View All Products</button>
           </div>
-          <div className="banner-ratings">
+          {/* <div className="banner-ratings">
             <div className="rating-images">
               <img src="https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="User 1" />
               <img src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="User 2" />
@@ -34,7 +34,7 @@ const BannerSection = () => {
             <div className="rating-text">
               <span>Trusted by a lot of Customers</span>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="banner-product-card">
         <div className="banner-product-image">

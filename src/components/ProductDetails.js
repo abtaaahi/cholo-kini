@@ -57,6 +57,8 @@ const ProductDetails = () => {
       relatedProducts = cosmeticProducts;
     } else if (product.type === "Food") {
       relatedProducts = foodproducts;
+    } else if (product.type === "Health") {
+      relatedProducts = healthproducts;
     } else {
       relatedProducts = products;
     }
