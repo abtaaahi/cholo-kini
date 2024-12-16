@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./Cart.css";
 import Loader from './Loader';
 import DeliveryPlan from "./DeliveryPlan";
+import logoBase64 from '../data/logoBase64';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -136,6 +137,7 @@ const Cart = () => {
       setIsLoading(true);
       setIsLoaderLoading(true);
       try {
+        console.log("Cart Items:", cartItems);
         const response = await fetch("https://order.kinboekhaney.com/send-email", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -176,94 +178,112 @@ const Cart = () => {
     }
   };
 
-const generateInvoice = () => {
-  if (!orderTimestamp) {
-      console.error("Order timestamp not available.");
-      return;
-  }
+  const generateInvoice = () => {
+    if (!orderTimestamp) {
+        console.error("Order timestamp not available.");
+        return;
+    }
 
-  const docDefinition = {
-      content: [
-          {
-              columns: [
-                  { text: 'Kinbo Ekhaney', style: 'topLeftTitle' },
-                  { text: 'Order Invoice', style: 'topRightTitle', alignment: 'right' },
-              ],
-              margin: [0, 0, 0, 10],
-          },
-          { text: `Date: ${orderTimestamp}`, style: 'date', margin: [0, 0, 0, 20] },
-
-          {
-              text: 'Customer Details',
-              style: 'sectionHeader',
-              margin: [0, 20, 0, 8],
-          },
-          {
-              table: {
-                  widths: ['35%', '65%'],
-                  body: [
-                      [{ text: 'Name', style: 'tableHeader' }, { text: formData.name, style: 'tableContent' }],
-                      [{ text: 'Phone', style: 'tableHeader' }, { text: formData.phone, style: 'tableContent' }],
-                      [{ text: 'Email', style: 'tableHeader' }, { text: formData.email, style: 'tableContent' }],
-                      [{ text: 'Delivery Address', style: 'tableHeader' }, { text: formData.address, style: 'tableContent' }],
-                  ],
-              },
-              layout: {
-                  fillColor: (rowIndex, node, columnIndex) => {
-                      return columnIndex === 0 ? '#f4f4f4' : null;
-                  },
-                  hLineColor: () => '#000000', 
-                  vLineColor: () => '#000000', 
-                  lineWidth: 0.5, 
-              },
-          },
-
-          {
-              text: 'Order Summary',
-              style: 'sectionHeader',
-              margin: [0, 20, 0, 8],
-          },
-          {
-              table: {
-                  widths: ['50%', '25%', '25%'],
-                  body: [
-                      [
-                          { text: 'Product', style: 'tableHeader' },
-                          { text: 'Quantity', style: 'tableHeader', alignment: 'center' },
-                          { text: 'Price', style: 'tableHeader', alignment: 'right' },
-                      ],
-                      ...cartItems.map(item => [
-                          { text: item.name, style: 'tableContent' },
-                          { text: item.quantity, style: 'tableContent', alignment: 'center' },
-                          { text: `BDT ${(item.price * item.quantity)}`, style: 'tableContent', alignment: 'right' },
-                      ]),
-                      [
-                          { text: 'Subtotal', colSpan: 2, style: 'tableFooter' },
-                          {},
-                          { text: `BDT ${totalAmount}`, style: 'tableFooter', alignment: 'right' },
-                      ],
-                      [
-                          { text: 'Delivery Charge', colSpan: 2, style: 'tableFooter' },
-                          {},
-                          { text: `BDT ${deliveryCharge}`, style: 'tableFooter', alignment: 'right' },
-                      ],
-                      [
-                          { text: 'Total Amount', colSpan: 2, style: 'tableFooter' },
-                          {},
-                          { text: `BDT ${totalAmountWithDelivery}`, style: 'tableFooter', alignment: 'right' },
-                      ],
-                  ],
-              },
-              layout: {
-                  fillColor: (rowIndex) => (rowIndex === 0 ? '#f4f4f4' : null), 
-                  hLineColor: () => '#000000', 
-                  vLineColor: () => '#000000', 
-                  lineWidth: 0.5, 
-              },
-          },
-      ],
-
-      footer: {
+    const formatTimestamp = (timestamp) => {
+      const date = new Date(timestamp);
+  
+      const hours = date.getHours() % 12 || 12;
+      const minutes = String(date.getMinutes()).padStart(2, '0');
+      const seconds = String(date.getSeconds()).padStart(2, '0');
+      const ampm = date.getHours() >= 12 ? 'PM' : 'AM';
+  
+      const day = String(date.getDate()).padStart(2, '0');
+      const monthShort = date.toLocaleString('en-US', { month: 'short' });
+      const year = date.getFullYear();
+  
+      return `${hours}:${minutes}:${seconds} ${ampm}, ${day}-${monthShort}-${year}`;
+  };
+  
+  const formattedOrderTimestamp = formatTimestamp(orderTimestamp);
+  
+  
+    const docDefinition = {
+        content: [
+            {
+                columns: [
+                    { image: logoBase64, width: 100 }, 
+                    { text: 'Order Invoice', style: 'topRightTitle', alignment: 'right' },
+                ],
+                margin: [0, 0, 0, 10],
+            },
+  
+            {
+                text: 'Customer Details',
+                style: 'sectionHeader',
+                margin: [0, 20, 0, 8],
+            },
+            {
+                table: {
+                    widths: ['35%', '65%'],
+                    body: [
+                        [{ text: 'Name', style: 'tableHeader' }, { text: formData.name, style: 'tableContent' }],
+                        [{ text: 'Phone', style: 'tableHeader' }, { text: formData.phone, style: 'tableContent' }],
+                        [{ text: 'Email', style: 'tableHeader' }, { text: formData.email, style: 'tableContent' }],
+                        [{ text: 'Order Date', style: 'tableHeader' }, { text: formattedOrderTimestamp, style: 'tableContent' }],
+                        [{ text: 'Delivery Address', style: 'tableHeader' }, { text: formData.address, style: 'tableContent' }],
+                    ],
+                },
+                layout: {
+                    fillColor: (rowIndex, node, columnIndex) => {
+                        return columnIndex === 0 ? '#f4f4f4' : null;
+                    },
+                    hLineColor: () => '#000000', 
+                    vLineColor: () => '#000000', 
+                    lineWidth: 0.5, 
+                },
+            },
+  
+            {
+                text: 'Order Summary',
+                style: 'sectionHeader',
+                margin: [0, 20, 0, 8],
+            },
+            {
+                table: {
+                    widths: ['50%', '25%', '25%'],
+                    body: [
+                        [
+                            { text: 'Product', style: 'tableHeader' },
+                            { text: 'Quantity', style: 'tableHeader', alignment: 'center' },
+                            { text: 'Price', style: 'tableHeader', alignment: 'right' },
+                        ],
+                        ...cartItems.map(item => [
+                            { text: item.name, style: 'tableContent' },
+                            { text: item.quantity, style: 'tableContent', alignment: 'center' },
+                            { text: `BDT ${(item.price * item.quantity)}`, style: 'tableContent', alignment: 'right' },
+                        ]),
+                        [
+                            { text: 'Subtotal', colSpan: 2, style: 'tableFooter' },
+                            {},
+                            { text: `BDT ${totalAmount}`, style: 'tableFooter', alignment: 'right' },
+                        ],
+                        [
+                            { text: 'Delivery Charge', colSpan: 2, style: 'tableFooter' },
+                            {},
+                            { text: `BDT ${deliveryCharge}`, style: 'tableFooter', alignment: 'right' },
+                        ],
+                        [
+                            { text: 'Total Amount', colSpan: 2, style: 'tableFooter' },
+                            {},
+                            { text: `BDT ${totalAmountWithDelivery}`, style: 'tableFooter', alignment: 'right' },
+                        ],
+                    ],
+                },
+                layout: {
+                    fillColor: (rowIndex) => (rowIndex === 0 ? '#f4f4f4' : null), 
+                    hLineColor: () => '#000000', 
+                    vLineColor: () => '#000000', 
+                    lineWidth: 0.5, 
+                },
+            },
+        ],
+  
+        footer: {
           stack: [
               {
                   canvas: [
@@ -274,67 +294,70 @@ const generateInvoice = () => {
                           x2: 515,
                           y2: 0,
                           lineWidth: 0.5,
-                          lineColor: '#6C757D', 
+                          lineColor: '#6C757D',
                       },
                   ],
               },
               {
-                  text: 'If you have not authorized the transaction then please reply to this email with the reason. You can send us an e-mail at contact@kinboekhaney.com',
-                  style: 'footerNote',
+                  text: [
+                      { text: 'If you have not authorized the transaction then please reply to this email with the reason.\n', style: 'footerNote' },
+                      { text: 'You can send us an E-mail at ', style: 'footerNote' },
+                      { text: 'contact@kinboekhaney.com', link: 'mailto:contact@kinboekhaney.com', style: 'footerNote',  color: '#0000FF' },
+                      { text: ' or WhatsApp at ', style: 'footerNote' },
+                      { text: 'https://wa.me/message/H3HCLKGHJ6WMA1', link: 'https://wa.me/message/H3HCLKGHJ6WMA1', style: 'footerNote',  color: '#0000FF' },
+                      { text: ' or Call at ', style: 'footerNote' },
+                      { text: '+8801409327811', link: 'tel:+8801409327811', style: 'footerNote', color: '#0000FF' },
+                  ],
                   margin: [0, 10, 0, 0],
               },
           ],
-          margin: [40, 0, 40, 20], 
-      },
-
-      styles: {
-          topLeftTitle: {
-              fontSize: 18,
-              bold: true,
-              color: '#000000', 
-          },
-          topRightTitle: {
-              fontSize: 18,
-              bold: true,
-              color: '#000000', 
-          },
-          date: {
-              fontSize: 12,
-              alignment: 'right',
-              color: '#000000', 
-          },
-          sectionHeader: {
-              fontSize: 16,
-              bold: true,
-              color: '#000000', 
-          },
-          tableHeader: {
-              bold: true,
-              fontSize: 12,
-              color: '#000000', 
-          },
-          tableContent: {
-              fontSize: 12,
-              color: '#000000', 
-          },
-          tableFooter: {
-              bold: true,
-              fontSize: 12,
-              color: '#000000', 
-          },
-          footerNote: {
-              fontSize: 10,
-              italics: true,
-              color: '#6C757D', 
-              alignment: 'center',
-          },
-      },
-
-      pageMargins: [40, 60, 40, 80], 
+          margin: [40, 0, 40, 20],
+      },           
+  
+        styles: {
+            topRightTitle: {
+                fontSize: 18,
+                bold: true,
+                color: '#000000', 
+            },
+            date: {
+                fontSize: 12,
+                alignment: 'right',
+                color: '#000000', 
+            },
+            sectionHeader: {
+                fontSize: 16,
+                bold: true,
+                color: '#000000', 
+            },
+            tableHeader: {
+                bold: true,
+                fontSize: 12,
+                color: '#000000', 
+            },
+            tableContent: {
+                fontSize: 12,
+                color: '#000000', 
+            },
+            tableFooter: {
+                bold: true,
+                fontSize: 12,
+                color: '#000000', 
+            },
+            footerNote: {
+                fontSize: 10,
+                italics: true,
+                color: '#6C757D', 
+                alignment: 'center',
+            },
+        },
+  
+        pageMargins: [40, 60, 40, 80], 
+    };
+  
+    pdfMake.createPdf(docDefinition).download(`Invoice ${formattedOrderTimestamp.replace(/[/,:]/g, '-')}.pdf`);
   };
-
-  pdfMake.createPdf(docDefinition).download(`Invoice_${orderTimestamp.replace(/[/,:]/g, '-')}.pdf`);
-};
+  
 
   if (cartItems.length === 0) {
     return <p className="empty-cart">No items in cart.</p>;

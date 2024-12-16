@@ -23,3 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 .htaccess
 package for gh pages.json
+src/data/products.js
