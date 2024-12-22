@@ -14,9 +14,9 @@ const ImageSlider = React.lazy(() => import("./components/ImageSlider"));
 const CategorySection = React.lazy(() => import("./components/CategorySection"));
 const FeatureSection = React.lazy(() => import("./components/FeatureSection"));
 const ProductCards = React.lazy(() => import("./components/ProductCards"));
-const Electronics = React.lazy(() => import("./components/Electronics"));
-const Cosmetics = React.lazy(() => import("./components/Cosmetics"));
-const Footwear = React.lazy(() => import("./components/Footwear"));
+// const Electronics = React.lazy(() => import("./components/Electronics"));
+// const Cosmetics = React.lazy(() => import("./components/Cosmetics"));
+// const Footwear = React.lazy(() => import("./components/Footwear"));
 const Foods = React.lazy(() => import("./components/Foods"));
 const HealthCare = React.lazy(() => import("./components/HealthCare"));
 const Footer = React.lazy(() => import("./components/Footer"));
@@ -55,9 +55,9 @@ function App() {
                   </Suspense>
                 }
               />
-              <Route path="/electronics" element={<Electronics />} />
+              {/* <Route path="/electronics" element={<Electronics />} />
               <Route path="/footwear" element={<Footwear />} />
-              <Route path="/cosmetics" element={<Cosmetics />} />
+              <Route path="/cosmetics" element={<Cosmetics />} /> */}
               <Route path="/foods" element={<Foods />} />
               <Route path="/health" element={<HealthCare />} />
               <Route path="/product/:id" element={<ProductDetails />} />

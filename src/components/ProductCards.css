@@ -140,17 +140,37 @@
 .star.filled {
     color: #fab634;
 }
+
+.see-more-button {
+  background-color: #214a25;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.see-more-button:hover {
+  background-color: #fab634;
+  color: black;
+}
+
   
   @media (max-width: 768px) {
-    .product-container-main {
-      flex-direction: column;
-      align-items: center;
+    /* .product-container-main { */
+      /* flex-direction: column;
+      align-items: center; */
+
       /* display: grid;
     grid-template-columns: 1fr 1fr; */
     /* gap: 10px; */
-    justify-items: center;
+
+    /* justify-items: center; */
+
     /* padding: 0 10px; */
-    }
+    /* } */
 
     .product-card {
       margin-bottom: 10px;

@@ -1,33 +1,48 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts, foodproducts, healthproducts } from "../data/products";
+// import { products, electronicsProducts, cosmeticProducts, sliderProducts, footwearProducts, foodproducts, healthproducts } from "../data/products";
+import { foodproducts, healthproducts } from "../data/products";
 import './SearchBox.css';
+import Fuse from 'fuse.js';
 
 const SearchBox = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [debouncedQuery, setDebouncedQuery] = useState('');
   const searchBoxRef = useRef(null);
 
-  const allProducts = [
-    ...products,
-    ...electronicsProducts,
-    ...cosmeticProducts,
-    ...sliderProducts,
-    ...footwearProducts,
+  const allProducts = useMemo(() => [
+    // ...products,
+    // ...electronicsProducts,
+    // ...cosmeticProducts,
+    // ...sliderProducts,
+    // ...footwearProducts,
     ...foodproducts,
     ...healthproducts
-  ];
+  ], []);
 
+  const fuse = useMemo(() => new Fuse(allProducts, {
+    keys: ['name', 'keyword'],
+    threshold: 0.3,
+    includeScore: true,
+  }), [allProducts]);
+
+  useEffect(() => {
+    const handler = setTimeout(() => setDebouncedQuery(searchQuery), 300); // 300ms delay
+    return () => clearTimeout(handler);
+  }, [searchQuery]);
+
+  useEffect(() => {
+    if (debouncedQuery) {
+      const results = fuse.search(debouncedQuery);
+      setFilteredProducts(results.map(result => result.item));
+    } else {
+      setFilteredProducts([]);
+    }
+  }, [debouncedQuery, fuse]);
+  
   const handleSearch = (e) => {
-    const query = e.target.value.toLowerCase();
-    setSearchQuery(query);
-
-    const filtered = allProducts.filter(product =>
-      product.name.toLowerCase().includes(query) ||
-      product.keyword.some(keyword => keyword.toLowerCase().includes(query))
-    );
-
-    setFilteredProducts(filtered);
+    setSearchQuery(e.target.value);
   };
 
   const handleReset = () => {
@@ -66,7 +81,7 @@ const SearchBox = () => {
         <button type="reset" />
       </div>
 
-      {searchQuery && filteredProducts.length > 0 && (
+      {debouncedQuery && filteredProducts.length > 0 && (
         <div className="search-results">
           {filteredProducts.map((product) => (
             <Link

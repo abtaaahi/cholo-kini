@@ -6,11 +6,11 @@ const BannerSection = () => {
     const navigate = useNavigate();
 
     const handleShopNowClick = () => {
-      navigate('/electronics');
+      navigate('/foods');
     };
 
     const handleViewAllClick = () => {
-        navigate('/foods');
+        navigate('/health');
     };
 
   return (
@@ -19,7 +19,7 @@ const BannerSection = () => {
         <div className="banner-header">
           <span className="banner-badge">The Best Affordable Online Store</span>
           <h1>Shop Everything, <span className="highlight">from Everyday to Home!</span></h1>
-          <p>Your one-stop shop for electronics, food, health care, and more! Explore products crafted to enhance your lifestyle and well-being. Stay tuned for our stylish and comfortable upcoming cosmetics & footwear collection!</p>
+          <p>Your one-stop shop for food, health care, and more! Explore products crafted to enhance your lifestyle and well-being. Stay tuned for our stylish and comfortable upcoming electronics, cosmetics & footwear collection!</p>
           <div className="banner-buttons">
             <button className="shop-now" onClick={handleShopNowClick} >Shop Now</button>
             <button className="view-products" onClick={handleViewAllClick}>View All Products</button>
@@ -38,13 +38,13 @@ const BannerSection = () => {
         </div>
         <div className="banner-product-card">
         <div className="banner-product-image">
-            <img src="https://bd.pureitwater.com/uploads/products/classic-1.jpg" alt="Water Purifier" />
+            <img src="https://bk.shajgoj.com/storage/2024/10/1-phrf.jpg" alt="Hair Oil Top Sale" />
             <div className="hot-tag">HOT!</div>
         </div>
         <div className="banner-product-info">
-            <h3>Water Purifier</h3>
+            <h3>Nihar Lovely Arabian Perfumed Hair Oil</h3>
             <p>Browse More...</p>
-            <a href="/electronics">➔</a>
+            <a href="/health">➔</a>
         </div>
         </div>
       </div>

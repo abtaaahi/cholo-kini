@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ProductCards.css";
 
 const ProductCards = ({ products, sectionSubtitle, sectionMainTitle }) => {
   const navigate = useNavigate();
+  
+  const [visibleProducts, setVisibleProducts] = useState(20);
+  
+  const handleSeeMore = () => {
+    const newVisibleCount = visibleProducts + 20;
+    setVisibleProducts(newVisibleCount);
+  };
 
   const handleProductClick = (id) => {
     navigate(`/product/${id}`);
   };
+
+  const productsToDisplay = products.slice(0, visibleProducts); 
 
   return (
     <div className="product-container">
@@ -16,12 +25,12 @@ const ProductCards = ({ products, sectionSubtitle, sectionMainTitle }) => {
         <h2 className="section-main-title">{sectionMainTitle}</h2>
       </div>
       <div className="product-container-main">
-        {products.map((product) => (
+        {productsToDisplay.map((product) => (
           <div className="product-card" key={product.id} onClick={() => handleProductClick(product.id)}>
             <div className="card-image">
               <img src={product.image} alt={product.name} />
               <div className="badges">
-                <span className="badge featured">25% Off</span>
+                <span className="badge featured">🏷️{product.discount} tk off!</span>
               </div>
             </div>
             <div className="card-content">
@@ -42,6 +51,10 @@ const ProductCards = ({ products, sectionSubtitle, sectionMainTitle }) => {
           </div>
         ))}
       </div>
+
+      {visibleProducts < products.length && (
+        <button className="see-more-button" onClick={handleSeeMore}>See More</button>
+      )}
     </div>
   );
 };

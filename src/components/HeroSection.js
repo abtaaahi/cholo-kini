@@ -19,7 +19,7 @@ const HeroSection = () => {
       </Link>
         </div>
         <div className="hero-sections">
-          <Link to="/electronics">Electronics</Link>
+          {/* <Link to="/electronics">Electronics</Link> */}
           {/* <Link to="/footwear">Footwear</Link> */}
           {/* <Link to="/cosmetics">Cosmetics</Link> */}
           <Link to="/foods">Food & Nutrition</Link>
@@ -55,7 +55,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="hero-sections">
-          <Link to="/electronics">Electronics</Link>
+          {/* <Link to="/electronics">Electronics</Link> */}
           {/* <Link to="/footwear">Footwear</Link> */}
           {/* <Link to="/cosmetics">Cosmetics</Link> */}
           <Link to="/foods">Food & Nutrition</Link>

@@ -6,13 +6,13 @@ const HeroTopSection = () => {
   const navigate = useNavigate();
   
   const handleBuyNowClick = () => {
-    navigate('/electronics');
+    navigate('/health');
   };
   return (
     <div className="hero-top-section">
       <div className="hero-top-info">
         <span>
-          <strong>GET 25% OFF</strong> for your first order. <strong className="buynow" onClick={handleBuyNowClick} >Buy Now</strong>{' '}
+          <strong>GET upto 25% OFF</strong> on every product. <strong className="buynow" onClick={handleBuyNowClick} >Buy Now</strong>{' '}
         </span>
       </div>
       <div className="hero-top-social">

@@ -11,6 +11,11 @@ import logoBase64 from '../data/logoBase64';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
+const isInAppBrowser = () => {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  return /FBAN|FBAV|Instagram|Messenger/i.test(userAgent);
+};
+
 const Cart = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -179,6 +184,17 @@ const Cart = () => {
   };
 
   const generateInvoice = () => {
+    if (isInAppBrowser()) {
+      toast.warn(
+        "You are using this website in an in-app browser. PDF downloads are not supported here. Check your email for the invoice.",
+        {
+          position: "top-right",
+          autoClose: 5000,
+        }
+      );
+      return;
+    }
+    
     if (!orderTimestamp) {
         console.error("Order timestamp not available.");
         return;
